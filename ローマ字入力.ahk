@@ -24,5 +24,5 @@ SetWorkingDir, %A_ScriptDir%
 ::z[::『
 ::z]::』
 
-::z;::➕
-::z-::➖
+::z;::👍
+::z-::👎
