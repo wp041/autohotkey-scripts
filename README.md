@@ -1,0 +1,2 @@
+# AutoHotKey-scripts
+AHKのスクリプト
