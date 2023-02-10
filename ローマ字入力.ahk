@@ -12,7 +12,7 @@ SetWorkingDir, %A_ScriptDir%
 ;ローマ字入力.ahk
 ;概要：ATOKでz.などによる矢印入力、三点リーダー入力ができないのでAHKで解決する
 
-#Hotstring O*
+#Hotstring O
 
 ::zh::←
 ::zj::↓
