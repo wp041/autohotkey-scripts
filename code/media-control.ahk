@@ -5,9 +5,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;既にスクリプトが起動している状態で、同じスクリプトを実行した時に、自動で既存のスクリプトを終了する
 #SingleInstance, Force
-SendMode Input
-SetWorkingDir, %A_ScriptDir%
-
 
 ;-----------------------------------------
 ;メディア操作
