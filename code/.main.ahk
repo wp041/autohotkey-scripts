@@ -12,5 +12,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include *i ひらがな／カタカナ.ahk
 #Include *i メディアコントロール.ahk
 #Include *i ローマ字入力.ahk
+#Include *i 半角／全角.ahk
 #Include *i 変換.ahk
 #Include *i 無変換.ahk
