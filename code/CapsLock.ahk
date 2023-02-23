@@ -10,3 +10,5 @@ SetWorkingDir, %A_ScriptDir%
 ; 概要：CapsLockをtabにする
 
 vkF0::Tab
+
+Tab::Esc
