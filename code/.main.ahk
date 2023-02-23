@@ -8,9 +8,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; .main.ahk
 ; ahkファイル全体の管理
 
-#Include, CapsLock.ahk
-#Include, ひらがな／カタカナ.ahk
-#Include, メディアコントロール.ahk
-#Include, ローマ字入力.ahk
-#Include, 変換.ahk
-#Include, 無変換.ahk
+#Include *i CapsLock.ahk
+#Include *i ひらがな／カタカナ.ahk
+#Include *i メディアコントロール.ahk
+#Include *i ローマ字入力.ahk
+#Include *i 変換.ahk
+#Include *i 無変換.ahk
