@@ -14,14 +14,18 @@ SetWorkingDir, %A_ScriptDir%
 ; `~`をつけるとエスケープできる！！！
 ; 参照：https://ahkwiki.net/Hotkeys
 ~vk1C & h::Send, {Blind}{Left}
-~vk1C & k::Send, {Blind}{Up}
 ~vk1C & j::Send, {Blind}{Down}
+~vk1C & k::Send, {Blind}{Up}
 ~vk1C & l::Send, {Blind}{Right}
 
-~vk1C & a::Send, {Blind}{Home}
-~vk1C & s::Send, {Blind}{PgUp}
-~vk1C & d::Send, {Blind}{PgDn}
-~vk1C & f::Send, {Blind}{End}
-
-~vk1C & o::Send, {Blind}{BS}
 ~vk1C & p::Send, {Blind}{Delete}
+
+; ~vk1C & a::Send, {Blind}{Home}
+; ~vk1C & d::Send, {Blind}{PgDn}
+; ~vk1C & s::Send, {Blind}{PgUp}
+; ~vk1C & f::Send, {Blind}{End}
+
+; ~vk1C & y::Send, {Blind}{Home}
+; ~vk1C & u::Send, {Blind}{PgDn}
+; ~vk1C & i::Send, {Blind}{PgUp}
+; ~vk1C & o::Send, {Blind}{End}
