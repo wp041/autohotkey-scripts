@@ -13,6 +13,8 @@ SetWorkingDir, %A_ScriptDir%
 ; &で監視が始まって、元の空押しの効果が上書きされちゃうっぽい
 ; `~`をつけるとエスケープできる！！！
 ; 参照：https://ahkwiki.net/Hotkeys
+
+
 ~vk1C & h::Send, {Blind}{Left}
 ~vk1C & j::Send, {Blind}{Down}
 ~vk1C & k::Send, {Blind}{Up}
@@ -20,12 +22,15 @@ SetWorkingDir, %A_ScriptDir%
 
 ~vk1C & p::Send, {Blind}{Delete}
 
-; ~vk1C & a::Send, {Blind}{Home}
-; ~vk1C & d::Send, {Blind}{PgDn}
-; ~vk1C & s::Send, {Blind}{PgUp}
-; ~vk1C & f::Send, {Blind}{End}
-
-; ~vk1C & y::Send, {Blind}{Home}
-; ~vk1C & u::Send, {Blind}{PgDn}
-; ~vk1C & i::Send, {Blind}{PgUp}
-; ~vk1C & o::Send, {Blind}{End}
+~vk1C & 1::Send, {Blind}{F1}
+~vk1C & 2::Send, {Blind}{F2}
+~vk1C & 3::Send, {Blind}{F3}
+~vk1C & 4::Send, {Blind}{F4}
+~vk1C & 5::Send, {Blind}{F5}
+~vk1C & 6::Send, {Blind}{F6}
+~vk1C & 7::Send, {Blind}{F7}
+~vk1C & 8::Send, {Blind}{F8}
+~vk1C & 9::Send, {Blind}{F9}
+~vk1C & 0::Send, {Blind}{F10}
+~vk1C & -::Send, {Blind}{F11}
+~vk1C & ^::Send, {Blind}{F12}
