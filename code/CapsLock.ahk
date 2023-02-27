@@ -7,6 +7,8 @@ SetWorkingDir, %A_ScriptDir%
 
 ;-----------------------------------------------------------------------------
 ; CapsLock.ahk
-; 概要：CapsLockをtabにする
+; 概要：imeの変換窓が出ているときのみCapsLockをtabにする
 
+If (IME_GetConverting() == 2){
 vkF0::Tab
+}
