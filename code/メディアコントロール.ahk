@@ -1,5 +1,4 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -8,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;-----------------------------------------
 ;メディア操作
-;-----------------------------------------
+
 
 ;右Ctrl＋↓、右Ctrl＋↑でメディア再生・一時停止
 RCtrl & Down::Media_Play_Pause
@@ -30,7 +29,3 @@ Return
 ;右Alt+↓で音量ダウン
 RAlt & Down::Volume_Down
 Return
-
-;-----------------------------------------
-;メディア操作終了
-;-----------------------------------------
