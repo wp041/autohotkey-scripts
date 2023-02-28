@@ -10,3 +10,11 @@ SetWorkingDir, %A_ScriptDir%
 ; 概要：CapsLockをtabにする(shift+tabは効かない)
 
 vkF0::Tab
+
+; 以下はimeの状況を感知してcapslockを回避しようとしたものの残骸
+; capslockは上位機能だから、乗っ取れない
+; +vkF0::
+; If (IME_GetConverting() = 2)
+; {
+;     Send, {Shift}{Tab}
+; }
