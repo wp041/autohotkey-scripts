@@ -14,6 +14,11 @@ SetWorkingDir, %A_ScriptDir%
 ~vk1C & k::Send, {Blind}{Up}
 ~vk1C & l::Send, {Blind}{Right}
 
+~vk1C & n::Send, {Blind}{Home}
+~vk1C & m::Send, {Blind}{PgDn}
+~vk1C & ,::Send, {Blind}{PgUp}
+~vk1C & .::Send, {Blind}{End}
+
 ~vk1C & p::Send, {Blind}{Delete}
 
 ~vk1C & 1::Send, {Blind}{F1}
