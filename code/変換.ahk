@@ -9,12 +9,6 @@ SetWorkingDir, %A_ScriptDir%
 ; 変換.ahk
 ; 概要：変換キーを用いた様々な入力を行う
 
-;  どうやらこれが入力されない原因はAHKでこれらのキーが使えないのではなくて、この書き方だと崩壊するっぽい
-; &で監視が始まって、元の空押しの効果が上書きされちゃうっぽい
-; `~`をつけるとエスケープできる！！！
-; 参照：https://ahkwiki.net/Hotkeys
-
-
 ~vk1C & h::Send, {Blind}{Left}
 ~vk1C & j::Send, {Blind}{Down}
 ~vk1C & k::Send, {Blind}{Up}
@@ -34,3 +28,6 @@ SetWorkingDir, %A_ScriptDir%
 ~vk1C & 0::Send, {Blind}{F10}
 ~vk1C & -::Send, {Blind}{F11}
 ~vk1C & ^::Send, {Blind}{F12}
+
+; imeコントロールを行うため
+vk1C up::IME_SET(1)
