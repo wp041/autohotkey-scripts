@@ -7,9 +7,7 @@ SetWorkingDir, %A_ScriptDir%
 
 ;-----------------------------------------------------------------------------
 ; CapsLock.ahk
-; 概要：CapsLockをtabにする(shift+tabは効かない)
-
-vkF0::Tab
+; 概要：CapsLockをctrlにする(shift*は効かない)
 
 ; 以下はimeの状況を感知してcapslockを回避しようとしたものの残骸
 ; capslockは上位機能だから、乗っ取れない
