@@ -10,5 +10,5 @@ SetWorkingDir, %A_ScriptDir%
 ; 概要：半角／全角をescにする
 ; 備考：なんかIMEONとOFFの状態でコードが違うらしい
 
-vkF3::Esc
-vkF4::Esc
+; vkF3::Esc
+; vkF4::Esc

@@ -9,4 +9,4 @@ SetWorkingDir, %A_ScriptDir%
 ; RWin.ahk
 ; 概要：RWinをEscにする
 
-RWin::Esc
+; RWin::Esc
