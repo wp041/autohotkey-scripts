@@ -22,10 +22,3 @@ Return
 RCtrl & Left::Media_Prev
 Return
 
-;右Alt+↑で音量アップ
-RAlt & Up::Volume_Up
-Return
-
-;右Alt+↓で音量ダウン
-RAlt & Down::Volume_Down
-Return

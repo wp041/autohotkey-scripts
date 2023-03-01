@@ -19,7 +19,17 @@ SetWorkingDir, %A_ScriptDir%
 ~vk1D & ,::Send, {Blind}{PgUp}
 ~vk1D & .::Send, {Blind}{End}
 
+~vk1D & y::Send, {Blind}{PrintScreen}
+~vk1D & u::Send, {Blind}{ScrollLock}
+~vk1D & i::Send, {Blind}{Pause}
+~vk1D & o::Send, {Blind}{BS}
 ~vk1D & p::Send, {Blind}{Delete}
+
+~vk1D & a::Send, {Blind}{Volume_Down}
+~vk1D & s::Send, {Blind}{Volume_Up}
+~vk1D & d::Send, {Blind}{Volume_Mute}
+
+~vk1D & Tab::Send, {Blind}{vkF0}
 
 ~vk1D & 1::Send, {Blind}{F1}
 ~vk1D & 2::Send, {Blind}{F2}

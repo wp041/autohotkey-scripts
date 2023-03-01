@@ -9,4 +9,4 @@ SetWorkingDir, %A_ScriptDir%
 ; RAlt.ahk
 ; 概要：RAltをEscにする
 
-RAlt::Esc
+; RAlt::
