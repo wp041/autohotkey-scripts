@@ -35,4 +35,4 @@ SetWorkingDir, %A_ScriptDir%
 ~vk1C & ^::Send, {Blind}{F12}
 
 ; imeコントロールを行うため
-vk1C up::IME_SET(1)
+vk1C::IME_SET(1)
