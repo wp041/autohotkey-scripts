@@ -9,16 +9,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;メディア操作
 
 
-;右Ctrl＋↓、右Ctrl＋↑でメディア再生・一時停止
-RCtrl & Down::Media_Play_Pause
-RCtrl & Up::Media_Play_Pause
-Return
+; RCtrl & Down::Media_Play_Pause
+; RCtrl & Up::Media_Play_Pause
+; Return
 
-;右Ctrl＋→で次へ
-RCtrl & Right::Media_Next
-Return
+; RCtrl & Right::Media_Next
+; Return
 
-;右Ctrl＋←で前へ
-RCtrl & Left::Media_Prev
-Return
+; RCtrl & Left::Media_Prev
+; Return
 

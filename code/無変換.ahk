@@ -29,6 +29,10 @@ SetWorkingDir, %A_ScriptDir%
 ~vk1D & s::Send, {Blind}{Volume_Up}
 ~vk1D & d::Send, {Blind}{Volume_Mute}
 
+~vk1D & z::Send, {Blind}{Media_Prev}
+~vk1D & x::Send, {Blind}{Media_Next}
+~vk1D & c::Send, {Blind}{Media_Play_Pause}
+
 ~vk1D & Tab::Send, {Blind}{vkF0}
 
 ~vk1D & 1::Send, {Blind}{F1}
