@@ -17,6 +17,9 @@ vk1C & j::Send, {Blind}{Down}
 vk1C & k::Send, {Blind}{Up}
 vk1C & l::Send, {Blind}{Right}
 
+vk1C & `;::Send, {Blind}{-}
+vk1C & vkBB::Send, {Blind}{-}
+
 vk1C & q::Send, {Blind}{PrintScreen}
 vk1C & w::Send, {Blind}{ScrollLock}
 vk1C & e::Send, {Blind}{Pause}

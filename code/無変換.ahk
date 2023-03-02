@@ -14,6 +14,9 @@ vk1D & j::Send, {Blind}{PgDn}
 vk1D & k::Send, {Blind}{PgUp}
 vk1D & l::Send, {Blind}{End}
 
+vk1D & `;::Send, {Blind}{-}
+vk1D & vkBB::Send, {Blind}{-}
+
 vk1D & q::Send, {Blind}{PrintScreen}
 vk1D & w::Send, {Blind}{ScrollLock}
 vk1D & e::Send, {Blind}{Pause}
