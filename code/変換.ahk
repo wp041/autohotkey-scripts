@@ -50,13 +50,7 @@ vk1C & -::Send, {Blind}{F11}
 vk1C & ^::Send, {Blind}{F12}
 
 ; imeコントロールを行うため
-vk1C::IME_SET(1)
-
-; offからonに切り替えるには2かい変換キーを押す必要がある
-; やりたい事:間に何のキーも挟まず変換キーが1度押された時にimeONになって欲しい
-; vk1C::
-;     if (A_ThisHotkey == "vk1C")
-;     {
-;         IME_SET(1)
-;     }
-;     Return
+vk1C::
+  IME_SET(1)
+  IME_SetConvMode(9)
+  Return
