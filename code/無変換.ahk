@@ -9,18 +9,10 @@ SetWorkingDir, %A_ScriptDir%
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
-vk1D & u::Send, {Blind}{BS}
-vk1D & i::Send, {Blind}{Delete}
-
-vk1D & h::Send, {Blind}{Left}
-vk1D & j::Send, {Blind}{Down}
-vk1D & k::Send, {Blind}{Up}
-vk1D & l::Send, {Blind}{Right}
-
-vk1D & n::Send, {Blind}{Home}
-vk1D & m::Send, {Blind}{PgDn}
-vk1D & ,::Send, {Blind}{PgUp}
-vk1D & .::Send, {Blind}{End}
+vk1D & h::Send, {Blind}{Home}
+vk1D & j::Send, {Blind}{PgDn}
+vk1D & k::Send, {Blind}{PgUp}
+vk1D & l::Send, {Blind}{End}
 
 vk1D & q::Send, {Blind}{PrintScreen}
 vk1D & w::Send, {Blind}{ScrollLock}
