@@ -48,3 +48,8 @@ vk1D & 9::Send, {Blind}{F9}
 vk1D & 0::Send, {Blind}{F10}
 vk1D & -::Send, {Blind}{F11}
 vk1D & ^::Send, {Blind}{F12}
+
+; imeコントロールを行うため
+vk1D::
+  IME_SET(0)
+  Return
