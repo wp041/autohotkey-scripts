@@ -11,7 +11,7 @@ SetWorkingDir, %A_ScriptDir%
 
 F13::Esc
 
-F13 & h::Send, {Blind}{Home}
-F13 & j::Send, {Blind}{PgDn}
-F13 & k::Send, {Blind}{PgUp}
-F13 & l::Send, {Blind}{End}
+; F13 & h::Send, {Blind}{Home}
+; F13 & j::Send, {Blind}{PgDn}
+; F13 & k::Send, {Blind}{PgUp}
+; F13 & l::Send, {Blind}{End}
