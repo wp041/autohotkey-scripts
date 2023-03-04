@@ -22,18 +22,6 @@ vk1C & m::Send, {Blind}{PgDn}
 vk1C & ,::Send, {Blind}{PgUp}
 vk1C & .::Send, {Blind}{End}
 
-vk1C & q::Send, {Blind}{PrintScreen}
-vk1C & w::Send, {Blind}{ScrollLock}
-vk1C & e::Send, {Blind}{Pause}
-
-vk1C & a::Send, {Blind}{Volume_Down}
-vk1C & s::Send, {Blind}{Volume_Up}
-vk1C & d::Send, {Blind}{Volume_Mute}
-
-vk1C & z::Send, {Blind}{Media_Prev}
-vk1C & x::Send, {Blind}{Media_Next}
-vk1C & c::Send, {Blind}{Media_Play_Pause}
-
 vk1C & Tab::Send, {Blind}{vkF0}
 
 vk1C & 1::Send, {Blind}{F1}
