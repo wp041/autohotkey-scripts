@@ -37,7 +37,6 @@ vk1C & 0::Send, {Blind}{F10}
 vk1C & -::Send, {Blind}{F11}
 vk1C & ^::Send, {Blind}{F12}
 
-; imeコントロールを行うため
 vk1C::
   IME_SET(1)
   IME_SetConvMode(9)

@@ -1,21 +1,14 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+﻿#SingleInstance, Force
+SendMode Input
+SetWorkingDir, %A_ScriptDir%
 
+;既にスクリプトが起動している状態で、同じスクリプトを実行した時に、自動で既存のスクリプトを終了する
+#SingleInstance, Force
 
-; ----------------------------------------------------------------------
+;-----------------------------------------------------------------------------
 ; .main.ahk
 ; ahkファイル全体の管理
 
 #Include *i F13.ahk
 #Include *i 変換.ahk
 #Include *i 無変換.ahk
-
-; 現在は使われていない
-#Include *i CapsLock.ahk
-#Include *i RAlt.ahk
-#Include *i ひらがな／カタカナ.ahk
-#Include *i RWin.ahk
-#Include *i メディアコントロール.ahk
-#Include *i 半角／全角.ahk

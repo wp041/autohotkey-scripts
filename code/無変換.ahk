@@ -9,36 +9,6 @@ SetWorkingDir, %A_ScriptDir%
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
-
-
-
-; この現状はカタカナ変換ができない、imeの状態を問わないカーソル移動が可能
-; カタカナ変換だけ実装する→そんなものない
-; カーソル移動を特殊な実装にする
-;   つまり、もし、imeがonだったらカーソル移動後にonに戻してあげたらいい
-; No1
-; ~vk1D & h::
-;     If (IME_GET()==1){
-;         Send, {Blind}{Home}
-;         IME_SET(1)
-;     }Else{
-;         Send, {Blind}{Home}
-;     }
-; Return
-; これは、コマンドが動いてるときには既にimeoffになってるからifがそもそも働かない
-; No2
-; もうKANAに割り当てる
-; No3
-; 
-
-~vk1D & `;::Send, {Blind}{-}
-~vk1D & vkBB::Send, {Blind}{-}
-
-; ~vk1D & h::Send, {Blind}{Home}
-; ~vk1D & j::Send, {Blind}{PgDn}
-; ~vk1D & k::Send, {Blind}{PgUp}
-; ~vk1D & l::Send, {Blind}{End}
-
 ~vk1D & q::Send, {Blind}{PrintScreen}
 ~vk1D & w::Send, {Blind}{ScrollLock}
 ~vk1D & e::Send, {Blind}{Pause}
@@ -65,8 +35,3 @@ SetWorkingDir, %A_ScriptDir%
 ~vk1D & 0::Send, {Blind}{F10}
 ~vk1D & -::Send, {Blind}{F11}
 ~vk1D & ^::Send, {Blind}{F12}
-
-; imeコントロールを行うため
-; vk1D::
-;   IME_SET(0)
-; Return
