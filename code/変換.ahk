@@ -22,6 +22,8 @@ vk1C & m::Send, {Blind}{PgDn}
 vk1C & ,::Send, {Blind}{PgUp}
 vk1C & .::Send, {Blind}{End}
 
+vk1C & Space::Send, {Blind}{Enter}
+
 vk1C & Tab::Send, {Blind}{vkF0}
 
 vk1C & 1::Send, {Blind}{F1}
