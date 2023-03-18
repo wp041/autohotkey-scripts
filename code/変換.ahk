@@ -12,15 +12,15 @@ SetWorkingDir, %A_ScriptDir%
 vk1C & i::Send, {Blind}{BS}
 vk1C & o::Send, {Blind}{Delete}
 
-vk1C & h::Send, {Blind}{Left}
-vk1C & j::Send, {Blind}{Down}
-vk1C & k::Send, {Blind}{Up}
-vk1C & l::Send, {Blind}{Right}
+vk1C & j::Send, {Blind}{Left}
+vk1C & k::Send, {Blind}{Down}
+vk1C & l::Send, {Blind}{Up}
+vk1C & sc027::Send, {Blind}{Right}
 
-vk1C & n::Send, {Blind}{Home}
-vk1C & m::Send, {Blind}{PgDn}
-vk1C & ,::Send, {Blind}{PgUp}
-vk1C & .::Send, {Blind}{End}
+vk1C & m::Send, {Blind}{Home}
+vk1C & ,::Send, {Blind}{PgDn}
+vk1C & .::Send, {Blind}{PgUp}
+vk1C & /::Send, {Blind}{End}
 
 vk1C & Space::Send, {Blind}{Enter}
 
@@ -30,11 +30,11 @@ vk1C & p::Send, {Blind}{PrintScreen}
 vk1C & @::Send, {Blind}{ScrollLock}
 vk1C & [::Send, {Blind}{Pause}
 
-vk1C & sc027::Send, {Blind}{Volume_Down}
-vk1C & sc028::Send, {Blind}{Volume_Up}
-vk1C & ]::Send, {Blind}{Volume_Mute}
+vk1C & sc028::Send, {Blind}{Volume_Down}
+vk1C & ]::Send, {Blind}{Volume_Up}
+vk1C & Enter::Send, {Blind}{Volume_Mute}
 
-vk1C & /::Send, {Blind}{Media_Prev}
+vk1C & n::Send, {Blind}{Media_Prev}
 vk1C & vkE2::Send, {Blind}{Media_Next}
 vk1C & RShift::Send, {Blind}{Media_Play_Pause}
 
