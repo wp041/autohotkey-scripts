@@ -24,19 +24,20 @@ vk1D & sc027::Send, {Blind}{0}
 vk1D & sc028::Send, {Blind}{-}
 vk1D & vkBA::Send, {Blind}{-}
 vk1D & ]::Send, {Blind}{^}
+vk1D & Enter::Send, {Blind}{\}
 
-vk1D & z::Send, {Blind}{F1}
-vk1D & x::Send, {Blind}{F2}
-vk1D & c::Send, {Blind}{F3}
-vk1D & v::Send, {Blind}{F4}
-vk1D & b::Send, {Blind}{F5}
-vk1D & n::Send, {Blind}{F6}
-vk1D & m::Send, {Blind}{F7}
-vk1D & ,::Send, {Blind}{F8}
-vk1D & .::Send, {Blind}{F9}
-vk1D & /::Send, {Blind}{F10}
-vk1D & q::Send, {Blind}{F11}
-vk1D & w::Send, {Blind}{F12}
+vk1D & q::Send, {Blind}{F1}
+vk1D & w::Send, {Blind}{F2}
+vk1D & e::Send, {Blind}{F3}
+vk1D & r::Send, {Blind}{F4}
+vk1D & t::Send, {Blind}{F5}
+vk1D & y::Send, {Blind}{F6}
+vk1D & u::Send, {Blind}{F7}
+vk1D & i::Send, {Blind}{F8}
+vk1D & o::Send, {Blind}{F9}
+vk1D & p::Send, {Blind}{F10}
+vk1D & @::Send, {Blind}{F11}
+vk1D & [::Send, {Blind}{F12}
 
 vk1D::
   IME_SET(0)
