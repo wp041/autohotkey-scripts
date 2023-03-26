@@ -12,3 +12,4 @@ SetWorkingDir, %A_ScriptDir%
 #Include *i F13.ahk
 #Include *i 変換.ahk
 #Include *i 無変換.ahk
+#Include *i temp.ahk
