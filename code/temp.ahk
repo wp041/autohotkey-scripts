@@ -9,7 +9,7 @@ SetWorkingDir, %A_ScriptDir%
 ; temp.ahk
 ; 概要：一時的なファイル
 
-; 物理キーの入力のみに対応
+; $によって物理キーの入力のみに対応
 $1::Send, {Blind}{F1}
 $2::Send, {Blind}{F2}
 $3::Send, {Blind}{F3}
@@ -22,6 +22,3 @@ $9::Send, {Blind}{F9}
 $0::Send, {Blind}{F10}
 $-::Send, {Blind}{F11}
 $^::Send, {Blind}{F12}
-
-
-; sc028::Enter
