@@ -9,24 +9,25 @@ SetWorkingDir, %A_ScriptDir%
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
-vk1D & u::Send, {Blind}{Insert}
+vk1D & vk1C::Send, {Blind}{Space}
 
-vk1D & i::Send, {Blind}{BS}
-vk1D & o::Send, {Blind}{Delete}
+vk1D & u::Send, {Blind}{7}
+vk1D & i::Send, {Blind}{8}
+vk1D & o::Send, {Blind}{9}
 
-vk1D & j::Send, {Blind}{Left}
-vk1D & k::Send, {Blind}{Down}
-vk1D & l::Send, {Blind}{Up}
-vk1D & sc027::Send, {Blind}{Right}
+vk1D & j::Send, {Blind}{4}
+vk1D & k::Send, {Blind}{5}
+vk1D & l::Send, {Blind}{6}
+vk1D & sc027::Send, {Blind}{-}
 
-vk1D & m::Send, {Blind}{Home}
-vk1D & ,::Send, {Blind}{PgDn}
-vk1D & .::Send, {Blind}{PgUp}
-vk1D & /::Send, {Blind}{End}
+vk1D & m::Send, {Blind}{1}
+vk1D & ,::Send, {Blind}{2}
+vk1D & .::Send, {Blind}{3}
+vk1D & /::Send, {Blind}{0}
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
-vk1D & p::Send, {Blind}{PrintScreen}
+vk1D & p::Send, {Blind}{^}
 vk1D & @::Send, {Blind}{ScrollLock}
 vk1D & [::Send, {Blind}{Pause}
 
@@ -37,19 +38,18 @@ vk1D & Enter::Send, {Blind}{Media_Play_Pause}
 vk1D & vkE2::Send, {Blind}{Media_Prev}
 vk1D & RShift::Send, {Blind}{Media_Next}
 
-vk1D & z::Send, {Blind}{0}
-vk1D & x::Send, {Blind}{1}
-vk1D & c::Send, {Blind}{2}
-vk1D & v::Send, {Blind}{3}
-vk1D & s::Send, {Blind}{4}
-vk1D & d::Send, {Blind}{5}
-vk1D & f::Send, {Blind}{6}
-vk1D & w::Send, {Blind}{7}
-vk1D & e::Send, {Blind}{8}
-vk1D & r::Send, {Blind}{9}
-vk1D & a::Send, {Blind}{-}
-
-vk1D & q::Send, {Blind}{^}
+vk1D & z::Send, {Blind}{F1}
+vk1D & x::Send, {Blind}{F2}
+vk1D & c::Send, {Blind}{F3}
+vk1D & v::Send, {Blind}{F4}
+vk1D & a::Send, {Blind}{F5}
+vk1D & s::Send, {Blind}{F6}
+vk1D & d::Send, {Blind}{F7}
+vk1D & f::Send, {Blind}{F8}
+vk1D & q::Send, {Blind}{F9}
+vk1D & w::Send, {Blind}{F10}
+vk1D & e::Send, {Blind}{F11}
+vk1D & r::Send, {Blind}{F12}
 
 vk1D & t::Send, {Blind}{@}
 vk1D & y::Send, {Blind}{\}
@@ -58,18 +58,18 @@ vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{sc028}
 vk1D & n::Send, {Blind}{vkE2sc073}
 
-vk1D & 1::Send, {Blind}{F1}
-vk1D & 2::Send, {Blind}{F2}
-vk1D & 3::Send, {Blind}{F3}
-vk1D & 4::Send, {Blind}{F4}
-vk1D & 5::Send, {Blind}{F5}
-vk1D & 6::Send, {Blind}{F6}
-vk1D & 7::Send, {Blind}{F7}
-vk1D & 8::Send, {Blind}{F8}
-vk1D & 9::Send, {Blind}{F9}
-vk1D & 0::Send, {Blind}{F10}
-vk1D & -::Send, {Blind}{F11}
-vk1D & ^::Send, {Blind}{F12}
+; vk1D & 1::Send, {Blind}{F1}
+; vk1D & 2::Send, {Blind}{F2}
+; vk1D & 3::Send, {Blind}{F3}
+; vk1D & 4::Send, {Blind}{F4}
+; vk1D & 5::Send, {Blind}{F5}
+; vk1D & 6::Send, {Blind}{F6}
+; vk1D & 7::Send, {Blind}{F7}
+; vk1D & 8::Send, {Blind}{F8}
+; vk1D & 9::Send, {Blind}{F9}
+; vk1D & 0::Send, {Blind}{F10}
+; vk1D & -::Send, {Blind}{F11}
+; vk1D & ^::Send, {Blind}{F12}
 
 ; 以下のGetConvertingは新msIMEでは効かない。Google日本語入力では効く。
 vk1D::
