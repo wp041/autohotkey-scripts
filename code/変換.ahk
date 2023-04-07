@@ -52,12 +52,12 @@ vk1C & w::Send, {Blind}{F10}
 vk1C & e::Send, {Blind}{F11}
 vk1C & r::Send, {Blind}{F12}
 
-vk1C & t::Send, {Blind}{@}
-vk1C & y::Send, {Blind}{\}
+; vk1C & t::Send, {Blind}{@}
+vk1C & u::Send, {Blind}{\}
 vk1C & g::Send, {Blind}{[}
 vk1C & h::Send, {Blind}{]}
-vk1C & b::Send, {Blind}{sc028}
-vk1C & n::Send, {Blind}{vkE2sc073}
+; vk1C & b::Send, {Blind}{sc028}
+; vk1C & n::Send, {Blind}{vkE2sc073}
 
 ; vk1C & 1::Send, {Blind}{F1}
 ; vk1C & 2::Send, {Blind}{F2}
