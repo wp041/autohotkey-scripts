@@ -41,31 +41,31 @@ vk1C & sc028::Send, {Blind}{Media_Play_Pause}
 vk1C & vkE2::Send, {Blind}{Volume_Mute}
 ; vk1C & RShift::Send, {Blind}{Media_Next}
 
-vk1C & z::Send, {Blind}{F1}
-vk1C & x::Send, {Blind}{F2}
-vk1C & c::Send, {Blind}{F3}
-vk1C & v::Send, {Blind}{F4}
-vk1C & a::Send, {Blind}{F5}
-vk1C & s::Send, {Blind}{F6}
-vk1C & d::Send, {Blind}{F7}
-vk1C & f::Send, {Blind}{F8}
-vk1C & q::Send, {Blind}{F9}
-vk1C & w::Send, {Blind}{F10}
-vk1C & e::Send, {Blind}{F11}
-vk1C & r::Send, {Blind}{F12}
+; vk1C & z::Send, {Blind}{F1}
+; vk1C & x::Send, {Blind}{F2}
+; vk1C & c::Send, {Blind}{F3}
+; vk1C & v::Send, {Blind}{F4}
+; vk1C & a::Send, {Blind}{F5}
+; vk1C & s::Send, {Blind}{F6}
+; vk1C & d::Send, {Blind}{F7}
+; vk1C & f::Send, {Blind}{F8}
+; vk1C & q::Send, {Blind}{F9}
+; vk1C & w::Send, {Blind}{F10}
+; vk1C & e::Send, {Blind}{F11}
+; vk1C & r::Send, {Blind}{F12}
 
 vk1C & u::Send, {Blind}{\}
 
 ; vk1C & t::Send, {Blind}{@}
 ; vk1C & y::Send, {Blind}{\}
-vk1C & t::Send, {Blind}{Media_Prev}
-vk1C & y::Send, {Blind}{Media_Next}
+; vk1C & t::Send, {Blind}{Media_Prev}
+; vk1C & y::Send, {Blind}{Media_Next}
 vk1C & g::Send, {Blind}{[}
 vk1C & h::Send, {Blind}{]}
 ; vk1C & b::Send, {Blind}{sc028}
 ; vk1C & n::Send, {Blind}{vkE2sc073}
-vk1C & b::Send, {Blind}{Volume_Down}
-vk1C & n::Send, {Blind}{Volume_Up}
+; vk1C & b::Send, {Blind}{Volume_Down}
+; vk1C & n::Send, {Blind}{Volume_Up}
 
 ; vk1C & 1::Send, {Blind}{F1}
 ; vk1C & 2::Send, {Blind}{F2}
