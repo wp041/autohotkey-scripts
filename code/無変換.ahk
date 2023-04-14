@@ -9,7 +9,7 @@ SetWorkingDir, %A_ScriptDir%
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
-vk1D & vk1C::Send, {Blind}{Space}
+vk1D & vk1C::Send, {Blind}{0}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
@@ -34,10 +34,10 @@ vk1D & [::Send, {Blind}{Pause}
 ; vk1D & sc028::Send, {Blind}{Volume_Down}
 ; vk1D & ]::Send, {Blind}{Volume_Up}
 ; vk1D & Enter::Send, {Blind}{Media_Play_Pause}
-vk1D & sc028::Send, {Blind}{Media_Play_Pause}
+; vk1D & sc028::Send, {Blind}{Media_Play_Pause}
 
 ; vk1D & vkE2::Send, {Blind}{Media_Prev}
-vk1D & vkE2::Send, {Blind}{Volume_Mute}
+; vk1D & vkE2::Send, {Blind}{Volume_Mute}
 ; vk1D & RShift::Send, {Blind}{Media_Next}
 
 vk1D & z::Send, {Blind}{F1}
@@ -55,14 +55,14 @@ vk1D & r::Send, {Blind}{F12}
 
 ; vk1D & t::Send, {Blind}{@}
 ; vk1D & y::Send, {Blind}{\}
-vk1D & t::Send, {Blind}{Media_Prev}
-vk1D & y::Send, {Blind}{Media_Next}
+; vk1D & t::Send, {Blind}{Media_Prev}
+; vk1D & y::Send, {Blind}{Media_Next}
 vk1D & g::Send, {Blind}{[}
-vk1D & h::Send, {Blind}{]}
+vk1D & b::Send, {Blind}{]}
 ; vk1D & b::Send, {Blind}{sc028}
 ; vk1D & n::Send, {Blind}{vkE2sc073}
-vk1D & b::Send, {Blind}{Volume_Down}
-vk1D & n::Send, {Blind}{Volume_Up}
+; vk1D & b::Send, {Blind}{Volume_Down}
+; vk1D & n::Send, {Blind}{Volume_Up}
 
 ; vk1D & 1::Send, {Blind}{F1}
 ; vk1D & 2::Send, {Blind}{F2}
