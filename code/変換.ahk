@@ -10,7 +10,9 @@ SetWorkingDir, %A_ScriptDir%
 ; 概要：変換キーを用いた様々な入力を行う
 
 ; vk1C & vk1D::Send, {Blind}{Space}
-vk1C & vk1D::Send, {Blind}{Media_Play_Pause}
+vk1C & vk1D::Send, {Blind}{Volume_Mute}
+
+vk1C & Space::Send, {Blind}{Media_Play_Pause}
 
 ; vk1C & u::Send, {Blind}{Insert}
 
