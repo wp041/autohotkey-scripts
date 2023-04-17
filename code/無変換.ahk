@@ -9,7 +9,11 @@ SetWorkingDir, %A_ScriptDir%
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
-vk1D & vk1C::Send, {Blind}{0}
+vk1D & Space::Send, {Blind}{Media_Play_Pause}
+
+vk1D & p::Send, {Blind}{\}
+vk1D & sc027::Send, {Blind}{-}
+vk1D & vk1C::Send, {Blind}{^}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
@@ -18,7 +22,6 @@ vk1D & o::Send, {Blind}{9}
 vk1D & j::Send, {Blind}{4}
 vk1D & k::Send, {Blind}{5}
 vk1D & l::Send, {Blind}{6}
-vk1D & sc027::Send, {Blind}{-}
 
 vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
@@ -27,7 +30,6 @@ vk1D & /::Send, {Blind}{0}
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
-vk1D & p::Send, {Blind}{^}
 vk1D & @::Send, {Blind}{ScrollLock}
 vk1D & [::Send, {Blind}{Pause}
 
