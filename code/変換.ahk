@@ -9,7 +9,7 @@ SetWorkingDir, %A_ScriptDir%
 ; 変換.ahk
 ; 概要：変換キーを用いた様々な入力を行う
 
-; vk1C & u::Send, {Blind}{Insert}
+vk1C & u::Send, {Blind}{Insert}
 
 vk1C & i::Send, {Blind}{BS}
 vk1C & o::Send, {Blind}{Delete}
