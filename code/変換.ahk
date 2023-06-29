@@ -9,10 +9,16 @@ SetWorkingDir, %A_ScriptDir%
 ; 変換.ahk
 ; 概要：変換キーを用いた様々な入力を行う
 
+vk1C & Tab::Send, {Blind}{vkF0}
+
+
 vk1C & u::Send, {Blind}{Insert}
 
 vk1C & i::Send, {Blind}{BS}
 vk1C & o::Send, {Blind}{Delete}
+
+vk1C & p::Send, {Blind}{PrintScreen}
+
 
 vk1C & j::Send, {Blind}{Left}
 vk1C & k::Send, {Blind}{Down}
@@ -24,11 +30,6 @@ vk1C & ,::Send, {Blind}{PgDn}
 vk1C & .::Send, {Blind}{PgUp}
 vk1C & /::Send, {Blind}{End}
 
-vk1C & Tab::Send, {Blind}{vkF0}
-
-vk1C & p::Send, {Blind}{PrintScreen}
-vk1C & @::Send, {Blind}{ScrollLock}
-vk1C & [::Send, {Blind}{Pause}
 
 vk1C & h::Send, {Blind}{Volume_Up}
 vk1C & sc028::Send, {Blind}{Media_Next}
