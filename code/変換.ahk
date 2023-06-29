@@ -30,10 +30,10 @@ vk1C & p::Send, {Blind}{PrintScreen}
 vk1C & @::Send, {Blind}{ScrollLock}
 vk1C & [::Send, {Blind}{Pause}
 
-vk1C & sc028::Send, {Blind}{Volume_Up}
-vk1C & vkE2::Send, {Blind}{Media_Next}
-vk1C & h::Send, {Blind}{Volume_Down}
-vk1C & n::Send, {Blind}{Media_Prev}
+vk1C & h::Send, {Blind}{Volume_Up}
+vk1C & sc028::Send, {Blind}{Media_Next}
+vk1C & n::Send, {Blind}{Volume_Down}
+vk1C & vkE2::Send, {Blind}{Media_Prev}
 
 
 vk1C::
