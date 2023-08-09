@@ -11,6 +11,7 @@ SetWorkingDir, %A_ScriptDir%
 
 vk1C & Tab::Send, {Blind}{vkF0}
 
+vk1C & Space::Send, {Blind}{Enter}
 
 vk1C & u::Send, {Blind}{Insert}
 
