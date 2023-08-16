@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
 
 ;-----------------------------------------------------------------------------
-; 日付入力.ahk
+; 日付・時間入力.ahk
 
 ; win+dで日付を入力
 #d::
