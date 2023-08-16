@@ -9,7 +9,9 @@ SetWorkingDir, %A_ScriptDir%
 ; .main.ahk
 ; ahkファイル全体の管理
 
-#Include *i F13.ahk
-#Include *i 変換.ahk
-#Include *i 無変換.ahk
-#Include *i temp.ahk
+; 基礎
+#Include *i 基礎/F13.ahk
+#Include *i 基礎/変換.ahk
+#Include *i 基礎/無変換.ahk
+; 拡張
+#Include *i 拡張/temp.ahk
