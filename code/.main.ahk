@@ -19,3 +19,4 @@ SetWorkingDir, %A_ScriptDir%
 #Include *i 拡張/global-quickadd.ahk
 #Include *i 拡張/日付・時間入力.ahk
 #Include *i 拡張/中ボタンでいつでも手のひらツール ver2（改）.ahk
+#Include *i 拡張/clipstudiopaint.ahk
