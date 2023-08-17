@@ -50,6 +50,7 @@ vk1D & r::Send, {Blind}{F12}
 
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
+vk1D & b::Send, {Blind}{]}
 
 
 vk1D::
