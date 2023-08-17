@@ -8,6 +8,15 @@ SetWorkingDir, %A_ScriptDir%
 ; --------------------------------------------------
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
 
+1::^@
+2::
+3::p
+4::m
 
+F1::^@
+F8::^@
+
+-::Enter
+RAlt::Enter
 
 #IfWinActive
