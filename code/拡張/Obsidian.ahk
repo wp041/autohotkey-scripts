@@ -15,3 +15,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   WinActivate,ahk_exe Obsidian.exe
   Send, ^m
 Return
+
+*^,::
+  WinActivate,ahk_exe Obsidian.exe
+  Send, ^,
+Return

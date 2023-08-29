@@ -17,7 +17,7 @@ SetWorkingDir, %A_ScriptDir%
 #Include *i 基礎/無変換.ahk
 ; 拡張
 #Include *i 拡張/.temp.ahk
-#Include *i 拡張/global-quickadd.ahk
+#Include *i 拡張/Obsidian.ahk
 #Include *i 拡張/日付・時間入力.ahk
 #Include *i 拡張/中ボタンでいつでも手のひらツール ver2（改）.ahk
 #Include *i 拡張/clipstudiopaint.ahk
