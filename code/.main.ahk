@@ -16,6 +16,7 @@ SetWorkingDir, %A_ScriptDir%
 #Include *i 基礎/変換.ahk
 #Include *i 基礎/無変換.ahk
 ; 拡張
+#Include *i 拡張/keyball.ahk
 #Include *i 拡張/.temp.ahk
 #Include *i 拡張/Obsidian.ahk
 #Include *i 拡張/日付・時間入力.ahk
