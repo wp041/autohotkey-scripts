@@ -28,6 +28,8 @@ vk1C & Enter::Send, {Blind}{Media_Next}
 vk1C & n::Send, {Blind}{Volume_Down}
 vk1C & vkE2::Send, {Blind}{Media_Prev}
 
+vk1C & Space::Send, {Blind}{Media_Play_Pause}
+
 vk1C::
   IME_SET(1)
   IME_SetConvMode(9)

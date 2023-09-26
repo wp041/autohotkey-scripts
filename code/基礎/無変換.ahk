@@ -8,8 +8,7 @@ SetWorkingDir, %A_ScriptDir%
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
-vk1D & Space::Send, {Blind}{Media_Play_Pause}
-
+vk1D & @::Send, {Blind}{BS}
 vk1D & p::Send, {Blind}{^}
 vk1D & Enter::Send, {Blind}{NumpadMult}
 vk1D & vkE2::Send, {Blind}{NumpadDiv}
