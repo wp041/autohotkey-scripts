@@ -13,10 +13,3 @@ SetWorkingDir, %A_ScriptDir%
 
 WheelDown::WheelUp
 WheelUp::WheelDown
-
-F21::Send, {Blind}{Volume_Up}
-F23::Send, {Blind}{Media_Next}
-F22::Send, {Blind}{Volume_Down}
-F24::Send, {Blind}{Media_Prev}
-
-F20::Send, {Blind}{Media_Play_Pause}
