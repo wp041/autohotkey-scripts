@@ -2,21 +2,21 @@
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
 
-;既にスクリプトが起動している状態で、同じスクリプトを実行した時に、自動で既存のスクリプトを終了する
-#SingleInstance, Force
-
 ;-----------------------------------------------------------------------------
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
-
 vk1D & Space::Send, {Blind}{Media_Play_Pause}
 
 vk1D & p::Send, {Blind}{^}
-vk1D & sc027::Send, {Blind}{:}
-vk1D & /::Send, {Blind}{vkE2}
+vk1D & Enter::Send, {Blind}{NumpadMult}
+vk1D & vkE2::Send, {Blind}{NumpadDiv}
+vk1D & -::Send, {Blind}{NumpadAdd}
+vk1D & /::Send, {Blind}{NumpadSub}
+
+vk1D & esc::Send, {Blind}{.}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
@@ -32,7 +32,6 @@ vk1D & .::Send, {Blind}{3}
 
 vk1D & vk1C::Send, {Blind}{0}
 
-
 vk1D & z::Send, {Blind}{F1}
 vk1D & x::Send, {Blind}{F2}
 vk1D & c::Send, {Blind}{F3}
@@ -46,17 +45,15 @@ vk1D & w::Send, {Blind}{F10}
 vk1D & e::Send, {Blind}{F11}
 vk1D & r::Send, {Blind}{F12}
 
-
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
-
 
 vk1D::
   IF (IME_GetConverting() != 0){
     Send, {Blind}{F7}
   }
   Else{
-  IME_SET(0)
+    IME_SET(0)
   }
-  Return
+Return
