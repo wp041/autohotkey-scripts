@@ -14,9 +14,9 @@ vk1D & Tab::Send, {Blind}{vkF0}
 
 vk1D & Space::Send, {Blind}{Media_Play_Pause}
 
-
-vk1D & p::Send, {Blind}{\}
-vk1D & /::Send, {Blind}{^}
+vk1D & p::Send, {Blind}{^}
+vk1D & sc027::Send, {Blind}{:}
+vk1D & /::Send, {Blind}{vkE2}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
