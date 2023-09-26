@@ -9,6 +9,8 @@ SetWorkingDir, %A_ScriptDir%
 ; keyball.ahk
 ; 概要：keyballのためのahk
 
+#MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
+
 WheelDown::WheelUp
 WheelUp::WheelDown
 
