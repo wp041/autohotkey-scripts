@@ -16,7 +16,7 @@ vk1C & p::Send, {Blind}{PrintScreen}
 vk1C & j::Send, {Blind}{Left}
 vk1C & k::Send, {Blind}{Down}
 vk1C & l::Send, {Blind}{Up}
-vk1C & -::Send, {Blind}{Right}
+vk1C & sc027::Send, {Blind}{Right}
 
 vk1C & m::Send, {Blind}{Home}
 vk1C & ,::Send, {Blind}{PgDn}

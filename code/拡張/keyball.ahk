@@ -13,3 +13,20 @@ SetWorkingDir, %A_ScriptDir%
 
 WheelDown::WheelUp
 WheelUp::WheelDown
+
++-::Send, _
+
+vk1D & vk1C::
+    if GetKeyState("Shift") {
+        Send, =
+        return
+    }
+    Send, {Blind}{NumpadAdd}
+Return
+vk1D & esc::Send, {Blind}{0}
+vk1D & @::Send, {Blind}{BS}
+vk1D & n::Send, {Blind}{NumpadMult}
+; vk1D & -::Send, {Blind}{NumpadAdd}
+; vk1D & /::Send, {Blind}{NumpadSub}
+
++sc027::Send, :

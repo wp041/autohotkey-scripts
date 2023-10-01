@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 ;Obsidianのquickaddショートカットをグローバルショートカットにする
 ;-------------------------------------------------
 
-; #WinActivateForce
+#WinActivateForce
 
 ; *^m::
 ;   ; WinActivate,ahk_exe Obsidian.exe
@@ -21,4 +21,16 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 ;   MouseMove, 960, 5
 ; Return
 
+; *#w::
+;     Send, {End}
+;     Send, ^c
+;     Send, ^+{Enter}
+;     Send, ^v
+;     Send, !{Up}
+;     Send, {Down}
+;     Loop, 12
+;     {
+;         Send, {BackSpace}
+;     }
+;     Send, {Enter}
 ; Return

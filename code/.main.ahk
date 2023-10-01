@@ -11,10 +11,9 @@ SetWorkingDir, %A_ScriptDir%
 ;-----------------------------------------------------------------------------
 
 ; 基礎
-#Include *i 基礎/F13.ahk
-#Include *i 基礎/F14.ahk
 #Include *i 基礎/変換.ahk
 #Include *i 基礎/無変換.ahk
+#Include *i 基礎/keyball.ahk
 ; 拡張
 #Include *i 拡張/keyball.ahk
 #Include *i 拡張/.temp.ahk
