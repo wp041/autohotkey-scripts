@@ -11,9 +11,7 @@ SetWorkingDir, %A_ScriptDir%
 
 #If IME_GET()
 
-l::Send, -
-+l::Send, ~
-
-c::Send, p
+x::Send, -
++x::Send, ~
 
 #If
