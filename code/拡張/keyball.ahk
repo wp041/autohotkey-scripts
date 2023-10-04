@@ -13,20 +13,52 @@ SetWorkingDir, %A_ScriptDir%
 
 WheelDown::WheelUp
 WheelUp::WheelDown
+WheelLeft::WheelRight
+WheelRight::WheelLeft
 
-+-::Send, _
++-::Send, ~
+
++sc027::Send, :
+
+    vk1D & Enter::Send, {Blind}{=}
+    vk1D & n::Send, {Blind}{~}
+
+vk1D & esc::
+    if GetKeyState("Shift") {
+        Send, ,
+        return
+    }
+    Send, {Blind}{.}
+Return
 
 vk1D & vk1C::
     if GetKeyState("Shift") {
-        Send, =
+        Send, {^}
         return
     }
-    Send, {Blind}{NumpadAdd}
+    Send, {Blind}{0}
 Return
-vk1D & esc::Send, {Blind}{0}
-vk1D & @::Send, {Blind}{BS}
-vk1D & n::Send, {Blind}{NumpadMult}
-; vk1D & -::Send, {Blind}{NumpadAdd}
-; vk1D & /::Send, {Blind}{NumpadSub}
 
-+sc027::Send, :
+vk1D & sc027::
+    if GetKeyState("Shift") {
+        Send, *
+        return
+    }
+    Send, {Blind}{+}
+Return
+
+vk1D & /::
+    if GetKeyState("Shift") {
+        Send, /
+        return
+    }
+    Send, {Blind}{-}
+Return
+
+vk1D & @::
+    if GetKeyState("Shift") {
+        Send, >
+        return
+    }
+    Send, {Blind}{<}
+Return
