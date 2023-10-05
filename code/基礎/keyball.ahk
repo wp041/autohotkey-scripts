@@ -9,27 +9,49 @@ SetWorkingDir, %A_ScriptDir%
 
 #UseHook
 
-F14::Send, {Blind}{Media_Play_Pause}
+F14::
+    key := "F14"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        WinActivate,ahk_exe Spotify.exe
+        Send, +!b
+        Send, !{Tab}
+        KeyWait, %key%
+        return 
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        WinActivate,ahk_exe Spotify.exe
+        Send, ^k
+        return
+    }else{ ;短押しした場合
+        Send, {Blind}{Media_Play_Pause}
+        KeyWait, %key%
+        return
+    }
+
+F15::
 
 F16::
     key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
-        Send, +^v
+        Send, ^x
         KeyWait, %key%
         return
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
-        Send,^v
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
         Send, ^c
         KeyWait, %key%
         return
+    }else{ ;短押しした場合
+        Send,^v
+        KeyWait, %key%
+        return
     }
-    +F16::Send, ^x
+
+    +F16::Send, +^v
 
 F17::
 
