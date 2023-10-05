@@ -11,38 +11,40 @@ SetWorkingDir, %A_ScriptDir%
     WheelLeft::WheelRight
     WheelRight::WheelLeft
 
-    1::
-    2::
-        3::p
-        4::m
+    RWin::RAlt
 
-        F8::^@
+    ; 1::
+    ; 2::
+    ;     3::p
+    ;     4::m
 
-        -::Enter
-        RAlt::Enter
+    ;     F8::^@
 
-    vk1D & z::
-    vk1D & x::
-    vk1D & c::
-        vk1D & v::k
-    vk1D & a::
-        vk1D & s::9
-    vk1D & d::
-        vk1D & f::@
-        vk1D & q::^+!k
-    vk1D & w::
-        vk1D & e::p
-        vk1D & r::^@
+    ;     -::Enter
+    ;     RAlt::Enter
 
-        F14::Delete
+    ; vk1D & z::
+    ; vk1D & x::
+    ; vk1D & c::
+    ;     vk1D & v::k
+    ; vk1D & a::
+    ;     vk1D & s::9
+    ; vk1D & d::
+    ;     vk1D & f::@
+    ;     vk1D & q::^+!k
+    ; vk1D & w::
+    ;     vk1D & e::p
+    ;     vk1D & r::^@
 
-        F1::Left
-        F2::Down
-        F3::Up
-        F4::Right
+    ;     F14::Delete
 
-        F14 & F1::Home
-        F14 & F2::PgDn
-        F14 & F3::PgUp
-        F14 & F4::End
+    ;     F1::Left
+    ;     F2::Down
+    ;     F3::Up
+    ;     F4::Right
+
+    ;     F14 & F1::Home
+    ;     F14 & F2::PgDn
+    ;     F14 & F3::PgUp
+    ;     F14 & F4::End
 #IfWinActive

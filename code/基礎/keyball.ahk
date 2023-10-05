@@ -7,8 +7,36 @@ SetWorkingDir, %A_ScriptDir%
 ; 概要：キーボール使用時の挙動を調整
 ; 拡張：keyball.ahkと違って、常に起動していていいもの
 
-F20::Send, {Blind}{Media_Play_Pause}
-F21::Send, {Blind}{Volume_Up}
-F22::Send, {Blind}{Volume_Down}
-F23::Send, {Blind}{Media_Next}
-F24::Send, {Blind}{Media_Prev}
+#UseHook
+
+F14::Send, {Blind}{Media_Play_Pause}
+
+F16::
+    key := "F16"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        Send, +^v
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        Send,^v
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        Send, ^c
+        KeyWait, %key%
+        return
+    }
+    +F16::Send, ^x
+
+F17::
+
+    F18::Send, ^z
+    +F18::Send, +^z
+
+    F21::Send, {Blind}{Volume_Up}
+    F22::Send, {Blind}{Volume_Down}
+    F23::Send, {Blind}{Media_Next}
+    F24::Send, {Blind}{Media_Prev}

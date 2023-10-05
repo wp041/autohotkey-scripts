@@ -16,11 +16,10 @@ WheelUp::WheelDown
 WheelLeft::WheelRight
 WheelRight::WheelLeft
 
-+-::Send, ~
-
 +sc027::Send, :
 
     vk1D & Enter::Send, {Blind}{=}
+
     vk1D & n::Send, {Blind}{~}
 
 vk1D & esc::
@@ -37,6 +36,14 @@ vk1D & vk1C::
         return
     }
     Send, {Blind}{0}
+Return
+
+vk1D & sc027::
+    if GetKeyState("Shift") {
+        Send, *
+        return
+    }
+    Send, {Blind}{+}
 Return
 
 vk1D & p::
