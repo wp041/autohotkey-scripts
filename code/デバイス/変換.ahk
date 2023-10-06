@@ -1,12 +1,5 @@
-#SingleInstance, Force
-SendMode Input
-SetWorkingDir, %A_ScriptDir%
-
-;-----------------------------------------------------------------------------
-; 変換.ahk
-; shift jisでエンコーディングしてある
-
-vk1C & Tab::Send, {Blind}{vkF0}
+; 螟画鋤.ahk
+; 螟画鋤繧ｭ繝ｼ繧堤畑縺�縺滓ｧ倥�縺ｪ蜈･蜉帙ｒ陦後≧
 
 vk1C & u::Send, {Blind}{Insert}
 vk1C & i::Send, {Blind}{BS}
@@ -28,10 +21,10 @@ vk1C & Enter::Send, {Blind}{Media_Next}
 vk1C & n::Send, {Blind}{Volume_Down}
 vk1C & vkE2::Send, {Blind}{Media_Prev}
 
-vk1C & Space::Send, {Blind}{Media_Play_Pause}
-
 vk1C::
   IME_SET(1)
   IME_SetConvMode(9)
-  my_tooltip_function(" あ ", 300)
+  ToolTip, ja
+  sleep, 300
+  ToolTip
 Return

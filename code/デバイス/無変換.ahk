@@ -1,8 +1,3 @@
-#SingleInstance, Force
-SendMode Input
-SetWorkingDir, %A_ScriptDir%
-
-;-----------------------------------------------------------------------------
 ; 無変換.ahk
 ; 概要：無変換キーを用いた様々な入力を行う
 
@@ -44,7 +39,9 @@ vk1D::
     Send, {Blind}{F7}
   }
   Else{
-    my_tooltip_function(" a ", 300)
     IME_SET(0)
+    ToolTip, en
+    sleep, 300
+    ToolTip
   }
 Return

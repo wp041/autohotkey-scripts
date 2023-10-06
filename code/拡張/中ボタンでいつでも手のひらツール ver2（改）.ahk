@@ -1,9 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
-;-----------------------------------------------------------------------------
+﻿;-----------------------------------------------------------------------------
 ; 中ボタンでいつでも手のひらツール ver2
 ; 参照：http://sysys.blog.shinobi.jp/Entry/71/
 ; 変更点
@@ -18,20 +13,20 @@ MButtonDownTime1:=0
 
 #IfWinActive ahk_class indesign
 
-;中ボタン押し下げ
-*MButton::
-    BlockInput, on
-    Send {Blind}{Alt Down}
-    Send {Blind}{Space Down}
-    Send {Blind}{LButton Down}
-    BlockInput, off
-Return
+    ;中ボタン押し下げ
+    *MButton::
+        BlockInput, on
+        Send {Blind}{Alt Down}
+        Send {Blind}{Space Down}
+        Send {Blind}{LButton Down}
+        BlockInput, off
+    Return
 
-;中ボタン押し上げ
-*MButton up::
-BlockInput, on
-    Send {Blind}{LButton Up}
-    Send {Blind}{Space Up}
-    Send {Blind}{Alt Up}
-BlockInput, off
-Return
+    ;中ボタン押し上げ
+    *MButton up::
+        BlockInput, on
+        Send {Blind}{LButton Up}
+        Send {Blind}{Space Up}
+        Send {Blind}{Alt Up}
+        BlockInput, off
+    Return

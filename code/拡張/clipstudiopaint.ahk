@@ -1,11 +1,6 @@
-#SingleInstance, Force
-SendMode Input
-SetWorkingDir, %A_ScriptDir%
-
-#UseHook
-; --------------------------------------------------
 ; CLIPStudioPaint
-; --------------------------------------------------
+#UseHook
+
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
 
     WheelLeft::WheelRight
