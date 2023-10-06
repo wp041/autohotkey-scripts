@@ -1,4 +1,4 @@
-﻿#SingleInstance, Force
+#SingleInstance, Force
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
 
@@ -21,12 +21,11 @@ Return
 ;     ToolTip 📋saved
 ; Return
 
-; 基礎
+; デバイス拡張
 #Include *i 基礎/変換.ahk
 #Include *i 基礎/無変換.ahk
-#Include *i 基礎/keyball.ahk
 #Include *i 基礎/サブルーチン.ahk
-; 拡張
+; アプリケーション拡張
 #Include *i 拡張/keyball.ahk
 #Include *i 拡張/.temp.ahk
 #Include *i 拡張/Obsidian.ahk
