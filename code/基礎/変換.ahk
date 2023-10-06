@@ -3,8 +3,8 @@ SendMode Input
 SetWorkingDir, %A_ScriptDir%
 
 ;-----------------------------------------------------------------------------
-; 変換.ahk
-; 概要：変換キーを用いた様々な入力を行う
+; �ϊ�.ahk
+; shift jis�ŃG���R�[�f�B���O���Ă���
 
 vk1C & Tab::Send, {Blind}{vkF0}
 
@@ -33,4 +33,5 @@ vk1C & Space::Send, {Blind}{Media_Play_Pause}
 vk1C::
   IME_SET(1)
   IME_SetConvMode(9)
+  my_tooltip_function(" �� ", 300)
 Return

@@ -44,6 +44,7 @@ vk1D::
     Send, {Blind}{F7}
   }
   Else{
+    my_tooltip_function(" a ", 300)
     IME_SET(0)
   }
 Return

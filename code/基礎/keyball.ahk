@@ -36,22 +36,22 @@ F16::
     key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
-        Send, ^x
+        Send, +^v
         KeyWait, %key%
         return
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
-        Send, ^c
+        Send,^v
         KeyWait, %key%
         return
     }else{ ;短押しした場合
-        Send,^v
+        Send, ^c
         KeyWait, %key%
         return
     }
 
-    +F16::Send, +^v
+    +F16::Send, ^x
 
 F17::
 
