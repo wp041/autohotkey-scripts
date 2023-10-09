@@ -9,9 +9,7 @@
 #Include *i 基礎/日付・時間入力.ahk
 
 ; デバイス
-#Include *i デバイス/変換.ahk
-#Include *i デバイス/無変換.ahk
-#Include *i デバイス/keyball.ahk
+#Include *i デバイス/nikujaga.ahk
 
 ; 拡張
 #Include *i 拡張/clipstudiopaint.ahk
