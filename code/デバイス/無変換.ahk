@@ -4,6 +4,8 @@
 vk1D & Tab::Send, {Blind}{vkF0}
 
 vk1D & Space::Send, {Blind}{Media_Play_Pause}
+vk1D & LWin::Send, {Blind}{Volume_Up}
+vk1D & LCtrl::Send, {Blind}{Volume_Down}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}

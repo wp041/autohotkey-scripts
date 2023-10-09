@@ -32,7 +32,35 @@ F14::
         return
     }
 
+F13::
+    key := "F13"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        WinActivate,ahk_exe Spotify.exe
+        Send, +!b
+        Send, !{Tab}
+        KeyWait, %key%
+        return 
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        WinActivate,ahk_exe Spotify.exe
+        Send, ^k
+        return
+    }else{ ;短押しした場合
+        Send, {Blind}{Media_Play_Pause}
+        KeyWait, %key%
+        return
+    }
+
+    #WinActivateForce
+
 F15::
+    WinActivate,ahk_exe Obsidian.exe
+    Send, ^t
+Return
+
+Return
 
 F16::
     key := "F16"
@@ -65,6 +93,15 @@ F23::Send, {Blind}{Media_Next}
 F24::Send, {Blind}{Media_Prev}
 
 ;キー配置
+
+vk1D & F13::
+    if GetKeyState("Shift") {
+        Send, {Blind}{Media_Prev}
+        return
+    }
+    Send, {Blind}{Media_Next}
+Return
+
 +sc027::Send, :
 
     vk1D & Enter::Send, {Blind}{=}
