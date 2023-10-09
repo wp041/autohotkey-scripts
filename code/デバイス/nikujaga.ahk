@@ -3,13 +3,13 @@
 vk1C::
     IME_SET(1)
     IME_SetConvMode(9)
-    Send, {Blind}{Esc} ; テスト
     ToolTip, ja
     sleep, 300
     ToolTip
 Return
 
 ;無変換
+
 vk1D::
     IF (IME_GetConverting() != 0){
         Send, {Blind}{F7}
@@ -81,6 +81,7 @@ F13::
     If(!ErrorLevel){ ;2度押しした場合
         WinActivate,ahk_exe Spotify.exe
         Send, ^k
+        KeyWait, %key%
         return
     }else{ ;短押しした場合
         Send, {Blind}{Media_Play_Pause}
@@ -88,7 +89,7 @@ F13::
         return
     }
 
-F14::
+F14::Return
 
 F15::
     key := "F15"
@@ -116,13 +117,13 @@ F16::
     key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
-        Send, ^x
+        ; Send, ^x
         KeyWait, %key%
         return
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
-        Send,^c
+        Send,^v
         KeyWait, %key%
         return
     }else{ ;短押しした場合
@@ -136,17 +137,17 @@ Return
     key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
-        Send, +^v
+        ; Send, +^v
         KeyWait, %key%
         return
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
-        Send,^v
+        Send, +^v
         KeyWait, %key%
         return
     }else{ ;短押しした場合
-        Send, ^v
+        Send, ^x
         KeyWait, %key%
         return
     }
