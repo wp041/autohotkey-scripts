@@ -3,12 +3,24 @@
 vk1C::
     IME_SET(1)
     IME_SetConvMode(9)
+    Send, {Blind}{Esc} ; テスト
     ToolTip, ja
     sleep, 300
     ToolTip
 Return
 
 ;無変換
+vk1D::
+    IF (IME_GetConverting() != 0){
+        Send, {Blind}{F7}
+    }
+    Else{
+        IME_SET(0)
+        ToolTip, en
+        sleep, 300
+        ToolTip
+    }
+Return
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
@@ -45,21 +57,8 @@ vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
 
-vk1D::
-    IF (IME_GetConverting() != 0){
-        Send, {Blind}{F7}
-    }
-    Else{
-        IME_SET(0)
-        ToolTip, en
-        sleep, 300
-        ToolTip
-    }
-Return
-
-#UseHook
-
 ; ホイール
+
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
 WheelDown::WheelUp
 WheelUp::WheelDown
@@ -67,26 +66,6 @@ WheelLeft::WheelRight
 WheelRight::WheelLeft
 
 ; ファンクションキー
-F14::
-    key := "F14"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合
-        WinActivate,ahk_exe Spotify.exe
-        Send, +!b
-        Send, !{Tab}
-        KeyWait, %key%
-        return 
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        WinActivate,ahk_exe Spotify.exe
-        Send, ^k
-        return
-    }else{ ;短押しした場合
-        Send, {Blind}{Media_Play_Pause}
-        KeyWait, %key%
-        return
-    }
 
 F13::
     key := "F13"
@@ -109,16 +88,51 @@ F13::
         return
     }
 
-    #WinActivateForce
+F14::
 
 F15::
-    WinActivate,ahk_exe Obsidian.exe
-    Send, ^t
-Return
-
+    key := "F15"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合    
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^t
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        Send,^v
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^+m
+        KeyWait, %key%
+        return
+    }
 Return
 
 F16::
+    key := "F16"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        Send, ^x
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        Send,^c
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        Send, ^c
+        KeyWait, %key%
+        return
+    }
+Return
+
++F16::
     key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
@@ -132,13 +146,11 @@ F16::
         KeyWait, %key%
         return
     }else{ ;短押しした場合
-        Send, ^c
+        Send, ^v
         KeyWait, %key%
         return
     }
 Return
-
-+F16::Send, ^x
 
 F18::Send, ^z
 +F18::Send, +^z
