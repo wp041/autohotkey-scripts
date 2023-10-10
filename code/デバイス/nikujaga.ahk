@@ -114,6 +114,10 @@ vk1D & F13::
         return
     }
 
+    LWin & Space::Send, {Blind}{Volume_Up}
+    LWin & LAlt::Send, {Blind}{Volume_Up}
+    LWin & vk1D::Send, {Blind}{Volume_Down}
+
 F14::Return
 
 F15::
