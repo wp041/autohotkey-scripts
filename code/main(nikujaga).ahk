@@ -14,5 +14,6 @@
 ; 拡張
 #Include *i 拡張/clipstudiopaint.ahk
 #Include *i 拡張/indesign.ahk
+#Include *i 拡張/illustrator.ahk
 
-; temp
+; templ

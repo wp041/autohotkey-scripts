@@ -6,7 +6,7 @@
     WheelLeft::WheelRight
     WheelRight::WheelLeft
 
-    RWin::RAlt
+    LWin::LAlt
 
     ; 1::
     ; 2::
