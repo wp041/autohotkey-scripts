@@ -1,3 +1,13 @@
+; esc
+$Esc::
+    KeyWait, Esc, T0.2
+    if ErrorLevel
+        send,!{F4}
+    else
+        send,{Esc}
+    keywait, Esc
+return
+
 ; 変換
 
 vk1C::
@@ -24,7 +34,6 @@ Return
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
-vk1D & Space::Send, {Blind}{Media_Play_Pause}
 vk1D & LWin::Send, {Blind}{Volume_Up}
 vk1D & LCtrl::Send, {Blind}{Volume_Down}
 
@@ -56,6 +65,10 @@ vk1D & r::Send, {Blind}{F12}
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
+
+; alt
+LAlt & LWin::Send, {Blind}{Media_Next}
+LAlt & LCtrl::Send, {Blind}{Media_Prev}
 
 ; ホイール
 
@@ -162,15 +175,6 @@ F23::Send, {Blind}{Media_Next}
 F24::Send, {Blind}{Media_Prev}
 
 ;キー配置
-
-vk1D & F13::
-    if GetKeyState("Shift") {
-        Send, {Blind}{Media_Prev}
-        return
-    }
-    Send, {Blind}{Media_Next}
-Return
-
 +sc027::Send, :
 
     vk1D & Enter::Send, {Blind}{=}
