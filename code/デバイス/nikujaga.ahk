@@ -32,11 +32,6 @@ vk1D::
     }
 Return
 
-vk1D & Tab::Send, {Blind}{vkF0}
-
-vk1D & LWin::Send, {Blind}{Volume_Up}
-vk1D & LCtrl::Send, {Blind}{Volume_Down}
-
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
 vk1D & o::Send, {Blind}{9}
@@ -65,10 +60,6 @@ vk1D & r::Send, {Blind}{F12}
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
-
-; alt
-LAlt & LWin::Send, {Blind}{Media_Next}
-LAlt & LCtrl::Send, {Blind}{Media_Prev}
 
 ; ホイール
 
@@ -197,23 +188,15 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-vk1D & sc027::
-    if GetKeyState("Shift") {
-        Send, *
-        return
-    }
-    Send, {Blind}{+}
-Return
-
-vk1D & p::
-    if GetKeyState("Shift") {
-        Send, *
-        return
-    }
-    Send, {Blind}{+}
-Return
-
 vk1D & /::
+    if GetKeyState("Shift") {
+        Send, *
+        return
+    }
+    Send, {Blind}{+}
+Return
+
+vk1D & sc027::
     if GetKeyState("Shift") {
         Send, /
         return
