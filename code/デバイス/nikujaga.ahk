@@ -183,6 +183,3 @@ Return
 
 F18::Send, ^z
 +F18::Send, +^z
-
-;キー配置
-+sc027::Send, :

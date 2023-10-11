@@ -5,6 +5,7 @@
 
 ; 基礎（デバイス共通）
 #Include *i 基礎/tooltip.ahk
+#Include *i 基礎/セミコロンUS化.ahk
 #Include *i 基礎/日本語入力.ahk
 #Include *i 基礎/日付・時間入力.ahk
 
