@@ -1,10 +1,12 @@
 ﻿#If IME_GET()
 
-x::Send, -
-c::Send, ~
+sc027::Send, -
+@::Send, ~
 
-sc073::Send, ?
-@::Send, +1
+; sc073::Send, +1
+; /::Send, ?
+c::Send, +1
+x::Send, ?
 
 +.::Send, ……
 

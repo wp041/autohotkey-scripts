@@ -132,7 +132,18 @@ F14::
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
-        Send,^v
+        WinActivate,ahk_exe Obsidian.exe
+        Send, {End}
+        Send, ^c
+        Send, ^v
+        Send, {BS}
+        Send, {BS}
+        Send, {BS}
+        Send, {BS}
+        Send, {Esc}
+        Send, {Esc}
+        Send, {Enter}
+        Send, !{Up}
         KeyWait, %key%
         return
     }else{ ;短押しした場合
