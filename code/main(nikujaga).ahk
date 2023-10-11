@@ -8,6 +8,7 @@
 #Include *i 基礎/セミコロンUS化.ahk
 #Include *i 基礎/日本語入力.ahk
 #Include *i 基礎/日付・時間入力.ahk
+#Include *i 基礎/変換・無変換.ahk
 
 ; デバイス
 #Include *i デバイス/nikujaga.ahk
