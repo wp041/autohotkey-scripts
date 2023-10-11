@@ -15,10 +15,8 @@ vk1C & ,::Send, {Blind}{PgDn}
 vk1C & .::Send, {Blind}{PgUp}
 vk1C & /::Send, {Blind}{End}
 
-vk1C & h::Send, {Blind}{Volume_Up}
-vk1C & Enter::Send, {Blind}{Media_Next}
-vk1C & n::Send, {Blind}{Volume_Down}
-vk1C & vkE2::Send, {Blind}{Media_Prev}
+vk1C & h::Send, {Blind}{[}
+vk1C & Enter::Send, {Blind}{]}
 
 vk1C & z::Send, {Blind}{F1}
 vk1C & x::Send, {Blind}{F2}
