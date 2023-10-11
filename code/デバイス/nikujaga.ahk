@@ -88,46 +88,6 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-; vk1D & esc::
-;     if GetKeyState("Shift") {
-;         Send, ,
-;         return
-;     }
-;     Send, {Blind}{.}
-; Return
-
-; vk1D & vk1C::
-;     if GetKeyState("Shift") {
-;         Send, {^}
-;         return
-;     }
-;     Send, {Blind}{0}
-; Return
-
-; vk1D & sc027::
-;     if GetKeyState("Shift") {
-;         Send, *
-;         return
-;     }
-;     Send, {Blind}{+}
-; Return
-
-; vk1D & /::
-;     if GetKeyState("Shift") {
-;         Send, /
-;         return
-;     }
-;     Send, {Blind}{-}
-; Return
-
-; vk1D & sc073::
-;     if GetKeyState("Shift") {
-;         Send, >
-;         return
-;     }
-;     Send, {Blind}{<}
-; Return
-
 ; LWin
 
 LWin & Space::Send, {Blind}{Volume_Up}
@@ -221,48 +181,8 @@ F14::
     }
 Return
 
-; F16::
-;     key := "F16"
-;     KeyWait, %key%, T0.3
-;     If(ErrorLevel){ ;長押しした場合
-;         ; Send, ^x
-;         KeyWait, %key%
-;         return
-;     }
-;     KeyWait, %key%, D, T0.2
-;     If(!ErrorLevel){ ;2度押しした場合
-;         Send,^v
-;         KeyWait, %key%
-;         return
-;     }else{ ;短押しした場合
-;         Send, ^c
-;         KeyWait, %key%
-;         return
-;     }
-; Return
-
-; +F16::
-;     key := "F16"
-;     KeyWait, %key%, T0.3
-;     If(ErrorLevel){ ;長押しした場合
-;         ; Send, +^v
-;         KeyWait, %key%
-;         return
-;     }
-;     KeyWait, %key%, D, T0.2
-;     If(!ErrorLevel){ ;2度押しした場合
-;         Send, +^v
-;         KeyWait, %key%
-;         return
-;     }else{ ;短押しした場合
-;         Send, ^x
-;         KeyWait, %key%
-;         return
-;     }
-; Return
-
-F16::Send, ^z
-+F16::Send, +^z
+F18::Send, ^z
++F18::Send, +^z
 
 ;キー配置
 +sc027::Send, :
