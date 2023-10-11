@@ -1,4 +1,4 @@
-;Sportify fav
+﻿;Sportify fav
 ;Obsidianのquickaddショートカットをグローバルショートカットにする
 
 #WinActivateForce

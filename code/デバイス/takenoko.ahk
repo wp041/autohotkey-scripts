@@ -1,4 +1,4 @@
-; 変換
+﻿; 変換
 
 vk1C & u::Send, {Blind}{Insert}
 vk1C & i::Send, {Blind}{BS}
@@ -29,6 +29,18 @@ vk1C::
 Return
 
 ;無変換
+
+vk1D::
+    IF (IME_GetConverting() != 0){
+        Send, {Blind}{F7}
+    }
+    Else{
+        IME_SET(0)
+        ToolTip, en
+        sleep, 300
+        ToolTip
+    }
+Return
 
 vk1D & Tab::Send, {Blind}{vkF0}
 
@@ -65,18 +77,70 @@ vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
 
-vk1D::
-    IF (IME_GetConverting() != 0){
-        Send, {Blind}{F7}
-    }
-    Else{
-        IME_SET(0)
-        ToolTip, en
-        sleep, 300
-        ToolTip
-    }
-Return
-
 ; F13
 
 F13::Esc
+
+;キー配置
+
+vk1D & F13::
+    if GetKeyState("Shift") {
+        Send, {Blind}{Media_Prev}
+        return
+    }
+    Send, {Blind}{Media_Next}
+Return
+
++sc027::Send, :
+
+    vk1D & Enter::Send, {Blind}{=}
+
+    vk1D & n::Send, {Blind}{~}
+
+vk1D & esc::
+    if GetKeyState("Shift") {
+        Send, ,
+        return
+    }
+    Send, {Blind}{.}
+Return
+
+vk1D & vk1C::
+    if GetKeyState("Shift") {
+        Send, {^}
+        return
+    }
+    Send, {Blind}{0}
+Return
+
+vk1D & sc027::
+    if GetKeyState("Shift") {
+        Send, *
+        return
+    }
+    Send, {Blind}{+}
+Return
+
+vk1D & p::
+    if GetKeyState("Shift") {
+        Send, *
+        return
+    }
+    Send, {Blind}{+}
+Return
+
+vk1D & /::
+    if GetKeyState("Shift") {
+        Send, /
+        return
+    }
+    Send, {Blind}{-}
+Return
+
+vk1D & sc073::
+    if GetKeyState("Shift") {
+        Send, >
+        return
+    }
+    Send, {Blind}{<}
+Return

@@ -1,4 +1,4 @@
-; esc
+﻿; esc
 $Esc::
     KeyWait, Esc, T0.2
     if ErrorLevel

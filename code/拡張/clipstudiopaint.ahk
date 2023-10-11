@@ -1,4 +1,4 @@
-; CLIPStudioPaint
+﻿; CLIPStudioPaint
 #UseHook
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
