@@ -79,7 +79,24 @@ vk1D & b::Send, {Blind}{]}
 
 ; F13
 
-F13::Esc
+F13::
+    key := "F13"
+    KeyWait, %key%, T0.15
+    If(ErrorLevel){ ;長押しした場合
+        Send, !{F4}
+        KeyWait, %key%
+        return 
+    }
+    KeyWait, %key%, D, T0.1
+    If(!ErrorLevel){ ;2度押しした場合
+        Send, {Blind}{Esc}
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        Send, {Blind}{Esc}
+        KeyWait, %key%
+        return
+    }
 
 ;キー配置
 
