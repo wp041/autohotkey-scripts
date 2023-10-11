@@ -5,8 +5,8 @@
 
 ; sc073::Send, +1
 ; /::Send, ?
-c::Send, -
-x::Send, ~ 
+c::Send, ~
+x::Send, -
 
 +.::Send, ……
 

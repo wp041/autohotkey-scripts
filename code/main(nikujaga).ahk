@@ -16,4 +16,4 @@
 #Include *i 拡張/indesign.ahk
 #Include *i 拡張/illustrator.ahk
 
-; templ
+; temp
