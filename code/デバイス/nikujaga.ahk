@@ -58,8 +58,75 @@ vk1D & e::Send, {Blind}{F11}
 vk1D & r::Send, {Blind}{F12}
 
 vk1D & g::Send, {Blind}{[}
-vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
+
+vk1D & h::Send, {Blind}{+}
+vk1D & n::Send, {Blind}{-}
+vk1D & sc027::Send, *
+vk1D & /::Send, /
+
+vk1D & p::Send, <
+vk1D & @::Send, >
+
+vk1D & Enter::Send, {Blind}{=}
+
+vk1D & sc073::Send, {Blind}{~}
+
+vk1D & esc::
+    if GetKeyState("Shift") {
+        Send, ,
+        return
+    }
+    Send, {Blind}{.}
+Return
+
+vk1D & vk1C::
+    if GetKeyState("Shift") {
+        Send, {^}
+        return
+    }
+    Send, {Blind}{0}
+Return
+
+; vk1D & esc::
+;     if GetKeyState("Shift") {
+;         Send, ,
+;         return
+;     }
+;     Send, {Blind}{.}
+; Return
+
+; vk1D & vk1C::
+;     if GetKeyState("Shift") {
+;         Send, {^}
+;         return
+;     }
+;     Send, {Blind}{0}
+; Return
+
+; vk1D & sc027::
+;     if GetKeyState("Shift") {
+;         Send, *
+;         return
+;     }
+;     Send, {Blind}{+}
+; Return
+
+; vk1D & /::
+;     if GetKeyState("Shift") {
+;         Send, /
+;         return
+;     }
+;     Send, {Blind}{-}
+; Return
+
+; vk1D & sc073::
+;     if GetKeyState("Shift") {
+;         Send, >
+;         return
+;     }
+;     Send, {Blind}{<}
+; Return
 
 ; LWin
 
@@ -199,47 +266,3 @@ F16::Send, ^z
 
 ;キー配置
 +sc027::Send, :
-
-    vk1D & Enter::Send, {Blind}{=}
-
-    vk1D & n::Send, {Blind}{~}
-
-vk1D & esc::
-    if GetKeyState("Shift") {
-        Send, ,
-        return
-    }
-    Send, {Blind}{.}
-Return
-
-vk1D & vk1C::
-    if GetKeyState("Shift") {
-        Send, {^}
-        return
-    }
-    Send, {Blind}{0}
-Return
-
-vk1D & sc027::
-    if GetKeyState("Shift") {
-        Send, *
-        return
-    }
-    Send, {Blind}{+}
-Return
-
-vk1D & /::
-    if GetKeyState("Shift") {
-        Send, /
-        return
-    }
-    Send, {Blind}{-}
-Return
-
-vk1D & sc073::
-    if GetKeyState("Shift") {
-        Send, >
-        return
-    }
-    Send, {Blind}{<}
-Return
