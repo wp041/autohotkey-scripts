@@ -12,4 +12,7 @@ x::Send, -
 
 q::Send, っ
 
+vk1D & g::Send, {Blind}{[}
+vk1D & b::Send, {Blind}{]}
+
 #If

@@ -34,22 +34,6 @@ vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
-vk1D & z::Send, {Blind}{F1}
-vk1D & x::Send, {Blind}{F2}
-vk1D & c::Send, {Blind}{F3}
-vk1D & v::Send, {Blind}{F4}
-vk1D & a::Send, {Blind}{F5}
-vk1D & s::Send, {Blind}{F6}
-vk1D & d::Send, {Blind}{F7}
-vk1D & f::Send, {Blind}{F8}
-vk1D & q::Send, {Blind}{F9}
-vk1D & w::Send, {Blind}{F10}
-vk1D & e::Send, {Blind}{F11}
-vk1D & r::Send, {Blind}{F12}
-
-vk1D & g::Send, {Blind}{[}
-vk1D & b::Send, {Blind}{]}
-
 vk1D & h::Send, {Blind}{+}
 vk1D & n::Send, {Blind}{-}
 vk1D & sc027::Send, *
