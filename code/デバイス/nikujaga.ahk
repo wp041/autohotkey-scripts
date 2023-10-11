@@ -220,7 +220,7 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-vk1D & /::
+vk1D & sc027::
     if GetKeyState("Shift") {
         Send, *
         return
@@ -228,7 +228,7 @@ vk1D & /::
     Send, {Blind}{+}
 Return
 
-vk1D & sc027::
+vk1D & /::
     if GetKeyState("Shift") {
         Send, /
         return
