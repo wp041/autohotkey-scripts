@@ -61,6 +61,13 @@ vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 vk1D & b::Send, {Blind}{]}
 
+; LWin
+
+LWin & Space::Send, {Blind}{Volume_Up}
+LWin & LAlt::Send, {Blind}{Volume_Up}
+LWin & vk1D::Send, {Blind}{Volume_Down}
+LWin & F13::Send, {Blind}{Volume_Mute}
+
 ; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
@@ -114,14 +121,8 @@ vk1D & F13::
         return
     }
 
-    LWin & Space::Send, {Blind}{Volume_Up}
-    LWin & LAlt::Send, {Blind}{Volume_Up}
-    LWin & vk1D::Send, {Blind}{Volume_Down}
-
-F14::Return
-
-F15::
-    key := "F15"
+F14::
+    key := "F14"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         WinActivate,ahk_exe Obsidian.exe
@@ -142,53 +143,48 @@ F15::
     }
 Return
 
-F16::
-    key := "F16"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合
-        ; Send, ^x
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        Send,^v
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        Send, ^c
-        KeyWait, %key%
-        return
-    }
-Return
+; F16::
+;     key := "F16"
+;     KeyWait, %key%, T0.3
+;     If(ErrorLevel){ ;長押しした場合
+;         ; Send, ^x
+;         KeyWait, %key%
+;         return
+;     }
+;     KeyWait, %key%, D, T0.2
+;     If(!ErrorLevel){ ;2度押しした場合
+;         Send,^v
+;         KeyWait, %key%
+;         return
+;     }else{ ;短押しした場合
+;         Send, ^c
+;         KeyWait, %key%
+;         return
+;     }
+; Return
 
-+F16::
-    key := "F16"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合
-        ; Send, +^v
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        Send, +^v
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        Send, ^x
-        KeyWait, %key%
-        return
-    }
-Return
+; +F16::
+;     key := "F16"
+;     KeyWait, %key%, T0.3
+;     If(ErrorLevel){ ;長押しした場合
+;         ; Send, +^v
+;         KeyWait, %key%
+;         return
+;     }
+;     KeyWait, %key%, D, T0.2
+;     If(!ErrorLevel){ ;2度押しした場合
+;         Send, +^v
+;         KeyWait, %key%
+;         return
+;     }else{ ;短押しした場合
+;         Send, ^x
+;         KeyWait, %key%
+;         return
+;     }
+; Return
 
-F18::Send, ^z
-+F18::Send, +^z
-
-F21::Send, {Blind}{Volume_Up}
-F22::Send, {Blind}{Volume_Down}
-F23::Send, {Blind}{Media_Next}
-F24::Send, {Blind}{Media_Prev}
+F16::Send, ^z
++F16::Send, +^z
 
 ;キー配置
 +sc027::Send, :
