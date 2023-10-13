@@ -40,6 +40,8 @@ F13::
         return
     }
 
+F14::Return
+
 F15::
     key := "F15"
     KeyWait, %key%, T0.3
