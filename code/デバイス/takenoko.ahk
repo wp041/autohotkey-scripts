@@ -43,7 +43,7 @@ vk1D & LCtrl::Send, {Blind}{Volume_Down}
 
 F13::
     key := "F13"
-    KeyWait, %key%, T0.15
+    KeyWait, %key%, T0.4
     If(ErrorLevel){ ;長押しした場合
         Send, !{F4}
         KeyWait, %key%
