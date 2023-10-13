@@ -15,12 +15,7 @@
 #Include *i デバイス/takenoko.ahk
 
 ; 拡張
-#Include *i 拡張/chrome.ahk
-#Include *i 拡張/clipstudiopaint.ahk
-#Include *i 拡張/illustrator.ahk
 #Include *i 拡張/indesign.ahk
-#Include *i 拡張/obsidian.ahk
-#Include *i 拡張/spotify.ahk
 #Include *i 拡張/ソフトウェア固有.ahk
 
 ; temp
