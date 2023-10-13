@@ -67,9 +67,29 @@ vk1D & F13::
         KeyWait, %key%
         return
     }
+Return
 
-F14::
-    key := "F14"
+F15::
+    key := "F15"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合    
+        Send, #.
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        Send, #v
+        KeyWait, %key%
+        return
+    }
+Return
+
+F16::
+    key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         WinActivate,ahk_exe Obsidian.exe
@@ -79,18 +99,6 @@ F14::
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, {End}
-        Send, ^c
-        Send, ^v
-        Send, {BS}
-        Send, {BS}
-        Send, {BS}
-        Send, {BS}
-        Send, {Esc}
-        Send, {Esc}
-        Send, {Enter}
-        Send, !{Up}
         KeyWait, %key%
         return
     }else{ ;短押しした場合
@@ -100,6 +108,3 @@ F14::
         return
     }
 Return
-
-F18::Send, ^z
-+F18::Send, +^z
