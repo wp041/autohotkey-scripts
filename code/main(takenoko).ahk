@@ -18,5 +18,6 @@
 #Include *i 拡張/clipstudiopaint.ahk
 #Include *i 拡張/spotify.ahk
 #Include *i 拡張/中ボタンでいつでも手のひらツール ver2（改）.ahk
+#Include *i 拡張/chrome.ahk
 
 ; temp

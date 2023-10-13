@@ -10,25 +10,22 @@ vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
-vk1D & h::Send, {Blind}{+}
-vk1D & n::Send, {Blind}{-}
-vk1D & sc027::Send, *
-vk1D & /::Send, /
+vk1D & sc027::Send, {Blind}{+}
+vk1D & p::Send, {Blind}{-}
+vk1D & 8::Send, {Blind}{/}
+vk1D & 9::Send, {Blind}{*}
+vk1D & /::Send, {Blind}{=}
 
-vk1D & p::Send, <
-vk1D & @::Send, >
+vk1D & [::Send, <
+vk1D & ]::Send, >
 
 vk1D & Enter::Send, {Blind}{=}
 
-vk1D & sc073::Send, {Blind}{~}
+vk1D & esc::Send, {Blind}{.}
 
-vk1D & esc::
-    if GetKeyState("Shift") {
-        Send, ,
-        return
-    }
-    Send, {Blind}{.}
-Return
+vk1D & n::Send, ,
+
+vk1D & h::Send, {Blind}{~}
 
 vk1D & vk1C::
     if GetKeyState("Shift") {

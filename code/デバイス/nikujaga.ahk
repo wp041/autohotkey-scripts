@@ -75,6 +75,7 @@ F16::
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
+        Run,notepad.exe
         KeyWait, %key%
         return
     }else{ ;短押しした場合

@@ -5,14 +5,12 @@
 
 ; sc073::Send, +1
 ; /::Send, ?
-c::Send, ~
 x::Send, -
+sc027::Send, -
+c::Send, ~
 
-+.::Send, ……
++.::Send, …
 
 q::Send, っ
-
-vk1D & g::Send, {Blind}{[}
-vk1D & b::Send, {Blind}{]}
 
 #If
