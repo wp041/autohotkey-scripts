@@ -41,8 +41,6 @@ vk1D & b::
     keywait, %key%
 return
 
-vk1D & Space::send, {Media_Play_Pause}
-
 vk1D & d::send, ^{Tab}
 vk1D & s::send, ^+{Tab}
 vk1D & f::send, ^y
