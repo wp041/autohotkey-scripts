@@ -21,3 +21,29 @@ vk1D::
         ToolTip
     }
 Return
+
+vk1D & g::
+    key := "g"
+    KeyWait, %key%, T0.2
+    if ErrorLevel
+        send, {Media_Next}
+    else
+        send, {Volume_Up}
+    keywait, %key%
+return
+vk1D & b::
+    key := "b"
+    KeyWait, %key%, T0.2
+    if ErrorLevel
+        send, {Media_Prev}
+    else
+        send, {Volume_Down}
+    keywait, %key%
+return
+
+vk1D & Space::send, {Media_Play_Pause}
+
+vk1D & d::send, ^{Tab}
+vk1D & s::send, ^+{Tab}
+vk1D & f::send, ^y
+vk1D & a::send, ^z
