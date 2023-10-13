@@ -8,13 +8,6 @@ $Esc::
     keywait, Esc
 return
 
-; LWin
-
-LWin & Space::Send, {Blind}{Volume_Up}
-LWin & LAlt::Send, {Blind}{Volume_Up}
-LWin & vk1D::Send, {Blind}{Volume_Down}
-LWin & F13::Send, {Blind}{Volume_Mute}
-
 ; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
