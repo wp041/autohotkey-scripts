@@ -46,4 +46,25 @@ vk1D & s::send, ^+{Tab}
 vk1D & f::send, ^+z
 vk1D & a::send, ^z
 
-vk1D & Tab::send, {Media_Play_Pause}
+vk1D & Tab::
+    key := "Tab"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        WinActivate,ahk_exe Spotify.exe
+        Send, +!b
+        Send, !{Tab}
+        KeyWait, %key%
+        return 
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        WinActivate,ahk_exe Spotify.exe
+        Send, ^k
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        Send, {Blind}{Media_Play_Pause}
+        KeyWait, %key%
+        return
+    }
+Return

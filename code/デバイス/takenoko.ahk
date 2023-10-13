@@ -15,9 +15,6 @@ vk1C & ,::Send, {Blind}{PgDn}
 vk1C & .::Send, {Blind}{PgUp}
 vk1C & /::Send, {Blind}{End}
 
-vk1C & h::Send, {Blind}{[}
-vk1C & Enter::Send, {Blind}{]}
-
 vk1C & z::Send, {Blind}{F1}
 vk1C & x::Send, {Blind}{F2}
 vk1C & c::Send, {Blind}{F3}
@@ -30,14 +27,6 @@ vk1C & q::Send, {Blind}{F9}
 vk1C & w::Send, {Blind}{F10}
 vk1C & e::Send, {Blind}{F11}
 vk1C & r::Send, {Blind}{F12}
-
-;無変換
-
-vk1D & Tab::Send, {Blind}{vkF0}
-
-vk1D & Space::Send, {Blind}{Media_Play_Pause}
-vk1D & LWin::Send, {Blind}{Volume_Up}
-vk1D & LCtrl::Send, {Blind}{Volume_Down}
 
 ; F13
 
@@ -59,13 +48,4 @@ F13::
         KeyWait, %key%
         return
     }
-
-    ;キー配置
-
-vk1D & F13::
-    if GetKeyState("Shift") {
-        Send, {Blind}{Media_Prev}
-        return
-    }
-    Send, {Blind}{Media_Next}
 Return
