@@ -39,6 +39,9 @@ F13::
         KeyWait, %key%
         return
     }
+Return
+
+vk1D & F13::send, {Volume_Mute}
 
 F14::Return
 
