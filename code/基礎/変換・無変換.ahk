@@ -43,8 +43,6 @@ return
 
 vk1D & d::send, ^{Tab}
 vk1D & s::send, ^+{Tab}
-vk1D & f::send, ^+z
-vk1D & a::send, ^z
 
 vk1D & Tab::
     key := "Tab"
