@@ -18,29 +18,29 @@ c::Send, っ
 l::Send, p ;cにするとぺが打ちづらい
 
 ; a
-~z & sc027::Send, a
-~q & sc027::Send, a
+~z & s::Send, a
 
 ; i
-~k & sc027::Send, i
+~k & l::Send, i
 
 ; u
-~n & sc027::Send, u
-~m & sc027::Send, u
-~h & sc027::Send, u
-~y & sc027::Send, u
-~j & sc027::Send, u
-~x & sc027::Send, u
+~n & k::Send, u
+~m & k::Send, u
+~h & k::Send, u
+~y & k::Send, u
+~j & k::Send, u
 
 ; e
-~d & sc027::Send, e
+~d & s::Send, e
 
 ; o
 ~l & sc027::Send, o
 
-;y
-x & m::Send, my
-x & h::Send, hy
-x & n::Send, ny
+; y
+~n & s::Send, y
+~m & s::Send, y
+~h & s::Send, y
+
+~s & k::Send, u
 
 #If
