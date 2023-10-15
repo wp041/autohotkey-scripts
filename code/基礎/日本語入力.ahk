@@ -17,31 +17,40 @@ Return
 c::Send, っ
 l::Send, p ;cにするとぺが打ちづらい
 
-; ん
-; ~n & sc027::Send, n
-
-; ざ
+; a
 ~z & sc027::Send, a
+~q & sc027::Send, a
 
-; き
+; i
 ~k & sc027::Send, i
 
-; ぬ
+; u
 ~n & sc027::Send, u
-
-; ふ
-~h & sc027::Send, u
-
-; む
 ~m & sc027::Send, u
-
-; ゆ
+~h & sc027::Send, u
 ~y & sc027::Send, u
+~j & sc027::Send, u
 
-; で
+; e
 ~d & sc027::Send, e
 
-; ぽ
-~p & sc027::Send, ぽ
+; o
+~l & sc027::Send, o
+
+;y
+~h & l::
+Send, y
+Send, u
+Return
+
+~n & l::
+Send, y
+Send, u
+Return
+
+~m & l::
+Send, y
+Send, u
+Return
 
 #If
