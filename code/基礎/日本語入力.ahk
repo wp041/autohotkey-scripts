@@ -32,6 +32,7 @@ l::Send, p ;cにするとぺが打ちづらい
 
 ; e
 ~d & s::Send, e
+~d & f::Send, e
 
 ; o
 ~l & sc027::Send, o
@@ -41,6 +42,11 @@ l::Send, p ;cにするとぺが打ちづらい
 ~m & s::Send, y
 ~h & s::Send, y
 
+; s
 ~s & k::Send, u
+~s & n::
+    Send, {BS}
+    Send, ん
+Return
 
 #If
