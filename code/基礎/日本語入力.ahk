@@ -30,6 +30,7 @@ l::Send, p ;cにするとぺが打ちづらい
 ~h & sc027::Send, u
 ~y & sc027::Send, u
 ~j & sc027::Send, u
+~x & sc027::Send, u
 
 ; e
 ~d & sc027::Send, e
@@ -38,19 +39,8 @@ l::Send, p ;cにするとぺが打ちづらい
 ~l & sc027::Send, o
 
 ;y
-~h & l::
-Send, y
-Send, u
-Return
-
-~n & l::
-Send, y
-Send, u
-Return
-
-~m & l::
-Send, y
-Send, u
-Return
+x & m::Send, my
+x & h::Send, hy
+x & n::Send, ny
 
 #If
