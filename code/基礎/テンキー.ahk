@@ -21,9 +21,9 @@ vk1D & ]::Send, >
 
 vk1D & esc::Send, {Blind}{.}
 
-vk1D & n::Send, ,
+vk1D & AppsKey::Send, ,
 
-vk1D & h::Send, {Blind}{~}
+vk1D & n::Send, {Blind}{~}
 
 vk1D & vk1C::
     if GetKeyState("Shift") {
