@@ -22,3 +22,8 @@ AHKのスクリプト
 ; temp
 
 ```
+
+change key対象
+- capslock→lalt
+- KANA→F13
+- LWIN→F20

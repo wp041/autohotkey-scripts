@@ -16,7 +16,6 @@
     vk1D & s::send, !{Left}
     vk1D & a::send, ^+{Tab}
 
-    vk1D & t::send, ^+{t}
     vk1D & w::
         Send, {End}
         Send, ^c
