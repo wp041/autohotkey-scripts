@@ -16,5 +16,3 @@
 
 ; 拡張
 #Include *i 拡張/indesign.ahk
-
-; temp
