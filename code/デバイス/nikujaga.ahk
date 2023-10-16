@@ -22,8 +22,6 @@ WheelRight::WheelLeft
 
 ~LCtrl & WheelLeft::AltTab
 ~LCtrl & WheelRight::ShiftAltTab
-; ~LCtrl & WheelUp::Send, ^{Tab}
-; ~LCtrl & WheelDown::Send, ^+{Tab}
 
 ; ファンクションキー
 

@@ -1,10 +1,9 @@
-﻿; 日付・時間入力.ahk
-
-; win+dで日付を入力
+﻿; win+dで日付を入力
 #d::
   FormatTime,TimeString,,yyyy-MM-dd
   Send,%TimeString%
 Return
+
 ; win+shift+d
 #+d::
   FormatTime,TimeString,,M-d

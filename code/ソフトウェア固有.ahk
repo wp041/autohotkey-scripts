@@ -11,6 +11,12 @@
 #IfWinActive
 
 #IFWinActive ahk_exe Obsidian.exe
+    vk1D & f::send, ^{Tab}
+    vk1D & d::send, !{Right}
+    vk1D & s::send, !{Left}
+    vk1D & a::send, ^+{Tab}
+
+    vk1D & t::send, ^+{t}
     vk1D & w::
         Send, {End}
         Send, ^c
@@ -35,10 +41,10 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-    vk1D & c::send, !{Right}
-    vk1D & x::send, !{Left}
-    vk1D & d::send, ^{Tab}
-    vk1D & s::send, ^+{Tab}
-    vk1D & a::send, {Blind}{[}
-    vk1D & f::send, {Blind}{]}
+    vk1D & f::send, ^{Tab}
+    vk1D & d::send, !{Right}
+    vk1D & s::send, !{Left}
+    vk1D & a::send, ^+{Tab}
+
+    vk1D & w::send, ^+{t}
 #IfWinActive
