@@ -10,13 +10,55 @@
 #IFWinActive ahk_exe Spotify.exe
 #IfWinActive
 
+#IfWinActive, ahk_exe Illustrator.exe
+#IfWinActive
+
+#IfWinActive, ahk_exe CLIPStudioPaint.exe
+    WheelLeft::WheelRight
+    WheelRight::WheelLeft
+#IfWinActive
+
+#IfWinActive, ahk_exe chrome.exe
+    vk1D & f::send, ^{Tab}
+    vk1D & d::send, !{Right}
+    vk1D & s::send, !{Left}
+    vk1D & a::send, ^+{Tab}
+
+    vk1D & q::send, {Home}
+    vk1D & z::send, {End}
+
+    vk1D & c::
+        send, {F6}
+        send, ^{c}
+    Return
+
+    vk1D & w::send, ^+{t}
+#IfWinActive
+
+#IfWinActive, ahk_exe explorer.exe
+    vk1D & f::send, ^{Tab}
+    vk1D & d::send, !{Right}
+    vk1D & s::send, !{Left}
+    vk1D & x::send, !{Up}
+    vk1D & a::send, ^+{Tab}
+    vk1D & r::send, {F5}
+    vk1D & e::send, +^{n}
+    vk1D & c::
+        send, !{d}
+        send, {cmd}
+        send, {Enter}
+    Return
+#IfWinActive
+
 #IFWinActive ahk_exe Obsidian.exe
     vk1D & f::send, ^{Tab}
     vk1D & d::send, !{Right}
     vk1D & s::send, !{Left}
     vk1D & a::send, ^+{Tab}
 
-    vk1D & w::
+    vk1D & w::send, ^+{t}
+
+    vk1D & v::
         Send, {End}
         Send, ^c
         Send, ^v
@@ -31,19 +73,11 @@
     Return
 #IfWinActive
 
-#IfWinActive, ahk_exe Illustrator.exe
-#IfWinActive
+#IfWinActive, ahk_exe Code.exe
+    vk1D & f::send, ^{PgDn}
+    vk1D & a::send, ^{PgUp}
 
-#IfWinActive, ahk_exe CLIPStudioPaint.exe
-    WheelLeft::WheelRight
-    WheelRight::WheelLeft
-#IfWinActive
-
-#IfWinActive, ahk_exe chrome.exe
-    vk1D & f::send, ^{Tab}
-    vk1D & d::send, !{Right}
-    vk1D & s::send, !{Left}
-    vk1D & a::send, ^+{Tab}
+    vk1D & e::send, +!{r}
 
     vk1D & w::send, ^+{t}
 #IfWinActive
