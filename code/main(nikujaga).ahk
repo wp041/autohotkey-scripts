@@ -13,3 +13,4 @@
 
 ; 拡張
 #Include *i 拡張/indesign.ahk
+#Include *i 拡張/ソフトウェア固有.ahk
