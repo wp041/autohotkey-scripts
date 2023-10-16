@@ -21,7 +21,7 @@ vk1D & y::Send, {Blind}{]}
 
 vk1D & esc::Send, {Blind}{.}
 
-vk1D & AppsKey::Send, ,
+vk1D & Tab::Send, ,
 
 vk1D & n::Send, {Blind}{~}
 
