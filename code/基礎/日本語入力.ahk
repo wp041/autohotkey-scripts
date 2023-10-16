@@ -8,11 +8,11 @@
 sc027::Send, -
 @::Send, ~
 
-Ctrl & Enter::
-    Send, {Tab}
-    Sleep, 10
-    Send, {Enter}
-Return
+; Ctrl & Enter::
+;     Send, {Tab}
+;     Sleep, 10
+;     Send, {Enter}
+; Return
 
 c::Send, っ
 l::Send, p ;cにするとぺが打ちづらい

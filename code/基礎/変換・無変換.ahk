@@ -46,8 +46,8 @@ vk1D & s::send, ^+{Tab}
 ; vk1D & a::send, ^z
 ; vk1D & f::send, ^+z
 
-vk1D & Tab::
-    key := "Tab"
+vk1D & LWin::
+    key := "LWin"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe
