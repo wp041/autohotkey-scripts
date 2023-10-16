@@ -41,11 +41,6 @@ vk1D & b::
     keywait, %key%
 return
 
-vk1D & d::send, ^{Tab}
-vk1D & s::send, ^+{Tab}
-; vk1D & a::send, ^z
-; vk1D & f::send, ^+z
-
 vk1D & LWin::
     key := "LWin"
     KeyWait, %key%, T0.3

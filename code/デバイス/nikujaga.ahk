@@ -8,10 +8,6 @@ $Esc::
     keywait, Esc
 return
 
-; alt
-LControl & LWin::LAlt
-LWin & LControl::LAlt
-
 ; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避

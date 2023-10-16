@@ -37,4 +37,8 @@
 #IfWinActive, ahk_exe chrome.exe
     vk1D & c::send, !{Right}
     vk1D & x::send, !{Left}
+    vk1D & d::send, ^{Tab}
+    vk1D & s::send, ^+{Tab}
+    vk1D & a::send, {Blind}{[}
+    vk1D & f::send, {Blind}{]}
 #IfWinActive
