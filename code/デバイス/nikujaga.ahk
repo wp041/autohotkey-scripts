@@ -1,4 +1,8 @@
-﻿; esc
+﻿;F20
+
+F20::LWin
+
+; esc
 $Esc::
     KeyWait, Esc, T0.2
     if ErrorLevel

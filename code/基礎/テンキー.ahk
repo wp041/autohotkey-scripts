@@ -16,8 +16,8 @@ vk1D & 8::Send, {Blind}{/}
 vk1D & 9::Send, {Blind}{*}
 vk1D & /::Send, {Blind}{=}
 
-vk1D & [::Send, <
-vk1D & ]::Send, >
+vk1D & t::Send, {Blind}{[}
+vk1D & y::Send, {Blind}{]}
 
 vk1D & esc::Send, {Blind}{.}
 
