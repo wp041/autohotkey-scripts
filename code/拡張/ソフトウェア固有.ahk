@@ -27,12 +27,13 @@
     vk1D & q::send, {Home}
     vk1D & z::send, {End}
 
+    vk1D & w::send, ^+{t}
+    vk1D & e::send, {F11}
+
     vk1D & c::
         send, {F6}
         send, ^{c}
     Return
-
-    vk1D & w::send, ^+{t}
 #IfWinActive
 
 #IfWinActive, ahk_exe explorer.exe
