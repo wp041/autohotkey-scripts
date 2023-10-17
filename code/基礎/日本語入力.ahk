@@ -1,19 +1,5 @@
 ﻿#If IME_GET() ; IMEがオンの時に実行
 
-; cf. https://gist.github.com/toriwasa/64fc9e1a8cce620b8ff92f0ae38075f7
-$Ctrl::
-    startTime := A_TickCount
-    KeyWait, Ctrl
-    keyPressDuration := A_TickCount - startTime
-    ; Ctrlを押している間に他のホットキーが発動した場合は入力しない
-    ; Ctrlを長押ししていた場合も入力しない
-    If (A_ThisHotkey == "$Ctrl" and keyPressDuration < 100) {
-        Send,{Tab}
-        Sleep, 10
-        Send,{Enter}
-    }
-Return
-
 sc027::Send, -
 @::Send, ~
 
