@@ -1,5 +1,18 @@
 ﻿#If IME_GET()
 
+$Ctrl::
+    startTime := A_TickCount
+    KeyWait, Ctrl
+    keyPressDuration := A_TickCount - startTime
+    ; Ctrlを押している間に他のホットキーが発動した場合は入力しない
+    ; Ctrlを長押ししていた場合も入力しない
+    If (A_ThisHotkey == "$Ctrl" and keyPressDuration < 100) {
+        Send,{Tab}
+        Sleep, 10
+        Send,{Enter}
+    }
+Return
+
 sc027::Send, -
 @::Send, ~
 
