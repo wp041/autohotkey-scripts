@@ -1,15 +1,25 @@
 ﻿; 日付、時間入力
 #d::
   FormatTime,TimeString,,yyyy-MM-dd
-  Send,%TimeString%
+  backup := ClipboardAll
+  Clipboard := % TimeString
+  Send,^v
+  sleep,100
+  Clipboard := backup
 Return
 #+d::
   FormatTime,TimeString,,M-d
-  Send,%TimeString%
+  Clipboard := % TimeString
+  Send,^v
+  sleep,100
+  Clipboard := backup
 Return
 #t::
   FormatTime,TimeString,,HH:mm
-  Send,%TimeString%
+  Clipboard := % TimeString
+  Send,^v
+  sleep,100
+  Clipboard := backup
 Return
 
 ; リロード
