@@ -1,4 +1,4 @@
-﻿#If IME_GET()
+﻿#If A_CaretX != "" && IME_GET() ; キャレットが表示されておらず、IMEがオンの時に実行
 
 $Ctrl::
     startTime := A_TickCount
