@@ -15,4 +15,4 @@ CheckActiveWindow:
         ToolTip
     }
     newtitle := oldtitle
-return
+return 
