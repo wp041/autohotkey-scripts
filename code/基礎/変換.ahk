@@ -1,11 +1,21 @@
 ﻿; 変換
 
+; 変換を修飾キーとして扱うための準備
+; 変換を押し続けている限りリピートせず待機
 vk1C::
     IME_SET(1)
     IME_SetConvMode(9)
     ToolTip, ●ja
     sleep, 300
     ToolTip
+    startTime := A_TickCount
+    KeyWait, vk1C
+    keyPressDuration := A_TickCount - startTime
+    ; 変換を押している間に他のホットキーが発動した場合は入力しない
+    ; 変換を長押ししていた場合も入力しない
+    If (A_ThisHotkey == "$vk1C" and keyPressDuration < 200) {
+        Send,{vk1C}
+    }
 Return
 
 ~vk1C & Enter::
@@ -14,23 +24,15 @@ Return
 Return
 
 #If (IsAltTab)
-Enter::
+~$vk1C Up::
 Send {Enter}
+Sleep, 100 ; これがないと切り替えが速すぎてカーソルが移動されないことがある
 WinGetPos, x, y, w, h, A
 newX := x + (w / 2)
 newY := y + (h / 2)
 CoordMode, Mouse,Screen
 MouseMove, %newX%, %newY%
 IsAltTab := false
-Return
-~$vk1C Up::
-    Send {Enter}
-    WinGetPos, x, y, w, h, A
-    newX := x + (w / 2)
-    newY := y + (h / 2)
-    CoordMode, Mouse,Screen
-    MouseMove, %newX%, %newY%
-    IsAltTab := false
 Return
 
 #If
