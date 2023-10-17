@@ -3,12 +3,29 @@
 vk1C::
     IME_SET(1)
     IME_SetConvMode(9)
-    ToolTip, ja
+    ToolTip, ●ja
     sleep, 300
     ToolTip
 Return
 
-vk1C & vk1D::AltTab
+; vk1C & Enter::AltTab
+~vk1C & Enter::
+    Send !^{Tab}
+    IsAltTab := True
+Return
+
+#If (IsAltTab)
+~$vk1C Up::
+Send {Enter}
+WinGetPos, x, y, w, h, A
+newX := x + (w / 2)
+newY := y + (h / 2)
+CoordMode, Mouse,Screen
+MouseMove, %newX%, %newY%
+IsAltTab := false
+Return
+
+#If
 
 vk1C & u::Send, {Blind}{Insert}
 vk1C & i::Send, {Blind}{BS}
@@ -46,7 +63,7 @@ vk1D::
     }
     Else{
         IME_SET(0)
-        ToolTip, en
+        ToolTip, 〇en
         sleep, 300
         ToolTip
     }
