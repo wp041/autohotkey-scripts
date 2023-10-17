@@ -17,8 +17,3 @@
 
 ; temp
 #R::Reload
-
-; timer
-^5::Run, settimer\simpletimer.ahk
-^4::Run, settimer\activewincur.ahk
-Run, settimer\activewincur.ahk
