@@ -2,11 +2,11 @@
 
 ; 基礎（デバイス共通）
 #Include *i 基礎/tooltip.ahk
-#Include *i 基礎/セミコロンUS化.ahk
-#Include *i 基礎/テンキー.ahk
+#Include *i 基礎/win.ahk
+#Include *i 基礎/その他.ahk
 #Include *i 基礎/日本語入力.ahk
-#Include *i 基礎/日付・時間入力.ahk
-#Include *i 基礎/変換・無変換.ahk
+#Include *i 基礎/変換.ahk
+#Include *i 基礎/無変換.ahk
 
 ; デバイス
 #Include *i デバイス/takenoko.ahk
@@ -16,4 +16,3 @@
 #Include *i 拡張/ソフトウェア固有.ahk
 
 ; temp
-#R::Reload
