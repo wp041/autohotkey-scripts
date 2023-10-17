@@ -23,6 +23,45 @@ WheelRight::WheelLeft
 ~LCtrl & WheelLeft::AltTab
 ~LCtrl & WheelRight::ShiftAltTab
 
+; tab
+
+$Tab::
+    startTime := A_TickCount
+    KeyWait, Tab
+    keyPressDuration := A_TickCount - startTime
+    ; Tabを押している間に他のホットキーが発動した場合は入力しない
+    ; Tabを長押ししていた場合も入力しない
+    If (A_ThisHotkey == "$Tab" and keyPressDuration < 200) {
+        Send,{Tab}
+    }
+Return
+
+~tab & j::
+~tab & k::
+~tab & l::
+~tab & sc027::
+    Send !^{Tab}
+    IsAltTab := True
+Return
+
+#If (IsAltTab)
+~$tab Up::
+Send {Enter}
+Sleep, 100 ; これがないと切り替えが速すぎてカーソルが移動されないことがある
+WinGetPos, x, y, w, h, A
+newX := x + (w / 2)
+newY := y + (h / 2)
+CoordMode, Mouse,Screen
+MouseMove, %newX%, %newY%
+IsAltTab := false
+Return
+
+Tab & j::Send, {Blind}{Left}
+Tab & k::Send, {Blind}{Down}
+Tab & l::Send, {Blind}{Up}
+Tab & sc027::Send, {Blind}{Right}
+#If
+
 ; ファンクションキー
 
 F13::
