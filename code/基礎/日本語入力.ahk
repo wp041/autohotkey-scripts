@@ -1,5 +1,6 @@
 ﻿#If A_CaretX != "" && IME_GET() ; キャレットが表示されておらず、IMEがオンの時に実行
 
+; cf. https://gist.github.com/toriwasa/64fc9e1a8cce620b8ff92f0ae38075f7
 $Ctrl::
     startTime := A_TickCount
     KeyWait, Ctrl
