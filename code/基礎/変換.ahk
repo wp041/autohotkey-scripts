@@ -5,7 +5,7 @@
 vk1C::
     IME_SET(1)
     IME_SetConvMode(9)
-    ToolTip, ●ja
+    ToolTip, ■ja
     sleep, 300
     ToolTip
 Return

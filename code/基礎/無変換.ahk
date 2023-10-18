@@ -6,7 +6,7 @@ vk1D::
     }
     Else{
         IME_SET(0)
-        ToolTip, 〇en
+        ToolTip, □en
         sleep, 300
         ToolTip
     }
