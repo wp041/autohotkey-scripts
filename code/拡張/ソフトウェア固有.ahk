@@ -2,8 +2,8 @@
 
 #IfWinActive, ahk_exe GitHubDesktop.exe
 
-    F15 & v::Send, ^+a
-    F15 & e::Send, ^+f
+    F13 & v::Send, ^+a
+    F13 & e::Send, ^+f
 
 #IfWinActive
 
@@ -19,20 +19,20 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-    F15 & f::send, ^{Tab}
-    F15 & d::send, !{Right}
-    F15 & s::send, !{Left}
-    F15 & a::send, ^+{Tab}
+    F13 & f::send, ^{Tab}
+    F13 & d::send, !{Right}
+    F13 & s::send, !{Left}
+    F13 & a::send, ^+{Tab}
 
-    F15 & x::send, {Home}
-    F15 & z::send, {End}
+    F13 & x::send, {Home}
+    F13 & z::send, {End}
 
-    F15 & w::send, ^+{t}
-    F15 & e::send, {F11}
-    F15 & q::send, {Left}
-    F15 & r::send, {Right}
+    F13 & w::send, ^+{t}
+    F13 & e::send, {F11}
+    F13 & q::send, {Left}
+    F13 & r::send, {Right}
 
-    F15 & c::
+    F13 & c::
         send, {F6}
         send, ^{c}
     Return
@@ -40,14 +40,14 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe explorer.exe
-    F15 & f::send, ^{Tab}
-    F15 & d::send, !{Right}
-    F15 & s::send, !{Left}
-    F15 & x::send, !{Up}
-    F15 & a::send, ^+{Tab}
-    F15 & r::send, {F5}
-    F15 & e::send, +^{n}
-    F15 & c::
+    F13 & f::send, ^{Tab}
+    F13 & d::send, !{Right}
+    F13 & s::send, !{Left}
+    F13 & x::send, !{Up}
+    F13 & a::send, ^+{Tab}
+    F13 & r::send, {F5}
+    F13 & e::send, +^{n}
+    F13 & c::
         send, !{d}
         send, {cmd}
         send, {Enter}
@@ -55,14 +55,14 @@
 #IfWinActive
 
 #IFWinActive ahk_exe Obsidian.exe
-    F15 & f::send, ^{Tab}
-    F15 & d::send, !{Right}
-    F15 & s::send, !{Left}
-    F15 & a::send, ^+{Tab}
+    F13 & f::send, ^{Tab}
+    F13 & d::send, !{Right}
+    F13 & s::send, !{Left}
+    F13 & a::send, ^+{Tab}
 
-    F15 & w::send, ^+{t}
+    F13 & w::send, ^+{t}
 
-    F15 & v::
+    F13 & v::
         Send, {End}
         Send, ^c
         Send, ^v
@@ -78,10 +78,10 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe
-    F15 & f::send, ^{PgDn}
-    F15 & a::send, ^{PgUp}
+    F13 & f::send, ^{PgDn}
+    F13 & a::send, ^{PgUp}
 
-    F15 & e::send, +!{r}
+    F13 & e::send, +!{r}
 
-    F15 & w::send, ^+{t}
+    F13 & w::send, ^+{t}
 #IfWinActive

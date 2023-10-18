@@ -35,7 +35,7 @@ WheelRight::WheelLeft
 
 ; ファンクションキー
 
-F13::
+F15::
     key := "F13"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
