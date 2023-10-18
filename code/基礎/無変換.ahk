@@ -31,8 +31,8 @@ vk1D & b::
     keywait, %key%
 return
 
-vk1D & F20::
-    key := "F20"
+vk1D & LCtrl::
+    key := "LCtrl"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe

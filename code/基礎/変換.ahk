@@ -37,3 +37,5 @@ vk1C & q::Send, {Blind}{F9}
 vk1C & w::Send, {Blind}{F10}
 vk1C & e::Send, {Blind}{F11}
 vk1C & r::Send, {Blind}{F12}
+
+vk1C & Enter::AltTab
