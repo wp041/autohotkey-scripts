@@ -56,7 +56,14 @@ Return
 
 vk1D & a::Send, {Blind}{Tab}
 vk1D & s::Send, {Blind}{Space}
-vk1D & d::Send, {Blind}{Esc}
+vk1D & d::
+    KeyWait, d, T0.2
+    if ErrorLevel
+        send,!{F4}
+    else
+        Send, {Blind}{Esc}
+    keywait, Esc
+return
 vk1D & f::Send, {Blind}{Enter}
 
 vk1D & w::Send, {Blind}{[}

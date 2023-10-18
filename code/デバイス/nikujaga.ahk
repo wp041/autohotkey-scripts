@@ -79,8 +79,6 @@ F14::
     }
 Return
 
-F15::Run,notepad.exe
-
 F16::
     key := "F16"
     KeyWait, %key%, T0.3
