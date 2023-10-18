@@ -12,6 +12,16 @@ $Esc::
     keywait, Esc
 return
 
+; tab
+$Tab::
+    KeyWait, Tab, T0.2
+    if ErrorLevel
+        Run,notepad.exe
+    else
+        send,{Tab}
+    keywait, Tab
+return
+
 ; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
@@ -48,10 +58,31 @@ F13::
     }
 Return
 
-F14::Return
+F14::
+    key := "F14"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合    
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^t
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^+m
+        KeyWait, %key%
+        return
+    }
+Return
 
-F15::
-    key := "F15"
+F15::Run,notepad.exe
+
+F16::
+    key := "F16"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         Send, #.
@@ -69,34 +100,4 @@ F15::
         KeyWait, %key%
         return
     }
-Return
-
-F16::
-    key := "F16"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合    
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^t
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        Run,notepad.exe
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^+m
-        KeyWait, %key%
-        return
-    }
-Return
-
-F17::
-    WinGetPos, x, y, w, h, A
-    newX := x + (w / 2)
-    newY := y + (h / 2)
-    CoordMode, Mouse,Screen
-    MouseMove, %newX%, %newY%
 Return
