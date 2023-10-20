@@ -31,7 +31,7 @@ vk1D & b::
     keywait, %key%
 return
 
-vk1D & t::
+vk1D & LCtrl::
     key := "LCtrl"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
@@ -81,20 +81,15 @@ vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
-vk1D & vk1C::Send, {Blind}{0}
-
 vk1D & sc027::Send, {Blind}{+}
 vk1D & p::Send, {Blind}{-}
-vk1D & /::Send, {Blind}{.}
+vk1D & 8::Send, {Blind}{/}
+vk1D & 9::Send, {Blind}{*}
+vk1D & /::Send, {Blind}{=}
+vk1D & 0::Send, {Blind}{BS}
 
-vk1D & h::Send, {Blind}{*}
-vk1D & y::Send, {Blind}{/}
-vk1D & n::Send, {Blind}{,}
+vk1D & esc::Send, {Blind}{.}
 
-vk1D & r::Send, {Blind}{¥}
-vk1D & q::Send, {Blind}{.}
+vk1D & Tab::Send, ,
 
-vk1D & v::Send, {Blind}{sc073}
-vk1D & c::Send, {Blind}{^}
-vk1D & x::Send, {Blind}{@}
-vk1D & z::Send, {Blind}{.}
+vk1D & vk1C::Send, {Blind}{0}
