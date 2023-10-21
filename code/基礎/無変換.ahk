@@ -30,7 +30,6 @@ vk1D & b::
         send, {Volume_Down}
     keywait, %key%
 return
-
 vk1D & Tab::
     key := "Tab"
     KeyWait, %key%, T0.3
