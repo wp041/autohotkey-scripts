@@ -31,8 +31,8 @@ vk1D & b::
     keywait, %key%
 return
 
-vk1D & LCtrl::
-    key := "LCtrl"
+vk1D & Tab::
+    key := "Tab"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe
@@ -53,18 +53,6 @@ vk1D & LCtrl::
         return
     }
 Return
-
-vk1D & a::Send, {Blind}{Tab}
-vk1D & s::Send, {Blind}{Space}
-vk1D & d::
-    KeyWait, d, T0.2
-    if ErrorLevel
-        send,!{F4}
-    else
-        Send, {Blind}{Esc}
-    keywait, Esc
-return
-vk1D & f::Send, {Blind}{Enter}
 
 vk1D & t::Send, {Blind}{[}
 vk1D & y::Send, {Blind}{]}
@@ -90,8 +78,6 @@ vk1D & 0::Send, {Blind}{BS}
 
 vk1D & esc::Send, {Blind}{.}
 
-vk1D & Tab::Send, ,
-
 vk1D & vk1C::
     if GetKeyState("Shift") {
         Send, {^}
@@ -99,3 +85,10 @@ vk1D & vk1C::
     }
     Send, {Blind}{0}
 Return
+
+vk1D & a::send, ^+{Tab}
+vk1D & s::send, !{Left}
+vk1D & d::send, !{Right}
+vk1D & f::send, ^{Tab}
+vk1D & z::send, ^{z}
+vk1D & v::send, ^+{z}
