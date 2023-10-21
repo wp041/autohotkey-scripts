@@ -12,16 +12,6 @@ $Esc::
     keywait, Esc
 return
 
-; tab
-$Tab::
-    KeyWait, Tab, T0.2
-    if ErrorLevel
-        Run,notepad.exe
-    else
-        send,{Tab}
-    keywait, Tab
-return
-
 ; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避

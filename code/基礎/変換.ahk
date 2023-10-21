@@ -39,3 +39,4 @@ vk1C & e::Send, {Blind}{F11}
 vk1C & r::Send, {Blind}{F12}
 
 vk1C & Enter::AltTab
+vk1C & F15::AltTab
