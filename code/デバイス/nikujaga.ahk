@@ -26,7 +26,7 @@ WheelRight::WheelLeft
 ; ファンクションキー
 
 F15::
-    key := "F13"
+    key := "F15"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         WinActivate,ahk_exe Obsidian.exe

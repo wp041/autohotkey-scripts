@@ -2,8 +2,8 @@
 
 #IfWinActive, ahk_exe GitHubDesktop.exe
 
-    tab & v::Send, ^+a
-    tab & e::Send, ^+f
+    ;     vk1D & v::Send, ^+a
+    ;     vk1D & e::Send, ^+f
 
 #IfWinActive
 
@@ -11,30 +11,28 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe Illustrator.exe
-    F20::LAlt
 #IfWinActive
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
     WheelLeft::WheelRight
     WheelRight::WheelLeft
-    F20::LAlt
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-    tab & f::send, ^{Tab}
-    tab & d::send, !{Right}
-    tab & s::send, !{Left}
-    tab & a::send, ^+{Tab}
+    vk1D & v::send, ^{Tab}
+    vk1D & x::send, !{Right}
+    ; vk1D & c::send, !{Left}
+    vk1D & z::send, ^+{Tab}
 
-    ; tab & x::send, {Home}
-    ; tab & z::send, {End}
+    ; vk1D & x::send, {Home}
+    ; vk1D & z::send, {End}
 
-    tab & w::send, ^+{t}
-    tab & e::send, {F11}
-    tab & q::send, {Left}
-    tab & r::send, {Right}
+    vk1D & w::send, ^+{t}
+    vk1D & e::send, {F11}
+    vk1D & q::send, {Left}
+    vk1D & r::send, {Right}
 
-    tab & c::
+    vk1D & c::
         send, {F6}
         send, ^{c}
     Return
@@ -42,14 +40,14 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe explorer.exe
-    tab & f::send, ^{Tab}
-    tab & d::send, !{Right}
-    tab & s::send, !{Left}
-    tab & x::send, !{Up}
-    tab & a::send, ^+{Tab}
-    tab & r::send, {F5}
-    tab & e::send, +^{n}
-    tab & c::
+    vk1D & f::send, ^{Tab}
+    vk1D & d::send, !{Right}
+    vk1D & s::send, !{Left}
+    vk1D & x::send, !{Up}
+    vk1D & a::send, ^+{Tab}
+    vk1D & r::send, {F5}
+    vk1D & e::send, +^{n}
+    vk1D & c::
         send, !{d}
         send, {cmd}
         send, {Enter}
@@ -57,14 +55,14 @@
 #IfWinActive
 
 #IFWinActive ahk_exe Obsidian.exe
-    tab & f::send, ^{Tab}
-    tab & d::send, !{Right}
-    tab & s::send, !{Left}
-    tab & a::send, ^+{Tab}
+    vk1D & f::send, ^{Tab}
+    vk1D & d::send, !{Right}
+    vk1D & s::send, !{Left}
+    vk1D & a::send, ^+{Tab}
 
-    tab & w::send, ^+{t}
+    vk1D & w::send, ^+{t}
 
-    tab & v::
+    vk1D & v::
         Send, {End}
         Send, ^c
         Send, ^v
@@ -80,10 +78,10 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe
-    tab & f::send, ^{PgDn}
-    tab & a::send, ^{PgUp}
+    vk1D & f::send, ^{PgDn}
+    vk1D & a::send, ^{PgUp}
 
-    tab & e::send, +!{r}
+    vk1D & e::send, +!{r}
 
-    tab & w::send, ^+{t}
+    vk1D & w::send, ^+{t}
 #IfWinActive

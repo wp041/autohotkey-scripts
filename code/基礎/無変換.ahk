@@ -1,34 +1,18 @@
-﻿; tab
-Tab::Tab
+﻿;無変換
 
-tab & Enter::
-    Send, {Blind}{Tab}
-    Sleep, 10
-    Send, {Blind}{Enter}
+vk1D::
+    IF (IME_GetConverting() != 0){
+        Send, {Blind}{F7}
+    }
+    Else{
+        IME_SET(0)
+        ToolTip, □en
+        sleep, 300
+        ToolTip
+    }
 Return
 
-; tab::
-;     IF (IME_GetConverting() != 0){
-;         Send, {Blind}{F7}
-;     }
-;     Else{
-;         IME_SET(0)
-;         ToolTip, □en
-;         sleep, 300
-;         ToolTip
-;     }
-; Return
-
-; $Tab::
-;     KeyWait, Tab, T0.2
-;     if ErrorLevel
-;         Run,notepad.exe
-;     else
-;         send,{Tab}
-;     keywait, Tab
-; return
-
-tab & g::
+vk1D & g::
     key := "g"
     KeyWait, %key%, T0.2
     if ErrorLevel
@@ -37,7 +21,7 @@ tab & g::
         send, {Volume_Up}
     keywait, %key%
 return
-tab & b::
+vk1D & b::
     key := "b"
     KeyWait, %key%, T0.2
     if ErrorLevel
@@ -47,8 +31,8 @@ tab & b::
     keywait, %key%
 return
 
-tab & F21::
-    key := "F21"
+vk1D & LCtrl::
+    key := "LCtrl"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe
@@ -70,29 +54,42 @@ tab & F21::
     }
 Return
 
-tab & t::Send, {Blind}{[}
-tab & y::Send, {Blind}{]}
+vk1D & a::Send, {Blind}{Tab}
+vk1D & s::Send, {Blind}{Space}
+vk1D & d::
+    KeyWait, d, T0.2
+    if ErrorLevel
+        send,!{F4}
+    else
+        Send, {Blind}{Esc}
+    keywait, Esc
+return
+vk1D & f::Send, {Blind}{Enter}
 
-tab & u::Send, {Blind}{7}
-tab & i::Send, {Blind}{8}
-tab & o::Send, {Blind}{9}
+vk1D & w::Send, {Blind}{[}
+vk1D & e::Send, {Blind}{]}
 
-tab & j::Send, {Blind}{4}
-tab & k::Send, {Blind}{5}
-tab & l::Send, {Blind}{6}
+vk1D & u::Send, {Blind}{7}
+vk1D & i::Send, {Blind}{8}
+vk1D & o::Send, {Blind}{9}
 
-tab & m::Send, {Blind}{1}
-tab & ,::Send, {Blind}{2}
-tab & .::Send, {Blind}{3}
+vk1D & j::Send, {Blind}{4}
+vk1D & k::Send, {Blind}{5}
+vk1D & l::Send, {Blind}{6}
 
-tab & h::Send, {Blind}{+}
-tab & sc027::Send, {Blind}{-}
-tab & /::Send, {Blind}{/}
-tab & n::Send, {Blind}{*}
-tab & p::Send, {Blind}{=}
+vk1D & m::Send, {Blind}{1}
+vk1D & ,::Send, {Blind}{2}
+vk1D & .::Send, {Blind}{3}
 
-tab & esc::Send, {Blind}{.}
+vk1D & sc027::Send, {Blind}{+}
+vk1D & p::Send, {Blind}{-}
+vk1D & 8::Send, {Blind}{/}
+vk1D & 9::Send, {Blind}{*}
+vk1D & /::Send, {Blind}{=}
+vk1D & 0::Send, {Blind}{BS}
 
-tab & vk1D::Send, ,
+vk1D & esc::Send, {Blind}{.}
 
-tab & vk1C::Send, {Blind}{0}
+vk1D & Tab::Send, ,
+
+vk1D & vk1C::Send, {Blind}{0}
