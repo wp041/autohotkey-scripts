@@ -66,8 +66,8 @@ vk1D & d::
 return
 vk1D & f::Send, {Blind}{Enter}
 
-vk1D & w::Send, {Blind}{[}
-vk1D & e::Send, {Blind}{]}
+vk1D & t::Send, {Blind}{[}
+vk1D & y::Send, {Blind}{]}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
@@ -92,4 +92,10 @@ vk1D & esc::Send, {Blind}{.}
 
 vk1D & Tab::Send, ,
 
-vk1D & vk1C::Send, {Blind}{0}
+vk1D & vk1C::
+    if GetKeyState("Shift") {
+        Send, {^}
+        return
+    }
+    Send, {Blind}{0}
+Return
