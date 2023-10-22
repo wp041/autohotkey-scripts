@@ -52,13 +52,12 @@ vk1D & d::send, !{Right}
 vk1D & f::send, ^{Tab}
 vk1D & z::send, ^{z}
 vk1D & v::send, ^+{z}
-vk1D & q::send, {Volume_Mute}
 vk1D & e::send, {Volume_Up}
 vk1D & c::send, {Media_Next}
 vk1D & w::send, {Volume_Down}
 vk1D & x::send, {Media_Prev}
-vk1D & r::
-    key := "r"
+vk1D & Tab::
+    key := "tab"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe
