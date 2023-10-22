@@ -12,8 +12,10 @@ vk1D::
     }
 Return
 
-vk1D & t::Send, {Blind}{[}
-vk1D & y::Send, {Blind}{]}
+vk1D & g::Send, {Blind}{[}
+vk1D & h::Send, {Blind}{]}
+
+vk1D & n::Send, {Blind}{~}
 
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
@@ -23,18 +25,29 @@ vk1D & j::Send, {Blind}{4}
 vk1D & k::Send, {Blind}{5}
 vk1D & l::Send, {Blind}{6}
 
-vk1D & m::Send, {Blind}{1}
+vk1D & m::Send, {Blind}{1}~
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
-vk1D & sc027::Send, {Blind}{-}
-vk1D & /::Send, {Blind}{+}
-vk1D & h::Send, {Blind}{/}
-vk1D & n::Send, {Blind}{*}
+vk1D & sc027::
+    if GetKeyState("Shift") {
+        Send, *
+        return
+    }
+    Send, {Blind}{+}
+Return
+vk1D & p::
+    if GetKeyState("Shift") {
+        Send, /
+        return
+    }
+    Send, {Blind}{-}
+Return
+vk1D & /::Send, {Blind}{=}
 vk1D & sc073::Send, {Blind}{=}
 vk1D & 8::Send, {Blind}{<}
 vk1D & 9::Send, {Blind}{>}
-vk1D & p::Send, {Blind}{BS}
+vk1D & 0::Send, {Blind}{BS}
 
 vk1D & esc::Send, {Blind}{.}
 
