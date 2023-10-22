@@ -53,7 +53,13 @@ F14::Return
 F15::Return
 
 F16::
-    key := "F16"
+    Send, {Tab}
+    Sleep, 10
+    Send, {Enter}
+Return
+
+F17::
+    key := "F17"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         Send, #.
@@ -71,12 +77,6 @@ F16::
         KeyWait, %key%
         return
     }
-Return
-
-F17::
-    Send, {Tab}
-    Sleep, 10
-    Send, {Enter}
 Return
 
 F18::

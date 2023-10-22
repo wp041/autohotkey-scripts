@@ -53,9 +53,9 @@ vk1D & f::send, ^{Tab}
 vk1D & z::send, ^{z}
 vk1D & v::send, ^+{z}
 vk1D & e::send, {Volume_Up}
-vk1D & c::send, {Media_Next}
+vk1D & r::send, {Media_Next}
 vk1D & w::send, {Volume_Down}
-vk1D & x::send, {Media_Prev}
+vk1D & q::send, {Media_Prev}
 vk1D & Tab::
     key := "tab"
     KeyWait, %key%, T0.3
