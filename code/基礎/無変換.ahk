@@ -50,6 +50,7 @@ vk1D & 9::Send, {Blind}{>}
 vk1D & 0::Send, {Blind}{BS}
 
 vk1D & esc::Send, {Blind}{.}
+vk1D & F16::Send, {Blind}{,}
 
 vk1D & vk1C::
     if GetKeyState("Shift") {
