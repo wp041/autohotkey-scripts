@@ -38,9 +38,5 @@ Return
 
 ; s
 ~s & k::Send, u
-~s & n::
-    Send, {BS}
-    Send, ん
-Return
 
 #If
