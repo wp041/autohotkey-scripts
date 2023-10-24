@@ -3,6 +3,7 @@
 sc027::Send, -
 
 c::Send, っ
+q::F7
 
 vk1C & vk1D::
     Send, {Tab}
