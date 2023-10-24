@@ -4,10 +4,10 @@ sc027::Send, -
 
 c::Send, っ
 
-vk1C & Space::
-Send, {Tab}
-Sleep, 10
-Send, {Enter}
+vk1C & vk1D::
+    Send, {Tab}
+    Sleep, 10
+    Send, {Enter}
 Return
 
 ; a
