@@ -6,6 +6,12 @@ sc027::Send, -
 c::Send, っ
 l::Send, p
 
+vk1C & Space::
+Send, {Tab}
+Sleep, 10
+Send, {Enter}
+Return
+
 ; a
 ~z & s::Send, a
 
