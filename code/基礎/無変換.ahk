@@ -49,6 +49,9 @@ vk1D & 8::Send, {Blind}{<}
 vk1D & 9::Send, {Blind}{>}
 vk1D & 0::Send, {Blind}{BS}
 
+vk1D & 1::Send, {Blind}{F11}
+vk1D & 2::Send, {Blind}{F12}
+
 vk1D & esc::Send, {Blind}{.}
 vk1D & F16::Send, {Blind}{,}
 

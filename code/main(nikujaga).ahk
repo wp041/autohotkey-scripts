@@ -4,6 +4,7 @@
 #Include *i 基礎/tooltip.ahk
 #Include *i 基礎/win.ahk
 #Include *i 基礎/その他.ahk
+#Include *i 基礎/ファンクション.ahk
 #Include *i 基礎/日本語入力.ahk
 #Include *i 基礎/変換.ahk
 #Include *i 基礎/無変換.ahk
