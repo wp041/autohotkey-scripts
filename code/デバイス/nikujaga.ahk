@@ -25,10 +25,8 @@ WheelRight::WheelLeft
 
 ; ファンクションキー
 
-F13::Return
-
-F14::
-    key := "F14"
+F13::
+    key := "F13"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         WinActivate,ahk_exe Obsidian.exe
@@ -50,6 +48,32 @@ F14::
     }
 Return
 
+F14::
+    key := "F14"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合    
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^t
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        ; なにもしない
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        CoordMode, Mouse, Screen
+        MouseClick, L, 3847, -1080, 1, 0,
+        Send, ^f
+        Send, ## 行動
+        Send, {Esc}
+        Send, {Esc}
+        Send, {Up}
+        Send, ^m
+    }
+Return
+
 F15::Return
 
 F16::Send, {Tab}
@@ -58,7 +82,7 @@ F17::
     key := "F17"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
-        Send, #.
+        ; なにもしない
         KeyWait, %key%
         return
     }
@@ -75,24 +99,4 @@ F17::
     }
 Return
 
-F18::
-    key := "F18"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合    
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^t
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        Run,notepad.exe
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^+m
-        KeyWait, %key%
-        return
-    }
-Return
+F18::Return

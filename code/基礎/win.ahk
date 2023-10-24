@@ -22,5 +22,6 @@ Return
   Clipboard := backup
 Return
 
-; リロード
 #R::Reload
+
+#M::Run,notepad.exe
