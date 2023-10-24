@@ -25,7 +25,7 @@ vk1D & j::Send, {Blind}{4}
 vk1D & k::Send, {Blind}{5}
 vk1D & l::Send, {Blind}{6}
 
-vk1D & m::Send, {Blind}{1}~
+vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
