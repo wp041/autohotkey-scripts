@@ -24,6 +24,3 @@ Return
 
 ; リロード
 #R::Reload
-
-; エディット
-#E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\okiko\git\autohotkey-scripts"
