@@ -1,10 +1,10 @@
 ﻿#SingleInstance, Force ;既にスクリプトが起動している状態で、同じスクリプトを実行した時に、自動で既存のスクリプトを終了する
 
 #IfWinActive, ahk_exe GitHubDesktop.exe
-    Tab::Tab
-    tab & v::Send, ^+a
-    tab & e::Send, ^+f
-    tab & g::Send, ^+g
+    Alt::Alt
+    Alt & v::Send, ^+a
+    Alt & e::Send, ^+f
+    Alt & g::Send, ^+g
 #IfWinActive
 
 #IFWinActive ahk_exe Spotify.exe
@@ -19,18 +19,18 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-    Tab::Tab
-    Tab & f::send, {F11}
-    Tab & c::
+    Alt::Alt
+    Alt & f::send, {F11}
+    Alt & c::
         send, {F6}
         send, ^{c}
     Return
 #IfWinActive
 
 #IfWinActive, ahk_exe explorer.exe
-    Tab::Tab
-    tab & s::send, !{Up}
-    Tab & c::
+    Alt::Alt
+    Alt & s::send, !{Up}
+    Alt & c::
         send, !{d}
         send, {cmd}
         send, {Enter}
@@ -38,8 +38,8 @@
 #IfWinActive
 
 #IFWinActive ahk_exe Obsidian.exe
-    Tab::Tab
-    tab & w::
+    Alt::Alt
+    Alt & w::
         Send, {End}
         Send, ^c
         Send, ^v
@@ -58,6 +58,6 @@
     vk1D & f::send, ^{PgDn}
     vk1D & a::send, ^{PgUp}
 
-    Tab::Tab
-    Tab & e::send, +!{r}
+    Alt::Alt
+    Alt & e::send, +!{r}
 #IfWinActive

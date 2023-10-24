@@ -25,7 +25,7 @@ vk1D & j::Send, {Blind}{4}
 vk1D & k::Send, {Blind}{5}
 vk1D & l::Send, {Blind}{6}
 
-vk1D & m::Send, {Blind}{1}~
+vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
@@ -70,25 +70,3 @@ vk1D & e::send, {Volume_Up}
 vk1D & r::send, {Media_Next}
 vk1D & w::send, {Volume_Down}
 vk1D & q::send, {Media_Prev}
-vk1D & Tab::
-    key := "tab"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合
-        WinActivate,ahk_exe Spotify.exe
-        Send, +!b
-        Send, !{Tab}
-        KeyWait, %key%
-        return 
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        WinActivate,ahk_exe Spotify.exe
-        Send, ^k
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        Send, {Blind}{Media_Play_Pause}
-        KeyWait, %key%
-        return
-    }
-Return

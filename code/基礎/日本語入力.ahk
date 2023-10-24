@@ -1,10 +1,8 @@
 ﻿#If IME_GET() ; IMEがオンの時に実行
 
 sc027::Send, -
-@::Send, ~
 
 c::Send, っ
-l::Send, p
 
 ; a
 ~z & s::Send, a
