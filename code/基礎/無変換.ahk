@@ -17,17 +17,44 @@ vk1D & h::Send, {Blind}{]}
 
 vk1D & n::Send, {Blind}{~}
 
-vk1D & u::Send, {Blind}{7}
-vk1D & i::Send, {Blind}{8}
-vk1D & o::Send, {Blind}{9}
+vk1D & u::
+    IME_SET(0)
+    Send, {Blind}{7}
+Return
+vk1D & i::
+    IME_SET(0)
+    Send, {Blind}{8}
+Return
+vk1D & o::
+    IME_SET(0)
+    Send, {Blind}{9}
+Return
 
-vk1D & j::Send, {Blind}{4}
-vk1D & k::Send, {Blind}{5}
-vk1D & l::Send, {Blind}{6}
+vk1D & j::
+    IME_SET(0)
+    Send, {Blind}{4}
+Return
+vk1D & k::
+    IME_SET(0)
+    Send, {Blind}{5}
+Return
+vk1D & l::
+    IME_SET(0)
+    Send, {Blind}{6}
+Return
 
-vk1D & m::Send, {Blind}{1}
-vk1D & ,::Send, {Blind}{2}
-vk1D & .::Send, {Blind}{3}
+vk1D & m::
+    IME_SET(0)
+    Send, {Blind}{1}
+Return
+vk1D & ,::
+    IME_SET(0)
+    Send, {Blind}{2}
+Return
+vk1D & .::
+    IME_SET(0)
+    Send, {Blind}{3}
+Return
 
 vk1D & sc027::
     if GetKeyState("Shift") {
