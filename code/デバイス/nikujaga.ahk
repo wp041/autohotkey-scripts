@@ -64,7 +64,7 @@ F14::
         return
     }else{ ;短押しした場合
         CoordMode, Mouse, Screen
-        MouseClick, L, 3847, -1080, 1, 0,
+        MouseClick, L, 1927, -1080, 1, 0,
         Send, ^d
         Send, ^f
         Send, ## 行動
