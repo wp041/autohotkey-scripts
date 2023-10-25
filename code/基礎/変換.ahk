@@ -1,11 +1,18 @@
 ﻿; 変換
 
 vk1C::
-    IME_SET(1)
-    IME_SetConvMode(9)
-    ToolTip, ■ja
-    sleep, 300
-    ToolTip
+    IF (IME_GetConverting() != 0){
+        Send, {Tab}
+        Sleep, 10
+        Send, {Enter}
+    }
+    Else{
+        IME_SET(1)
+        IME_SetConvMode(9)
+        ToolTip, ■ja
+        sleep, 300
+        ToolTip
+    }
 Return
 
 vk1C & u::Send, {Blind}{Insert}
