@@ -68,6 +68,7 @@ F14::
         Send, ^d
         Send, ^f
         Send, ## 行動
+        Send, {Enter}
         Send, {Esc}
         Send, {Esc}
         Send, {Up}
