@@ -2,9 +2,7 @@
 
 vk1C::
     IF (IME_GetConverting() != 0){
-        Send, {Tab}
-        Sleep, 10
-        Send, {Enter}
+        Send, {vk1C}
     }
     Else{
         IME_SET(1)
@@ -14,6 +12,8 @@ vk1C::
         ToolTip
     }
 Return
+
++vk1C::+vk1C
 
 vk1C & u::Send, {Blind}{Insert}
 vk1C & i::Send, {Blind}{BS}
