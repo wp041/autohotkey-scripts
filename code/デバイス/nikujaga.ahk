@@ -30,7 +30,7 @@ F13::
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合    
         WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F11}
+        Send, ^!+{F12}
         KeyWait, %key%
         return
     }
