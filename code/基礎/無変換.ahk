@@ -29,21 +29,21 @@ vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
+vk1D & /::
+    if GetKeyState("Shift") {
+        Send, {NumpadMult}
+        return
+    }
+    Send, {Blind}{NumpadAdd}
+Return
 vk1D & sc027::
     if GetKeyState("Shift") {
-        Send, *
+        Send, {NumpadDiv}
         return
     }
-    Send, {Blind}{+}
+    Send, {Blind}{NumpadSub}
 Return
-vk1D & p::
-    if GetKeyState("Shift") {
-        Send, /
-        return
-    }
-    Send, {Blind}{-}
-Return
-vk1D & /::Send, {Blind}{=}
+vk1D & p::Send, {Blind}{=}
 vk1D & sc073::Send, {Blind}{=}
 vk1D & 8::Send, {Blind}{<}
 vk1D & 9::Send, {Blind}{>}
