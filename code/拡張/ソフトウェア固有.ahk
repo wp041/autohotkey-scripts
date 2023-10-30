@@ -40,32 +40,6 @@
         send, {cmd}
         send, {Enter}
     Return
-    #If (altmode)
-        a::send, ^+{Tab}
-    f::send, ^{Tab}
-    s::send, !{Left}
-    d::send, !{Right}
-    w::send, ^w
-    c::send, ^+t
-    g::send, {Right}
-    +g::send, {Left}
-
-    t::
-        send, ^t
-        altmode := False
-        ToolTip,,,,2
-    Return
-    1::
-        send, ^t
-        send, https://twitter.com/home
-        send, {Enter}
-    Return
-    2::
-        send, ^t
-        send, https://www.youtube.com/
-        send, {Enter}
-    Return
-    #If
 #IfWinActive
 
 #IFWinActive ahk_exe Obsidian.exe
