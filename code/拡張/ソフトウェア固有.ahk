@@ -22,7 +22,10 @@
 
 #IfWinActive, ahk_exe chrome.exe
     Tab::Tab
-    Tab & f::send, {F11}
+    Tab & w::send, {up}
+    Tab & a::send, {Left}
+    Tab & s::send, {Down}
+    Tab & d::send, {Right}
     Tab & c::
         send, {F6}
         send, ^{c}
