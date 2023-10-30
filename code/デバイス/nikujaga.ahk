@@ -25,28 +25,7 @@ WheelRight::WheelLeft
 
 ; ファンクションキー
 
-F13::
-    key := "F13"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合    
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F12}
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F12}
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F10}
-        KeyWait, %key%
-        return
-    }
-Return
+F13::Return
 
 F14::
     key := "F14"
@@ -82,7 +61,28 @@ Return
 
 F15::Return
 
-F16::Send, {Tab}
+F16::
+    key := "F16"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合    
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^!+{F12}
+        KeyWait, %key%
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^!+{F12}
+        KeyWait, %key%
+        return
+    }else{ ;短押しした場合
+        WinActivate,ahk_exe Obsidian.exe
+        Send, ^!+{F10}
+        KeyWait, %key%
+        return
+    }
+Return
 
 F17::
     key := "F17"
