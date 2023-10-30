@@ -2,7 +2,9 @@
 
 vk1C::
     IF (IME_GetConverting() != 0){
-        Send, {vk1C}
+        Send, {Tab}
+        Sleep, 10
+        Send, {Enter}
     }
     Else{
         IME_SET(1)
