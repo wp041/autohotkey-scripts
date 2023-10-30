@@ -11,6 +11,8 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe Illustrator.exe
+    ctrl & WheelUp::!WheelDown
+    ctrl & WheelDown::!WheelUp
 #IfWinActive
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
