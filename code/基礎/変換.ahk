@@ -1,6 +1,8 @@
 ﻿; 変換
 
 vk1C::
+    altmode := False
+    ToolTip,,,,2
     IF (IME_GetConverting() != 0){
         Send, {Tab}
         Sleep, 10

@@ -1,6 +1,8 @@
 ﻿;無変換
 
 vk1D::
+    altmode := False
+    ToolTip,,,,2
     IF (IME_GetConverting() != 0){
         Send, {Blind}{F7}
     }
@@ -43,8 +45,7 @@ vk1D & sc027::
     }
     Send, {Blind}{NumpadSub}
 Return
-vk1D & p::Send, {Blind}{=}
-vk1D & sc073::Send, {Blind}{=}
+vk1D & Enter::Send, {Blind}{=}
 vk1D & 8::Send, {Blind}{<}
 vk1D & 9::Send, {Blind}{>}
 vk1D & 0::Send, {Blind}{BS}

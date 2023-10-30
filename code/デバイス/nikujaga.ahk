@@ -5,10 +5,13 @@ F20::LWin
 ; esc
 $Esc::
     KeyWait, Esc, T0.2
-    if ErrorLevel
+    if (ErrorLevel){
         send,!{F4}
-    else
+    }else{
         send,{Esc}
+        altmode := False
+        ToolTip,,,,2
+    }
     keywait, Esc
 return
 
@@ -25,19 +28,30 @@ WheelRight::WheelLeft
 
 ; ファンクションキー
 
-F13::Return
+altmode := False
 
-F13 & m::Send, #1
-F13 & ,::Send, #2
-F13 & .::Send, #3
+F13::
+    If (altmode == True){
+        altmode := False
+        ToolTip,,,,2
+        Return
+    }Else{
+        altmode := True
+        ToolTip, altmode, 0, 0, 2
+        Return
+    }
 
-F13 & j::Send, #4
-F13 & k::Send, #5
-F13 & l::Send, #6
+    F13 & m::Send, #1
+    F13 & ,::Send, #2
+    F13 & .::Send, #3
 
-F13 & u::Send, #7
-F13 & i::Send, #8
-F13 & o::Send, #9
+    F13 & j::Send, #4
+    F13 & k::Send, #5
+    F13 & l::Send, #6
+
+    F13 & u::Send, #7
+    F13 & i::Send, #8
+    F13 & o::Send, #9
 
 F14::
     key := "F14"
