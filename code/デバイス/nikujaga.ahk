@@ -67,7 +67,11 @@ F14::
         MouseClick, L, 1927, -1080, 1, 0,
         Send, ^d
         Send, ^f
-        Send, ## 行動
+        Send, 行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
+        ; backup := ClipboardAll
+        ; Clipboard := ## 行動
+        ; Send,^v
+        ; Clipboard := backup
         Send, {Enter}
         Send, {Esc}
         Send, {Esc}
