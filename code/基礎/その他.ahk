@@ -3,3 +3,5 @@
 ^!k::Return
 
 #Space::Return
+
+^sc027::Return
