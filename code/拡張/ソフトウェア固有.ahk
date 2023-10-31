@@ -10,6 +10,10 @@
 #IFWinActive ahk_exe Spotify.exe
 #IfWinActive
 
+#IfWinActive, ahk_exe javaw.exe
+    vk1D::Space
+#IfWinActive
+
 #IfWinActive, ahk_exe Illustrator.exe
     ctrl & WheelUp::!WheelDown
     ctrl & WheelDown::!WheelUp
@@ -21,11 +25,13 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
+    vk1D & s::send, ^+{Tab}
+    vk1D & d::send, ^{Tab}
+    vk1D & a::send, !{Left}
+    vk1D & f::send, !{Right}
+
     Tab::Tab
-    Tab & w::send, {up}
-    Tab & a::send, {Left}
-    Tab & s::send, {Down}
-    Tab & d::send, {Right}
+    Tab & e::send, {Esc}
     Tab & c::
         send, {F6}
         send, ^{c}

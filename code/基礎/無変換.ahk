@@ -63,11 +63,6 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-vk1D & a::send, ^+{Tab}
-vk1D & f::send, ^{Tab}
-vk1D & s::send, !{Left}
-vk1D & d::send, !{Right}
-
 vk1D & e::send, {Volume_Up}
 vk1D & r::send, {Media_Next}
 vk1D & w::send, {Volume_Down}
