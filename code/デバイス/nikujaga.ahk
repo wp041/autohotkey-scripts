@@ -27,17 +27,13 @@ WheelRight::WheelLeft
 
 F13::Return
 
-F13 & m::Send, #1
-F13 & ,::Send, #2
-F13 & .::Send, #3
+F13 & w::Send, {Blind}{Esc}
+F13 & e::Send, {Blind}{Enter}
 
-F13 & j::Send, #4
-F13 & k::Send, #5
-F13 & l::Send, #6
-
-F13 & u::Send, #7
-F13 & i::Send, #8
-F13 & o::Send, #9
+F13 & s::Send, {Blind}{Up}
+F13 & a::Send, {Blind}{Left}
+F13 & d::Send, {Blind}{Down}
+F13 & f::Send, {Blind}{Right}
 
 F14::
     key := "F14"

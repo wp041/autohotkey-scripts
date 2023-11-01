@@ -31,7 +31,6 @@
     vk1D & f::send, !{Right}
 
     Tab::Tab
-    Tab & e::send, {Esc}
     Tab & c::
         send, {F6}
         send, ^{c}
@@ -66,8 +65,8 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe
-    vk1D & f::send, ^{PgDn}
-    vk1D & a::send, ^{PgUp}
+    vk1D & d::send, ^{PgDn}
+    vk1D & s::send, ^{PgUp}
 
     Tab::Tab
     Tab & e::send, +!{r}
