@@ -1,6 +1,4 @@
-﻿#SingleInstance, Force ;既にスクリプトが起動している状態で、同じスクリプトを実行した時に、自動で既存のスクリプトを終了する
-
-#IfWinActive, ahk_exe GitHubDesktop.exe
+﻿#IfWinActive, ahk_exe GitHubDesktop.exe
     Tab::Tab
     Tab & v::Send, ^+a
     Tab & e::Send, ^+f
@@ -25,10 +23,6 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-    vk1D & s::send, ^+{Tab}
-    vk1D & d::send, ^{Tab}
-    vk1D & a::send, !{Left}
-    vk1D & f::send, !{Right}
 
     Tab::Tab
     Tab & c::

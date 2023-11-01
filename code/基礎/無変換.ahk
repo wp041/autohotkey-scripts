@@ -89,3 +89,13 @@ vk1D & Tab::
         return
     }
 Return
+
+vk1D & s::send, ^+{Tab}
+vk1D & d::send, ^{Tab}
+vk1D & a::send, !{Left}
+vk1D & f::send, !{Right}
+
+vk1D & z::send, {Esc}
+vk1D & v::send, {Enter}
+vk1D & c::send, {Right}
+vk1D & x::send, {Left}
