@@ -24,6 +24,4 @@ Return
   Clipboard := backup
 Return
 
-vk1C & r::Reload
-
 #M::Run,notepad.exe
