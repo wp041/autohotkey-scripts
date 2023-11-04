@@ -1,8 +1,4 @@
-﻿;F20
-
-F20::LWin
-
-; ホイール
+﻿; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
 WheelDown::WheelUp

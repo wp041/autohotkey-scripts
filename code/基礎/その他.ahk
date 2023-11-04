@@ -33,3 +33,7 @@ Ctrl & v::
     }
     keywait, v
 return
+
+;F20
+
+F20::LWin
