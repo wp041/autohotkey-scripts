@@ -2,16 +2,6 @@
 
 F20::LWin
 
-; esc
-$Esc::
-    KeyWait, Esc, T0.2
-    if ErrorLevel
-        send,!{F4}
-    else
-        send,{Esc}
-    keywait, Esc
-return
-
 ; ホイール
 
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
@@ -25,7 +15,46 @@ WheelRight::WheelLeft
 
 ; ファンクションキー
 
-F13::Return
+altmode := False
+
+F13::
+    If (altmode == True){
+        altmode := False
+        ToolTip,,,,2
+        Return
+    }Else{
+        altmode := True
+        ToolTip, altmode, 0, 0, 2
+        Return
+    }
+Return
+
+#If (altmode)
+
+*e::send, {Blind}{Up}
+*d::send, {Blind}{Down}
+*s::send, {Blind}{Left}
+*f::send, {Blind}{Right}
+*a::send, {Blind}{Esc}
+*g::send, {Blind}{Enter}
+
+t::
+    send, ^t
+    altmode := False
+    ToolTip,,,,2
+Return
+1::
+    send, ^t
+    send, https://twitter.com/home
+    send, {Enter}
+Return
+2::
+    send, ^t
+    send, https://www.youtube.com/
+    send, {Enter}
+Return
+
+#If
 
 F14::
     key := "F14"
@@ -46,7 +75,7 @@ F14::
         MouseClick, L, 1927, -1080, 1, 0,
         Send, ^d
         Send, ^f
-        Send, 行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
+        Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
         ; backup := ClipboardAll
         ; Clipboard := ## 行動
         ; Send,^v

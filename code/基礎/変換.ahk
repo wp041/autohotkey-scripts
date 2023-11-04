@@ -1,14 +1,17 @@
 ﻿; 変換
 
 vk1C::
+    altmode := False
+    ToolTip,,,,2
     IF (IME_GetConverting() != 0){
         Send, {Tab}
         Sleep, 10
         Send, {Enter}
     }
     Else{
-        IME_SET(1)
-        IME_SetConvMode(9)
+        ; IME_SET(1)
+        ; IME_SetConvMode(9)
+        Send, {vk1C}
         ToolTip, ■ja
         sleep, 300
         ToolTip
