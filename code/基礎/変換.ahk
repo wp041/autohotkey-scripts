@@ -37,5 +37,3 @@ vk1C & /::Send, {Blind}{End}
 
 vk1C & Enter::AltTab
 vk1C & F17::AltTab
-
-vk1C & r::Reload

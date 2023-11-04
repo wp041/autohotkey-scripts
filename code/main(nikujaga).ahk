@@ -11,7 +11,7 @@
 
 ; デバイス
 #Include *i デバイス/nikujaga.ahk
-vk1C & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\okiko\git\autohotkey-scripts"
+F16 & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\okiko\git\autohotkey-scripts"
 
 ; 拡張
 #Include *i 拡張/indesign.ahk

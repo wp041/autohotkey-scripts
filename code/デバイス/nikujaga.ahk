@@ -25,6 +25,11 @@ F13::
     }
 Return
 
+F13 & f::AltTab
+F13 & e::send, {Blind}{Up}
+F13 & d::send, {Blind}{Down}
+F13 & s::WinActivate, ahk_exe Spotify.exe
+
 #If (altmode)
 
 *e::send, {Blind}{Up}
@@ -52,82 +57,54 @@ Return
 
 #If
 
-F14::
-    key := "F14"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合    
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^t
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        ; なにもしない
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        CoordMode, Mouse, Screen
-        MouseClick, L, 1927, -1080, 1, 0,
-        Send, ^d
-        Send, ^f
-        Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
-        ; backup := ClipboardAll
-        ; Clipboard := ## 行動
-        ; Send,^v
-        ; Clipboard := backup
-        Send, {Enter}
-        Send, {Esc}
-        Send, {Esc}
-        Send, {Up}
-        Send, ^m
-    }
-Return
+F14::Return
 
 F15::Return
 
-F16::
-    key := "F16"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合    
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F12}
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F12}
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        WinActivate,ahk_exe Obsidian.exe
-        Send, ^!+{F10}
-        KeyWait, %key%
-        return
-    }
+; グローバルショートカットとして運用
+F16::Return
+
+F16 & r::Reload
+
+F16 & m::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1927, -1080, 1, 0,
+    Send, ^d
+    Send, ^f
+    Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
+    ; backup := ClipboardAll
+    ; Clipboard := ## 行動
+    ; Send,^v
+    ; Clipboard := backup
+    Send, {Enter}
+    Send, {Esc}
+    Send, {Esc}
+    Send, {Up}
+    Send, ^m
 Return
 
-F17::
-    key := "F17"
-    KeyWait, %key%, T0.3
-    If(ErrorLevel){ ;長押しした場合    
-        ; なにもしない
-        KeyWait, %key%
-        return
-    }
-    KeyWait, %key%, D, T0.2
-    If(!ErrorLevel){ ;2度押しした場合
-        WinActivate, ahk_exe chrome.exe
-        Send, ^t
-        KeyWait, %key%
-        return
-    }else{ ;短押しした場合
-        Send, #v
-        KeyWait, %key%
-        return
-    }
+F16 & o::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 700, -1080, 1, 0,
+    Send, ^o
 Return
+
+F16 & t::
+    WinActivate, ahk_exe chrome.exe
+    Send, ^t
+return
+
+F16 & p::
+    WinActivate, ahk_exe Obsidian.exe
+    KeyWait, p, T0.2
+    if (ErrorLevel){
+        Send, ^!+{F12}
+    }else{
+        Send, ^!+{F10}
+    }
+    keywait, p
+return
+
+F17::Return
 
 F18::Return

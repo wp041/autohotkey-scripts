@@ -17,8 +17,6 @@ Return
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
 
-vk1D & n::Send, {Blind}{~}
-
 vk1D & u::Send, {Blind}{7}
 vk1D & i::Send, {Blind}{8}
 vk1D & o::Send, {Blind}{9}
@@ -65,9 +63,21 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-vk1D & e::send, {Volume_Up}
+vk1D & e::
+    if GetKeyState("alt") {
+        send, {Media_Next}
+        return
+    }
+    send, {Volume_Up}
+Return
+vk1D & w::
+    if GetKeyState("alt") {
+        send, {Esc}
+        return
+    }
+    send, {Volume_Down}
+Return
 vk1D & r::send, {Media_Next}
-vk1D & w::send, {Volume_Down}
 vk1D & q::send, {Media_Prev}
 vk1D & Tab::
     key := "Tab"
@@ -92,10 +102,34 @@ vk1D & Tab::
     }
 Return
 
-vk1D & s::send, ^+{Tab}
-vk1D & d::send, ^{Tab}
-vk1D & a::send, {Left}
-vk1D & f::send, {Right}
+vk1D & s::
+    if GetKeyState("alt") {
+        send, {Up}
+        return
+    }
+    send, ^+{Tab}
+Return
+vk1D & d::
+    if GetKeyState("alt") {
+        send, {Down}
+        return
+    }
+    send, ^{Tab}
+Return
+vk1D & a::
+    if GetKeyState("alt") {
+        send, {Left}
+        return
+    }
+    send, !{Left}
+Return
+vk1D & f::
+    if GetKeyState("alt") {
+        send, {Right}
+        return
+    }
+    send, !{Right}
+Return
 
 vk1D & z::send, {Esc}
 vk1D & v::send, {Enter}
