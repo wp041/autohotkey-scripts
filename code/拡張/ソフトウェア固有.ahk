@@ -13,17 +13,19 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe Illustrator.exe
-    ctrl & WheelUp::!WheelDown
-    ctrl & WheelDown::!WheelUp
+    ; ctrl & WheelUp::!WheelDown
+    ; ctrl & WheelDown::!WheelUp
 #IfWinActive
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
+    ; ctrl & WheelUp::!WheelDown
+    ; ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-
+    Alt::Return
     Tab::Tab
     Tab & c::
         send, {F6}
@@ -36,7 +38,11 @@
     Tab & s::send, !{Up}
     Tab & c::
         send, !{d}
-        send, {cmd}
+        send, ^c
+    Return
+    Tab & e::
+        send, !{d}
+        send, cmd
         send, {Enter}
     Return
 #IfWinActive

@@ -65,7 +65,7 @@ Return
 
 vk1D & e::
     if GetKeyState("alt") {
-        send, {Media_Next}
+        send, {Esc}
         return
     }
     send, {Volume_Up}

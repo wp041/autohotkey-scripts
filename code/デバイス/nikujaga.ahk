@@ -8,6 +8,8 @@ WheelRight::WheelLeft
 
 ~LCtrl & WheelLeft::AltTab
 ~LCtrl & WheelRight::ShiftAltTab
+~F20 & WheelUp::!WheelDown
+~F20 & WheelDown::!WheelUp
 
 ; ファンクションキー
 
@@ -25,18 +27,13 @@ F13::
     }
 Return
 
-F13 & f::AltTab
-F13 & e::send, {Blind}{Up}
-F13 & d::send, {Blind}{Down}
-F13 & s::WinActivate, ahk_exe Spotify.exe
-
 #If (altmode)
 
-*e::send, {Blind}{Up}
+*s::send, {Blind}{Up}
 *d::send, {Blind}{Down}
-*s::send, {Blind}{Left}
+*a::send, {Blind}{Left}
 *f::send, {Blind}{Right}
-*a::send, {Blind}{Esc}
+*e::send, {Blind}{Esc}
 *g::send, {Blind}{Enter}
 
 t::
@@ -62,9 +59,17 @@ F14::Return
 F15::Return
 
 ; グローバルショートカットとして運用
-F16::Return
 
 F16 & r::Reload
+
+F16 & d::
+    FormatTime,TimeString,,yyyy-MM-dd
+    backup := ClipboardAll
+    Clipboard := % TimeString
+    Send,^v
+    sleep,100
+    Clipboard := backup
+Return
 
 F16 & m::
     CoordMode, Mouse, Screen
@@ -89,8 +94,10 @@ F16 & o::
     Send, ^o
 Return
 
-F16 & t::
+F16 & k::
     WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1928, -995, 1, 0,
     Send, ^t
 return
 

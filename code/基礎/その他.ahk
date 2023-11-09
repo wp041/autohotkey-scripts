@@ -23,17 +23,5 @@ $Esc::
     keywait, Esc
 return
 
-; ペースト
-Ctrl & v::
-    KeyWait, v, T0.2
-    if (ErrorLevel){
-        send, #v
-    }else{
-        send, ^v 
-    }
-    keywait, v
-return
-
 ;F20
-
 F20::LWin
