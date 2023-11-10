@@ -8,8 +8,6 @@ WheelRight::WheelLeft
 
 ~LCtrl & WheelLeft::AltTab
 ~LCtrl & WheelRight::ShiftAltTab
-~F20 & WheelUp::!WheelDown
-~F20 & WheelDown::!WheelUp
 
 ; ファンクションキー
 
