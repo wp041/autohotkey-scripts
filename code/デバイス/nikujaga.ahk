@@ -6,6 +6,73 @@ WheelUp::WheelDown
 WheelLeft::WheelRight
 WheelRight::WheelLeft
 
+; ウィンドウ切り替え
+
+vk1D & z::
+    KeyWait, z, U
+    KeyWait, z, D T0.2
+    if (ErrorLevel=1){
+        CoordMode, Mouse, Screen
+        MouseClick, L, -1920, 0, 1, 0,
+    }else{
+        CoordMode, Mouse, Screen
+        MouseClick, L, -955, 0, 1, 0,
+    }
+Return
+
+vk1D & x::
+    KeyWait, x, U
+    KeyWait, x, D T0.2
+    if (ErrorLevel=1){
+        CoordMode, Mouse, Screen
+        MouseClick, L, 0, 0, 1, 0,
+    }else{
+        CoordMode, Mouse, Screen
+        MouseClick, L, 965, 0, 1, 0,
+    }
+Return
+
+vk1D & q::
+    KeyWait, q, U
+    KeyWait, q, D T0.2
+    if (ErrorLevel=1){
+        CoordMode, Mouse, Screen
+        MouseClick, L, -2552, -1082, 1, 0,
+    }else{
+        CoordMode, Mouse, Screen
+        MouseClick, L, -1580, -1082, 1, 0,
+    }
+Return
+
+vk1D & w::
+    KeyWait, w, U
+    KeyWait, w, D T0.2
+    if (ErrorLevel=1){
+        CoordMode, Mouse, Screen
+        MouseClick, L, 700, -1080, 1, 0,
+    }else{
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1927, -1080, 1, 0,
+    }
+Return
+
+vk1D & e::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1928, -995, 1, 0,
+Return
+vk1D & r::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 3007, -600, 1, 0,
+Return
+vk1D & v::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 3007, 600, 1, 0,
+Return
+vk1D & c::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 2125, 900, 1, 0,
+Return
+
 ; ファンクションキー
 
 altmode := False
