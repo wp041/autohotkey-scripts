@@ -8,22 +8,22 @@ WheelRight::WheelLeft
 
 ; ウィンドウ切り替え
 
-vk1D & z::
-    KeyWait, z, U
-    KeyWait, z, D T0.2
-    if (ErrorLevel=1){
-        CoordMode, Mouse, Screen
-        MouseClick, L, -1920, 0, 1, 0,
-    }else{
-        CoordMode, Mouse, Screen
-        MouseClick, L, -955, 0, 1, 0,
-    }
-Return
-
 vk1D & x::
     KeyWait, x, U
     KeyWait, x, D T0.2
-    if (ErrorLevel=1){
+    if (ErrorLevel){
+        CoordMode, Mouse, Screen
+        MouseClick, L, -1920, 2, 1, 0,
+    }else{
+        CoordMode, Mouse, Screen
+        MouseClick, L, -955, 2, 1, 0,
+    }
+Return
+
+vk1D & c::
+    KeyWait, c, U
+    KeyWait, c, D T0.2
+    if (ErrorLevel){
         CoordMode, Mouse, Screen
         MouseClick, L, 0, 0, 1, 0,
     }else{
@@ -32,10 +32,10 @@ vk1D & x::
     }
 Return
 
-vk1D & q::
-    KeyWait, q, U
-    KeyWait, q, D T0.2
-    if (ErrorLevel=1){
+vk1D & z::
+    KeyWait, z, U
+    KeyWait, z, D T0.2
+    if (ErrorLevel){
         CoordMode, Mouse, Screen
         MouseClick, L, -2552, -1082, 1, 0,
     }else{
@@ -44,10 +44,10 @@ vk1D & q::
     }
 Return
 
-vk1D & w::
-    KeyWait, w, U
-    KeyWait, w, D T0.2
-    if (ErrorLevel=1){
+vk1D & v::
+    KeyWait, v, U
+    KeyWait, v, D T0.2
+    if (ErrorLevel){
         CoordMode, Mouse, Screen
         MouseClick, L, 700, -1080, 1, 0,
     }else{
@@ -56,22 +56,22 @@ vk1D & w::
     }
 Return
 
-vk1D & e::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 1928, -995, 1, 0,
-Return
-vk1D & r::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 3007, -600, 1, 0,
-Return
-vk1D & v::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 3007, 600, 1, 0,
-Return
-vk1D & c::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 2125, 900, 1, 0,
-Return
+; vk1D & e::
+;     CoordMode, Mouse, Screen
+;     MouseClick, L, 1928, -995, 1, 0,
+; Return
+; vk1D & r::
+;     CoordMode, Mouse, Screen
+;     MouseClick, L, 3007, -600, 1, 0,
+; Return
+; vk1D & v::
+;     CoordMode, Mouse, Screen
+;     MouseClick, L, 3007, 600, 1, 0,
+; Return
+; vk1D & c::
+;     CoordMode, Mouse, Screen
+;     MouseClick, L, 2125, 900, 1, 0,
+; Return
 
 ; ファンクションキー
 
