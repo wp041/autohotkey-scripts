@@ -26,7 +26,6 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
-    Alt::Return
     Tab::Tab
     Tab & c::
         send, {F6}

@@ -6,9 +6,6 @@ WheelUp::WheelDown
 WheelLeft::WheelRight
 WheelRight::WheelLeft
 
-~LCtrl & WheelLeft::AltTab
-~LCtrl & WheelRight::ShiftAltTab
-
 ; ファンクションキー
 
 altmode := False

@@ -1,12 +1,3 @@
-﻿; 1::F1
-; 2::F2
-; 3::Media_Play_Pause
-; 4::F4
-; 5::F5
-; 6::F6
-; 7::F7
-; 8::F8
-; 9::F9
-; 0::F10
-
-;F11,F12については無変換.ahkに記述
+﻿#SingleInstance, Force
+SendMode Input
+SetWorkingDir, %A_ScriptDir%
