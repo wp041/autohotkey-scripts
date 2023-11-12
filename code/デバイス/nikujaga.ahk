@@ -36,16 +36,6 @@ t::
     altmode := False
     ToolTip,,,,2
 Return
-1::
-    send, ^t
-    send, https://twitter.com/home
-    send, {Enter}
-Return
-2::
-    send, ^t
-    send, https://www.youtube.com/
-    send, {Enter}
-Return
 
 #If
 
