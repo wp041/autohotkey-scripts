@@ -58,22 +58,22 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-; vk1D & e::
-;     if GetKeyState("alt") {
-;         send, {Esc}
-;         return
-;     }
-;     send, {Volume_Up}
-; Return
-; vk1D & w::
-;     if GetKeyState("alt") {
-;         send, {Esc}
-;         return
-;     }
-;     send, {Volume_Down}
-; Return
-; vk1D & r::send, {Media_Next}
-; vk1D & q::send, {Media_Prev}
+vk1D & t::
+    if GetKeyState("alt") {
+        send, {Esc}
+        return
+    }
+    send, {Volume_Up}
+Return
+vk1D & q::
+    if GetKeyState("alt") {
+        send, {Esc}
+        return
+    }
+    send, {Volume_Down}
+Return
+vk1D & b::send, {Media_Next}
+vk1D & z::send, {Media_Prev}
 vk1D & Tab::
     key := "Tab"
     KeyWait, %key%, T0.3

@@ -149,6 +149,7 @@ F16 & m::
     CoordMode, Mouse, Screen
     MouseClick, L, 1927, -1080, 1, 0,
     Send, ^d
+    Sleep, 1000
     Send, ^f
     Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
     ; backup := ClipboardAll
@@ -176,14 +177,8 @@ F16 & k::
 return
 
 F16 & p::
-    WinActivate, ahk_exe Obsidian.exe
-    KeyWait, p, T0.2
-    if (ErrorLevel){
-        Send, ^!+{F12}
-    }else{
-        Send, ^!+{F10}
-    }
-    keywait, p
+    CoordMode, Mouse, Screen
+    MouseClick, L, - 800, -790, 1, 0,
 return
 
 F17::Return
