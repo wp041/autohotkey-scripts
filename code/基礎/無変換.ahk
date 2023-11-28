@@ -46,7 +46,6 @@ vk1D & @::Send, {Blind}{>}
 
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
-vk1D & n::Send, {Blind}{^}
 
 vk1D & esc::Send, {Blind}{.}
 vk1D & F16::Send, {Blind}{,}
