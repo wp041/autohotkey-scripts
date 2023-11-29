@@ -22,7 +22,9 @@
     ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
-    Alt::Space
+    vk1D & t::!]
+    vk1D & b::![
+    ; Alt::Space
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
@@ -41,6 +43,11 @@
         send, ^c
     Return
     Tab & e::
+        send, !{d}
+        send, cmd
+        send, {Enter}
+    Return
+    Tab & v::
         send, !{d}
         send, cmd
         send, {Enter}
