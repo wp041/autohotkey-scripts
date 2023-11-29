@@ -57,36 +57,36 @@ vk1D & vk1C::
     Send, {Blind}{0}
 Return
 
-vk1D & t::
+vk1D & e::
     if GetKeyState("alt") {
         send, {Esc}
         return
     }
     send, {Volume_Up}
 Return
-vk1D & q::
+vk1D & w::
     if GetKeyState("alt") {
         send, {Esc}
         return
     }
     send, {Volume_Down}
 Return
-vk1D & b::send, {Media_Next}
-vk1D & z::send, {Media_Prev}
+vk1D & c::send, {Media_Next}
+vk1D & x::send, {Media_Prev}
 vk1D & Tab::
     key := "Tab"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe
-        Send, +!b
-        Send, !{Tab}
+        Send, ^k
         KeyWait, %key%
         return
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合
         WinActivate,ahk_exe Spotify.exe
-        Send, ^k
+        Send, +!b
+        Send, !{Tab}
         KeyWait, %key%
         return
     }else{ ;短押しした場合
