@@ -10,18 +10,5 @@
 ; 拡大の無効化
 ^sc027::Return
 
-; esc
-$Esc::
-    KeyWait, Esc, T0.2
-    if (ErrorLevel){
-        send,!{F4}
-    }else{
-        send,{Esc}
-        altmode := False
-        ToolTip,,,,2
-    }
-    keywait, Esc
-return
-
 ;F20
 F20::LWin

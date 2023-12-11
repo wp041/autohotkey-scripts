@@ -22,6 +22,22 @@ F13::
     }
 Return
 
+; esc
+
+$Esc::
+    KeyWait, Esc, T0.2
+    if (ErrorLevel){
+        send,!{F4}
+    }else{
+        send,{Esc}
+        altmode := False
+        ToolTip,,,,2
+    }
+    keywait, Esc
+return
+
+; altmode
+
 #If (altmode)
 
 *s::send, {Blind}{Up}
