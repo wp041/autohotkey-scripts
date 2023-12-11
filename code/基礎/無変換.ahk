@@ -40,9 +40,8 @@ vk1D & sc027::
     }
     Send, {Blind}{NumpadSub}
 Return
-vk1D & sc073::Send, {Blind}{=}
-vk1D & p::Send, {Blind}{<}
-vk1D & @::Send, {Blind}{>}
+vk1D & Enter::Send, {Blind}{=}
+vk1D & sc073::Send, {Blind}{^}
 
 vk1D & g::Send, {Blind}{[}
 vk1D & h::Send, {Blind}{]}
