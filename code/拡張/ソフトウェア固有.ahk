@@ -31,7 +31,8 @@
     Tab::Tab
     Tab & c::
         send, {F6}
-        send, ^{c}
+        Sleep, 20
+        send, ^c
     Return
 #IfWinActive
 
