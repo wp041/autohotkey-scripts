@@ -46,6 +46,12 @@ return
 *f::send, {Blind}{Right}
 *e::send, {Blind}{Esc}
 *g::send, {Blind}{Enter}
+*l::send, {Blind}{Up}
+*k::send, {Blind}{Down}
+*j::send, {Blind}{Left}
+*sc027::send, {Blind}{Right}
+*i::send, {Blind}{Esc}
+*h::send, {Blind}{Enter}
 
 t::
     send, ^t
