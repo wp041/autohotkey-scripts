@@ -22,6 +22,18 @@ F13::
     }
 Return
 
+F14::
+    If (altmode == True){
+        altmode := False
+        ToolTip,,,,2
+        Return
+    }Else{
+        altmode := True
+        ToolTip, altmode, 0, 0, 2
+        Return
+    }
+Return
+
 ; esc
 
 $Esc::
@@ -60,8 +72,6 @@ t::
 Return
 
 #If
-
-F14::Return
 
 F15::Return
 
