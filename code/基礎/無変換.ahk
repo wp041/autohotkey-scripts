@@ -85,7 +85,7 @@ vk1D & Tab::
     If(!ErrorLevel){ ;2度押しした場合
         WinActivate,ahk_exe Spotify.exe
         Send, +!b
-        Send, !{Tab}
+        Send, !{Esc}
         KeyWait, %key%
         return
     }else{ ;短押しした場合
