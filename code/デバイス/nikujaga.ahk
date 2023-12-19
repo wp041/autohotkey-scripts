@@ -72,6 +72,15 @@ F16 & d::
     Clipboard := backup
 Return
 
+F16 & n::
+    FormatTime,TimeString,,yyyy-MM-ddTHHmmss
+    backup := ClipboardAll
+    Clipboard := % TimeString
+    Send,^v
+    sleep,100
+    Clipboard := backup
+Return
+
 F16 & m::
     CoordMode, Mouse, Screen
     MouseClick, L, 1927, -1080, 1, 0,
