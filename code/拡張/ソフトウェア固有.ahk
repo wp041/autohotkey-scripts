@@ -60,12 +60,13 @@
         send, !{d}
         send, ^c
     Return
-    Tab & e::
+    Tab & p::
         send, !{d}
-        send, cmd
+        Sleep, 20
+        send, powershell
         send, {Enter}
     Return
-    Tab & v::
+    Tab & e::
         send, !{d}
         send, cmd
         send, {Enter}
