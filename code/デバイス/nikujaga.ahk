@@ -136,7 +136,8 @@ return
 
 F16 & p::
     CoordMode, Mouse, Screen
-    MouseClick, L, - 800, -790, 1, 0,
+    MouseClick, L, -740, -920, 1, 0,
+    Send, !{Esc}
 return
 
 F17::Return
