@@ -30,9 +30,26 @@
 #IfWinActive, ahk_exe chrome.exe
     Tab::Tab
     Tab & c::
-        send, {F6}
+        send, !{d}
         Sleep, 20
         send, ^c
+    Return
+    Tab & t::
+        send, {F6}
+        send, {F6}
+        Sleep, 20
+        send, {AppsKey}
+        Sleep, 20
+        send, {Down}
+        Sleep, 10
+        send, {Down}
+        Sleep, 10
+        send, {Down}
+        Sleep, 10
+        send, {Down}
+        Sleep, 10
+        send, {Enter}
+        send, {Enter}
     Return
 #IfWinActive
 
