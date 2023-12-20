@@ -68,7 +68,20 @@
     Return
     Tab & e::
         send, !{d}
+        Sleep, 20
         send, cmd
+        send, {Enter}
+    Return
+    Tab & v::
+        IME_SET(0)
+        send, !{d}
+        Sleep, 20
+        send, cmd
+        send, {Enter}
+        Sleep, 500
+        send, code .
+        Sleep, 200
+        send, {Enter}
         send, {Enter}
     Return
 #IfWinActive
