@@ -37,9 +37,9 @@
     Tab & t::
         send, {F6}
         send, {F6}
-        Sleep, 20
+        Sleep, 50
         send, {AppsKey}
-        Sleep, 20
+        Sleep, 50
         send, {Down}
         Sleep, 10
         send, {Down}
@@ -47,7 +47,7 @@
         send, {Down}
         Sleep, 10
         send, {Down}
-        Sleep, 10
+        Sleep, 50
         send, {Enter}
         send, {Enter}
     Return
