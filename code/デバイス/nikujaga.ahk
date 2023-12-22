@@ -48,6 +48,11 @@ $Esc::
     keywait, Esc
 return
 
+; altもspaceとして扱う
+#IF IME_GetConverting()
+    Alt::Space
+#If
+
 ; altmode
 
 #If (altmode)
@@ -61,6 +66,7 @@ return
 *l::send, {Blind}{Up}
 *k::send, {Blind}{Down}
 *j::send, {Blind}{Left}
+*vkBB::send, {Blind}{Right}
 *sc027::send, {Blind}{Right}
 *i::send, {Blind}{Esc}
 *h::send, {Blind}{Enter}
