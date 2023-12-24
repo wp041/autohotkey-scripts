@@ -68,8 +68,8 @@ return
 *j::send, {Blind}{Left}
 *vkBB::send, {Blind}{Right}
 *sc027::send, {Blind}{Right}
-*i::send, {Blind}{Esc}
-*h::send, {Blind}{Enter}
+*,::send, {Blind}{Left}
+*.::send, {Blind}{Right}
 
 t::
     send, ^t
