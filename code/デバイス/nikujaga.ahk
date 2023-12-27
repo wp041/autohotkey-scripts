@@ -10,17 +10,17 @@ WheelRight::WheelLeft
 
 altmode := False
 
-F13::
-    If (altmode == True){
-        altmode := False
-        ToolTip,,,,2
-        Return
-    }Else{
-        altmode := True
-        ToolTip, altmode, 0, 0, 2
-        Return
-    }
-Return
+; F13::
+;     If (altmode == True){
+;         altmode := False
+;         ToolTip,,,,2
+;         Return
+;     }Else{
+;         altmode := True
+;         ToolTip, altmode, 0, 0, 2
+;         Return
+;     }
+; Return
 
 F14::
     If (altmode == True){
@@ -79,7 +79,7 @@ Return
 
 #If
 
-F15::Return
+F16::Send, !{Tab}
 
 ; グローバルショートカットとして運用
 
