@@ -22,9 +22,24 @@
     ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
-    vk1D & t::!]
-    vk1D & b::![
-    ; Alt::Space
+    vk1D & a::[
+    vk1D & f::]
+    vk1D & z::!]
+    vk1D & v::![
+    Alt::Space
+    ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
+    F1::
+        Flag += 1
+        If Flag = 1
+        {Send, p
+            Return
+        }
+        If Flag = 2
+            Send, e
+        Flag =
+    Return
+    F13::LAlt
+    LWin::LAlt
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
