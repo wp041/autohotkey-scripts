@@ -22,9 +22,9 @@
     ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
-    vk1D & a::[
-    vk1D & f::]
-    vk1D & z::!]
+    vk1D & g::[
+    vk1D & b::]
+    vk1D & f::!]
     vk1D & v::![
     Alt::Space
     ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
