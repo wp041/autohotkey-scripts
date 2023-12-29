@@ -18,17 +18,17 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
-    ;ホイール系
+    ;keyball用の対処
     ctrl & WheelUp::!WheelDown
     ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
+    Alt::Space
     ;無変換キー
     vk1D & g::[
     vk1D & b::]
     vk1D & f::!]
     vk1D & v::![
-    Alt::Space
     ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
     F1::
         Flag += 1
