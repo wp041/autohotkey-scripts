@@ -18,10 +18,12 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
+    ;ホイール系
     ctrl & WheelUp::!WheelDown
     ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
+    ;無変換キー
     vk1D & g::[
     vk1D & b::]
     vk1D & f::!]
