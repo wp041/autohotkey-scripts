@@ -97,14 +97,14 @@ Return
 
 vk1D & s::
     if GetKeyState("alt") {
-        send, {Up}
+        send, {Down}
         return
     }
     send, ^+{Tab}
 Return
 vk1D & d::
     if GetKeyState("alt") {
-        send, {Down}
+        send, {Up}
         return
     }
     send, ^{Tab}
