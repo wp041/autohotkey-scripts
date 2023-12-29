@@ -18,7 +18,7 @@
 #IfWinActive
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
-    ;keyball用
+    ;keyball用verified用のテスト
     ctrl & WheelUp::!WheelDown
     ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
