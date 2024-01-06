@@ -79,8 +79,6 @@ Return
 
 #If
 
-F16::Send, !{Tab}
-
 ; グローバルショートカットとして運用
 
 F16 & r::Reload
@@ -138,6 +136,15 @@ F16 & k::
     CoordMode, Mouse, Screen
     MouseClick, L, 1928, -995, 1, 0,
     Send, ^t
+return
+
+F16 & a::
+    WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1928, -995, 1, 0,
+    Send, ^t
+    Send, ba
+    Send, {Enter}
 return
 
 F16 & p::
