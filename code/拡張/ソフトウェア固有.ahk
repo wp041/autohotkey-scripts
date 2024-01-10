@@ -17,6 +17,11 @@
     ctrl & WheelDown::!WheelUp
 #IfWinActive
 
+#IfWinActive, ahk_exe InDesign.exe
+    ctrl & WheelUp::!WheelDown
+    ctrl & WheelDown::!WheelUp
+#IfWinActive
+
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
     ;keyball用
     ctrl & WheelUp::!WheelDown
@@ -67,6 +72,9 @@
         Sleep, 50
         send, {Enter}
         send, {Enter}
+    Return
+    Ctrl & o::
+        send, ^+a
     Return
 #IfWinActive
 
