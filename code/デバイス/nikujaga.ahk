@@ -156,3 +156,15 @@ return
 F17::Return
 
 F18::Return
+
+; ソフトウェア固有
+
+#IfWinActive, ahk_exe Illustrator.exe
+    ctrl & WheelUp::!WheelDown
+    ctrl & WheelDown::!WheelUp
+#IfWinActive
+
+#IfWinActive, ahk_exe InDesign.exe
+    ctrl & WheelUp::!WheelDown
+    ctrl & WheelDown::!WheelUp
+#IfWinActive
