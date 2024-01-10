@@ -65,7 +65,7 @@ vk1D & e::
 Return
 vk1D & w::
     if GetKeyState("alt") {
-        send, {Esc}
+        send, {Enter}
         return
     }
     send, {Volume_Down}
