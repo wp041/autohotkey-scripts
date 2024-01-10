@@ -63,7 +63,7 @@
         send, {Enter}
         send, {Enter}
     Return
-    Ctrl & o::
+    Tab & a::
         send, ^+a
     Return
 #IfWinActive
