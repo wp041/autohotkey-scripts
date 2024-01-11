@@ -14,11 +14,8 @@
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
     ;keyball用
-    ctrl & WheelUp::!WheelDown
-    ctrl & WheelDown::!WheelUp
     WheelLeft::WheelRight
     WheelRight::WheelLeft
-    Alt::Space
     ;無変換キー
     vk1D & g::[
     vk1D & b::]
@@ -35,8 +32,6 @@
             Send, e
         Flag =
     Return
-    F13::LAlt
-    LWin::LAlt
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
