@@ -10,7 +10,7 @@ WheelRight::WheelLeft
 
 altmode := False
 
-Ctrl & F13::
+Tab & F13::
     If (altmode == True){
         altmode := False
         ToolTip,,,,2
