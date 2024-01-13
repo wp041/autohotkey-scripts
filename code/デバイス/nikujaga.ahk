@@ -113,16 +113,12 @@ F16 & m::
     CoordMode, Mouse, Screen
     MouseClick, L, 1927, -1080, 1, 0,
     Sleep, 200
-    ; InsertText("<% tp.file.cursor(2) %>")
-    Send, a
-    Send, a
-    Send, {BS}
-    Send, {BS}
-    Sleep, 20
-    Send, ^t
-    Sleep, 20
-    Send, ^d
-    Sleep, 500
+    InsertText("<% tp.file.cursor(2) %>")
+    ; Sleep, 20
+    ; Send, ^t
+    ; Sleep, 20
+    ; Send, ^d
+    ; Sleep, 500
     Send, ^{End}
     ; Send, ^f
     ; Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
