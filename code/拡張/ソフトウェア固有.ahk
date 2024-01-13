@@ -111,6 +111,13 @@
         Send, {Enter}
         Send, !{Up}
     Return
+    Tab & c::
+        Send, {End}
+        Send, ^c
+        Send, ^v
+        Send, {Up}
+        Send, {NumpadSub}
+    Return
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe

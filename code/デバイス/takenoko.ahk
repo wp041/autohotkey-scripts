@@ -6,7 +6,7 @@ F13::
     If(ErrorLevel){ ;長押しした場合
         Send, !{F4}
         KeyWait, %key%
-        return 
+        return
     }
     KeyWait, %key%, D, T0.2
     If(!ErrorLevel){ ;2度押しした場合

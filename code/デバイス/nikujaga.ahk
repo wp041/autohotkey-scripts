@@ -101,28 +101,52 @@ F16 & n::
     Clipboard := backup
 Return
 
+InsertText(Content) {
+    cb_bk = %ClipboardAll%
+    Clipboard = %Content%
+    Send, ^v
+    Sleep, 200
+    Clipboard = %cb_bk%
+}
+
 F16 & m::
     CoordMode, Mouse, Screen
     MouseClick, L, 1927, -1080, 1, 0,
+    Sleep, 200
+    ; InsertText("<% tp.file.cursor(2) %>")
+    Send, a
+    Send, a
+    Send, {BS}
+    Send, {BS}
+    Sleep, 20
+    Send, ^t
+    Sleep, 20
     Send, ^d
-    Sleep, 1000
-    Send, ^f
-    Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
-    ; backup := ClipboardAll
-    ; Clipboard := ## 行動
-    ; Send,^v
-    ; Clipboard := backup
-    Send, {Enter}
-    Send, {Esc}
-    Send, {Esc}
-    Send, {Up}
+    Sleep, 500
+    Send, ^{End}
+    ; Send, ^f
+    ; Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
+    ; ; backup := ClipboardAll
+    ; ; Clipboard := ## 行動
+    ; ; Send,^v
+    ; ; Clipboard := backup
+    ; Send, {Enter}
+    ; Send, {Esc}
+    ; Send, {Esc}
+    ; Send, {Up}
     Send, ^m
 Return
 
 F16 & t::
     CoordMode, Mouse, Screen
     MouseClick, L, 700, -1080, 1, 0,
-    Send, ^t
+    Send, !a
+Return
+
+F16 & a::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 700, -1080, 1, 0,
+    Send, !a
 Return
 
 F16 & o::
@@ -138,7 +162,7 @@ F16 & k::
     Send, ^t
 return
 
-F16 & a::
+F16 & b::
     WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Screen
     MouseClick, L, 1928, -995, 1, 0,
