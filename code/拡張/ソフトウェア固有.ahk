@@ -118,10 +118,11 @@
         Send, {Up}
         Send, {NumpadSub}
     Return
-    Ctrl & j::
-        send, ^{Home}
-        Send, ^j
-    Return
+    ; Ctrl & j::
+    ;     send, ^{Home}
+    ;     sleep, 50
+    ;     Send, ^j
+    ; Return
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe
