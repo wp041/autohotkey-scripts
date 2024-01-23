@@ -154,14 +154,14 @@ Return
 F16 & k::
     WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Screen
-    MouseClick, L, 1928, -995, 1, 0,
+    MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
 return
 
 F16 & b::
     WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Screen
-    MouseClick, L, 1928, -995, 1, 0,
+    MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
     Send, ba
     Send, {Enter}
