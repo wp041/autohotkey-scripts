@@ -135,10 +135,11 @@ F16 & m::
     Send, ^m
 Return
 
-F16 & t::
+F16 & ,::
     CoordMode, Mouse, Screen
-    MouseClick, L, 700, -1080, 1, 0,
-    Send, !a
+    MouseClick, L, 1927, -1080, 1, 0,
+    Sleep, 100
+    Send, ^j
 Return
 
 F16 & a::
@@ -169,15 +170,10 @@ F16 & b::
     Send, {Enter}
 return
 
-F16 & p::
-    CoordMode, Mouse, Screen
-    MouseClick, L, -740, -920, 1, 0,
-    Send, !{Esc}
-return
-
 F16 & h::
     CoordMode, Mouse, Screen
     MouseClick, L, 3009, 0, 1, 0,
+    MouseClick, L, 2990, -292, 1, 0,
     Send, ^t
 Return
 
