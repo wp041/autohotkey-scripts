@@ -111,11 +111,12 @@ InsertText(Content) {
 
 F16 & m::
     CoordMode, Mouse, Screen
-    MouseClick, L, 1927, -1080, 1, 0,
-    Sleep, 200
-    Send, ^j
-    Sleep, 20
-    InsertText("<% tp.file.cursor(2) %>")
+    MouseClick, L, 1600, -730, 1, 0,
+    Sleep, 100
+    ; Sleep, 100
+    ; Send, ^j
+    ; Sleep, 20
+    ; InsertText("<% tp.file.cursor(2) %>")
     ; Sleep, 20
     ; Send, ^t
     ; Sleep, 20
