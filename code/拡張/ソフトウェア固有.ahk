@@ -112,6 +112,13 @@
         Send, !{Up}
     Return
     Tab & c::
+        send, {F2}
+        send, ^c
+        clipboard = [[%clipboard%]]
+        Sleep, 50
+        send, {Esc}
+    Return
+    Tab & v::
         Send, {End}
         Send, ^c
         Send, ^v
