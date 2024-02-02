@@ -114,9 +114,9 @@
     Tab & c::
         send, {F2}
         send, ^c
-        clipboard = [[%clipboard%]]
-        Sleep, 50
         send, {Esc}
+        Sleep, 20
+        clipboard = [[%clipboard%]]
     Return
     Tab & v::
         Send, {End}
