@@ -139,3 +139,26 @@
     Tab::Tab
     Tab & e::send, +!{r}
 #IfWinActive
+
+#IfWinActive, ahk_exe blender.exe
+    Tab::Tab
+    vk1D & u::Send, {Blind}{Numpad7}
+    vk1D & i::Send, {Blind}{Numpad8}
+    vk1D & o::Send, {Blind}{Numpad9}
+
+    vk1D & j::Send, {Blind}{Numpad4}
+    vk1D & k::Send, {Blind}{Numpad5}
+    vk1D & l::Send, {Blind}{Numpad6}
+
+    vk1D & m::Send, {Blind}{Numpad1}
+    vk1D & ,::Send, {Blind}{Numpad2}
+    vk1D & .::Send, {Blind}{Numpad3}
+#IfWinActive
+
+#IfWinActive, ahk_exe Eagle.exe
+    Tab::Tab
+#IfWinActive
+
+#IfWinActive, ahk_exe Illustrator.exe
+    Tab::Tab
+#IfWinActive
