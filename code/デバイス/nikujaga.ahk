@@ -81,6 +81,8 @@ Return
 
 ; グローバルショートカットとして運用
 
+F16::AppsKey
+
 F16 & r::Reload
 
 F16 & d::

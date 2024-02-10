@@ -112,6 +112,7 @@
         Send, !{Up}
     Return
     Tab & c::
+        Sleep, 20
         send, {F2}
         send, ^c
         send, {Esc}
