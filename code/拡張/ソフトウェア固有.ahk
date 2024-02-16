@@ -127,6 +127,19 @@
         Send, {Up}
         Send, {NumpadSub}
     Return
+    Tab & b::
+        if GetKeyState("alt") {
+            Sleep, 50
+            Send, ^+!1
+            Sleep, 50
+            Send, ^+!3
+            return
+        }
+        Sleep, 50
+        Send, ^+!1
+        Sleep, 50
+        Send, ^+!2
+    Return
     ; Ctrl & j::
     ;     send, ^{Home}
     ;     sleep, 50
