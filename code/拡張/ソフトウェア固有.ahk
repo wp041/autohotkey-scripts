@@ -37,9 +37,9 @@
 #IfWinActive, ahk_exe chrome.exe
     Tab::Tab
     Tab & c::
-        Sleep, 20
+        Sleep, 50
         send, !{d}
-        Sleep, 20
+        Sleep, 50
         send, ^c
     Return
     Tab & t::
@@ -115,9 +115,10 @@
     Tab & c::
         Sleep, 200
         send, {F2}
+        Sleep, 20
         send, ^c
         send, {Esc}
-        Sleep, 20
+        Sleep, 300
         clipboard = [[%clipboard%]]
     Return
     Tab & v::
