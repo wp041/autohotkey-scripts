@@ -12,3 +12,5 @@
 
 ;F20
 F20::LWin
+
+^esc::Suspend ; Suspend script with Ctrl+Alt+S
