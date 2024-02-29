@@ -170,6 +170,7 @@ F16 & i::
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^6
     MouseClick, L, 2024, -746, 1, 0,
+    MouseClick, L, 2230, 850, 1, 0,
 return
 
 F16 & h::
