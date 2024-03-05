@@ -26,9 +26,9 @@ vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
-vk1D & Enter::Send, {Blind}{=}
+vk1D & /::Send, {Blind}{=}
 
-vk1D & /::Send, {Blind}{Enter}
+vk1D & Enter::Send, {Blind}{Enter}
 vk1D & sc027::
     if GetKeyState("Shift") {
         Send, {NumpadMult}
