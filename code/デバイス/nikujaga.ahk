@@ -94,7 +94,7 @@ F16 & d::
     Clipboard := backup
 Return
 
-F16 & n::
+F16 & t::
     FormatTime,TimeString,,yyyy-MM-ddTHHmmss
     backup := ClipboardAll
     Clipboard := % TimeString
@@ -162,6 +162,12 @@ F16 & k::
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
+return
+
+F16 & /::
+    WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Screen
+    MouseClick, L, 2075, -921, 1, 0,
 return
 
 F16 & i::
