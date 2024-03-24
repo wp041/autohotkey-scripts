@@ -29,8 +29,14 @@
             Return
         }
         If Flag = 2
-            Send, e
-        Flag =
+        {Send, j
+            Return
+        }
+        If Flag = 3
+        {Send, e
+            Flag =
+            Return
+        }
     Return
 #IfWinActive
 
