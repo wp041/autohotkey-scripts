@@ -3,3 +3,4 @@
 #M::Run,notepad.exe
 #d::Run,C:\Users\okiko\Downloads
 #f::Send, {F15}
+#c::Return
