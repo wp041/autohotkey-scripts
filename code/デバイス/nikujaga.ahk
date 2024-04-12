@@ -57,8 +57,8 @@ return
 
 #If (altmode)
 
-*s::send, {Blind}{Up}
-*d::send, {Blind}{Down}
+*s::send, {Blind}{Down}
+*d::send, {Blind}{Up}
 *a::send, {Blind}{Left}
 *f::send, {Blind}{Right}
 *e::send, {Blind}{Esc}
