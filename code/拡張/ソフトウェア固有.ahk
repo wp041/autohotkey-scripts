@@ -183,4 +183,5 @@
 
 #IfWinActive, ahk_exe Illustrator.exe
     Tab::Tab
+    ^sc027::send, {Blind}{Ctrl}{:}
 #IfWinActive
