@@ -152,6 +152,15 @@
     ;     sleep, 50
     ;     Send, ^j
     ; Return
+    CoordMode, Mouse, Screen
+    vk1D & b::MouseClick, L, 30, 180, 1, 0,
+    vk1D & n::MouseClick, L, 64, 180, 1, 0,
+    vk1D & t::MouseClick, L, 99, 180, 1, 0,
+    vk1D & y::MouseClick, L, 138, 180, 1, 0,
+    vk1D & 7::MouseClick, L, 30, 180, 1, 0,
+    vk1D & 8::MouseClick, L, 64, 180, 1, 0,
+    vk1D & 9::MouseClick, L, 99, 180, 1, 0,
+    vk1D & 0::MouseClick, L, 138, 180, 1, 0,
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe

@@ -169,6 +169,7 @@ F16 & g::
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
+    IME_SET(0)
     Send, go
     Send, {Enter}
     Sleep, 1000
