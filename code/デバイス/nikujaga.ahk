@@ -181,7 +181,6 @@ F16 & /::
 return
 
 F16 & a::
-    WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^1
@@ -199,6 +198,13 @@ Return
 F16 & F18::
     CoordMode, Mouse, Screen
     MouseClick, L, 1750, 1000, 1, 0,
+Return
+
+F16 & G::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 3009, -400, 1, 0,
+    WinActivate, ahk_exe GitHubDesktop.exe
+    Send, ^t
 Return
 
 F17::Return
