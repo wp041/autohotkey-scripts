@@ -26,20 +26,21 @@ vk1C & ,::Send, {Blind}{PgDn}
 vk1C & .::Send, {Blind}{PgUp}
 vk1C & /::Send, {Blind}{End}
 
-vk1C & z::Send, {Blind}{F1}
-vk1C & x::Send, {Blind}{F2}
-vk1C & c::Send, {Blind}{F3}
-vk1C & v::Send, {Blind}{F4}
+vk1C & x::Send, {Blind}{F1}
+vk1C & c::Send, {Blind}{F2}
+vk1C & v::Send, {Blind}{F3}
 
-vk1C & a::Send, {Blind}{F5}
-vk1C & s::Send, {Blind}{F6}
-vk1C & d::Send, {Blind}{F7}
-vk1C & f::Send, {Blind}{F8}
+vk1C & s::Send, {Blind}{F4}
+vk1C & d::Send, {Blind}{F5}
+vk1C & f::Send, {Blind}{F6}
 
-vk1C & q::Send, {Blind}{F9}
-vk1C & w::Send, {Blind}{F10}
-vk1C & e::Send, {Blind}{F11}
-vk1C & r::Send, {Blind}{F12}
+vk1C & w::Send, {Blind}{F7}
+vk1C & e::Send, {Blind}{F8}
+vk1C & r::Send, {Blind}{F9}
+
+vk1C & 2::Send, {Blind}{F10}
+vk1C & 3::Send, {Blind}{F11}
+vk1C & 4::Send, {Blind}{F12}
 
 vk1C & Enter::Send, {Volume_Up}
 vk1C & sc073::Send, {Media_Next}
