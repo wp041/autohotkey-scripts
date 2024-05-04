@@ -145,12 +145,6 @@ F16 & ,::
     Send, ^j
 Return
 
-F16 & a::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 700, -1080, 1, 0,
-    Send, !a
-Return
-
 F16 & o::
     CoordMode, Mouse, Screen
     MouseClick, L, 700, -1080, 1, 0,
@@ -158,26 +152,26 @@ F16 & o::
 Return
 
 F16 & k::
+    if GetKeyState("ctrl") {
+        WinActivate, ahk_exe chrome.exe
+        CoordMode, Mouse, Screen
+        MouseClick, L, 2000, -944, 1, 0,
+        Send, ^t
+        IME_SET(0)
+        Send, go
+        Send, {Enter}
+        Sleep, 1000
+        MouseClick, L, 2700, -507, 1, 0,
+        Sleep, 100
+        MouseClick, L, 2255, -268, 1, 0,
+        Send, ^v
+        Send, {Enter}
+        return
+    }
     WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
-return
-
-F16 & g::
-    WinActivate, ahk_exe chrome.exe
-    CoordMode, Mouse, Screen
-    MouseClick, L, 2000, -944, 1, 0,
-    Send, ^t
-    IME_SET(0)
-    Send, go
-    Send, {Enter}
-    Sleep, 1000
-    MouseClick, L, 2700, -507, 1, 0,
-    Sleep, 100
-    MouseClick, L, 2255, -268, 1, 0,
-    Send, ^v
-    Send, {Enter}
 return
 
 F16 & /::
@@ -186,7 +180,7 @@ F16 & /::
     MouseClick, L, 2075, -921, 1, 0,
 return
 
-F16 & i::
+F16 & a::
     WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
