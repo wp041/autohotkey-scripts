@@ -207,6 +207,9 @@ F16 & G::
     Send, ^t
 Return
 
+; ブログ
+F16 & B::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "D:\Users\okiko\git\wp041.github.io"
+
 F17::Return
 
 F18::Return
