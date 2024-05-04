@@ -5,6 +5,21 @@ vk1D::
     ToolTip,,,,2
     IF (IME_GetConverting() != 0){
         Send, {Blind}{F7}
+        key := "vk1D"
+        KeyWait, %key%, T0.3
+        If(ErrorLevel){ ;長押しした場合
+            return
+        }
+        KeyWait, %key%, D, T0.2
+        If(!ErrorLevel){ ;2度押しした場合
+            Send, {Blind}{F8}
+            KeyWait, %key%
+            return
+        }else{ ;短押しした場合
+            Send, {Blind}{F7}
+            KeyWait, %key%
+            return
+        }
     }
     Else{
         IME_SET(0)
