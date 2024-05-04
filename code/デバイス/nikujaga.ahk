@@ -202,6 +202,11 @@ F16 & h::
     Send, ^t
 Return
 
+F16 & F18::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1750, 1000, 1, 0,
+Return
+
 F17::Return
 
 F18::Return
@@ -216,4 +221,19 @@ F18::Return
 #IfWinActive, ahk_exe InDesign.exe
     ctrl & WheelUp::!WheelDown
     ctrl & WheelDown::!WheelUp
+#IfWinActive
+
+#IfWinActive, ahk_exe Photoshop.exe
+^WheelUp::
+    Send, {AltDown}
+    Sleep, 2
+    Send, {WheelDown}
+    Send, {AltUp}
+Return
+^WheelDown::
+    Send, {AltDown}
+    Sleep, 2
+    Send, {WheelUp}
+    Send, {AltUp}
+Return
 #IfWinActive

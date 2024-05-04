@@ -12,13 +12,26 @@
     vk1D::Space
 #IfWinActive
 
+;                                                                              
+;     ■■■         ■■■   ■■■      ■■■ ■■■■■■■            ■■■      ■■■     ■■■   
+;   ■■■ ■■ ■■     ■■   ■■■■■■  ■■■■■ ■■■■■■■ ■     ■■  ■■■■■■    ■■    ■■■ ■■  
+;  ■■      ■■      ■   ■■   ■  ■        ■    ■     ■■  ■■    ■    ■   ■■     ■ 
+;  ■       ■■      ■   ■■   ■  ■        ■    ■     ■■  ■■    ■■   ■   ■      ■ 
+;  ■       ■■      ■   ■■   ■  ■■■      ■    ■     ■■  ■■     ■   ■   ■      ■■
+;  ■       ■■      ■   ■■■■■     ■■■    ■    ■     ■■  ■■     ■   ■   ■      ■■
+;  ■       ■■      ■   ■■          ■■   ■    ■     ■■  ■■    ■■   ■   ■      ■■
+;  ■■      ■■      ■   ■■          ■■   ■    ■■    ■   ■■    ■■   ■   ■■     ■ 
+;   ■■     ■■      ■   ■■          ■■   ■     ■    ■   ■■   ■■    ■    ■    ■■ 
+;    ■■■■■ ■■■■■■ ■■■  ■■      ■■■■■    ■     ■■■■■    ■■■■■■    ■■■    ■■■■■  
+;                                                                              
+
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
     ;keyball用
     WheelLeft::WheelRight
     WheelRight::WheelLeft
     ;無変換キー
-    vk1D & g::[
-    vk1D & b::]
+    ; LAlt & g::[下の二つと同じ効果
+    ; LAlt & b::]
     vk1D & f::!]
     vk1D & v::![
     ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
@@ -193,4 +206,8 @@
 #IfWinActive, ahk_exe Illustrator.exe
     Tab::Tab
     ^sc027::send, {Blind}{Ctrl}{:}
+#IfWinActive
+
+#IfWinActive, ahk_exe Photoshop.exe
+    Tab::Tab
 #IfWinActive
