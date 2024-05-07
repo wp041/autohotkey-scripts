@@ -81,6 +81,9 @@ Return
 
 ; グローバルショートカットとして運用
 
+F13 & c::Run, C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP STUDIO PAINT\CLIPStudioPaint.exe
+F13 & a::Run, C:\Users\okiko\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Aseprite.url
+
 F16::AppsKey
 
 F16 & r::Reload
