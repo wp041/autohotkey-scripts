@@ -61,7 +61,7 @@
         Sleep, 50
         send, ^c
     Return
-    Tab & t::
+    Tab & w::
         send, {F6}
         send, {F6}
         Sleep, 50
@@ -81,6 +81,17 @@
     Tab & a::
         send, ^+a
     Return
+    tab & t::
+        Sleep, 20
+        send, {AppsKey}
+        Sleep, 20
+        Send, t
+        Sleep, 20
+        send, {Enter}
+        Sleep, 20
+        send, {Esc}
+    Return
+
 #IfWinActive
 
 #IfWinActive, ahk_exe explorer.exe
