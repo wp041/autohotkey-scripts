@@ -85,6 +85,8 @@
         Sleep, 20
         send, {AppsKey}
         Sleep, 20
+        send, {AppsKey}
+        Sleep, 20
         Send, t
         Sleep, 20
         send, {Enter}
@@ -143,6 +145,15 @@
         Send, !{Up}
     Return
     Tab & c::
+        if GetKeyState("shift") {
+            Sleep, 200
+            send, {F2}
+            Sleep, 20
+            send, ^c
+            send, {Esc}
+            Sleep, 300
+            Return
+        }
         Sleep, 200
         send, {F2}
         Sleep, 20
