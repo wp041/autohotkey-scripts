@@ -88,16 +88,16 @@ F16::AppsKey
 
 F16 & r::Reload
 
-F16 & d::
-    FormatTime,TimeString,,yyyy-MM-dd
-    backup := ClipboardAll
-    Clipboard := % TimeString
-    Send,^v
-    sleep,100
-    Clipboard := backup
-Return
-
 F16 & n::
+    if GetKeyState("shift") {
+        FormatTime,TimeString,,yyyy-MM-dd
+        backup := ClipboardAll
+        Clipboard := % TimeString
+        Send,^v
+        sleep,100
+        Clipboard := backup
+        Return
+    }
     FormatTime,TimeString,,yyyy-MM-ddTHHmmss
     backup := ClipboardAll
     Clipboard := % TimeString
