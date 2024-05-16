@@ -35,6 +35,20 @@
     vk1D & f::!]
     vk1D & v::![
     ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
+    vk1D & s::
+        if GetKeyState("alt") {
+            send, {Down}
+            return
+        }
+        send, ^{Tab}
+    Return
+    vk1D & d::
+        if GetKeyState("alt") {
+            send, {Up}
+            return
+        }
+        send, ^+{Tab}
+    Return
     F1::
         Flag += 1
         If Flag = 1
@@ -93,6 +107,19 @@
         Sleep, 20
         send, {Esc}
     Return
+    tab & s::
+        send, ^s
+        Sleep, 1000
+        send, {Enter}
+        send, {Enter}
+        Sleep, 100
+        send, {Down}
+        send, {Down}
+        send, {Down}
+        send, !{Tab}
+        send, ^d
+        send, ^v
+    Return
 
 #IfWinActive
 
@@ -145,7 +172,7 @@
         Send, !{Up}
     Return
     Tab & c::
-        if GetKeyState("shift") {
+        if GetKeyState("alt") {
             Sleep, 200
             send, {F2}
             Sleep, 20
