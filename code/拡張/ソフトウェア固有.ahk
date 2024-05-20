@@ -32,8 +32,20 @@
     ;無変換キー
     ; LAlt & g::[下の二つと同じ効果
     ; LAlt & b::]
-    vk1D & f::!]
-    vk1D & v::![
+    vk1D & x::
+        if GetKeyState("ctrl") {
+            send, ^![
+            return
+        }
+        send, !]
+    Return
+    vk1D & c::
+        if GetKeyState("ctrl") {
+            send, ^!]
+            return
+        }
+        send, ![
+    Return
     ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
     vk1D & s::
         if GetKeyState("alt") {
@@ -73,7 +85,6 @@
             Return
         }
     Return
-
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
@@ -107,9 +118,8 @@
     Return
     tab & t::
         Sleep, 20
-        send, {AppsKey}
-        Sleep, 20
-        send, {AppsKey}
+        CoordMode, Mouse, Screen
+        MouseClick, R, 2988, 911, 1, 0,
         Sleep, 20
         Send, t
         Sleep, 20

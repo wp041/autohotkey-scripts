@@ -7,9 +7,6 @@
 ; IME切り替えの無効化
 #Space::Return
 
-; 拡大の無効化
-^sc027::Return
-
 ;F20
 F20::LWin
 
