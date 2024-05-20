@@ -274,7 +274,7 @@ F16 & n::
     Clipboard := % TimeString
     Send,^v
     sleep,100
-    Clipboard := backup
+    ; Clipboard := backup
 Return
 
 InsertText(Content) {
@@ -286,14 +286,16 @@ InsertText(Content) {
 }
 
 F16 & m::
-    if GetKeyState("ctrl") {
+    if GetKeyState("F15") {
         CoordMode, Mouse, Screen
         MouseClick, L, 1930, -920, 1, 0,
         Return
     }
     CoordMode, Mouse, Screen
     MouseClick, L, 1930, -920, 1, 0,
-    Sleep, 100
+    Sleep, 10
+    Send, ^d
+    Sleep, 500
     ; Sleep, 100
     ; Send, ^j
     ; Sleep, 20
@@ -315,6 +317,26 @@ F16 & m::
     ; Send, {Esc}
     ; Send, {Up}
     Send, ^m
+Return
+
+F16 & 8::
+    if GetKeyState("ctrl") {
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1930, -920, 1, 0,
+        Return
+    }
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1930, 0, 1, 0,
+    Sleep, 10
+    Send, ^{End}
+    Send, ^2
+    FormatTime,TimeString,,yyyy-MM-ddTHHmmss
+    backup := ClipboardAll
+    Clipboard := % TimeString
+    Send,^v
+    Send,{Enter}
+    sleep,100
+    Clipboard := backup
 Return
 
 F16 & ,::
@@ -363,8 +385,8 @@ F16 & a::
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^1
-    MouseClick, L, 2024, -746, 1, 0,
-    MouseClick, L, 2230, 850, 1, 0,
+    MouseClick, L, 1990, -777, 1, 0,
+    MouseClick, L, 2322, 858, 1, 0,
 return
 
 F16 & h::

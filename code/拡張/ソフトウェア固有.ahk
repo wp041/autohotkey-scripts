@@ -40,14 +40,22 @@
             send, {Down}
             return
         }
-        send, ^{Tab}
+        Else if GetKeyState("ctrl") {
+            send, +^,
+            return
+        }
+        send, ^,
     Return
     vk1D & d::
         if GetKeyState("alt") {
             send, {Up}
             return
         }
-        send, ^+{Tab}
+        Else if GetKeyState("ctrl") {
+            send, +^.
+            return
+        }
+        send, ^.
     Return
     F1::
         Flag += 1
@@ -65,13 +73,15 @@
             Return
         }
     Return
+
 #IfWinActive
 
 #IfWinActive, ahk_exe chrome.exe
+    ^f::^f
     Tab::Tab
     Tab & c::
         Sleep, 50
-        send, !{d}
+        send, {F6}
         Sleep, 50
         send, ^c
     Return
