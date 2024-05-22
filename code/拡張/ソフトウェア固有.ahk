@@ -27,6 +27,7 @@
 
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
     ;keyball用
+    ^::del
     WheelLeft::WheelRight
     WheelRight::WheelLeft
     ;無変換キー
@@ -46,7 +47,7 @@
         }
         send, ![
     Return
-    ;F1（ペンの下ボタン）を押すたびに、ペンと消しゴムを切り替える
+    vk1D & v::
     vk1D & s::
         if GetKeyState("alt") {
             send, {Down}
@@ -68,22 +69,6 @@
             return
         }
         send, ^.
-    Return
-    F1::
-        Flag += 1
-        If Flag = 1
-        {Send, p
-            Return
-        }
-        If Flag = 2
-        {Send, j
-            Return
-        }
-        If Flag = 3
-        {Send, e
-            Flag =
-            Return
-        }
     Return
 #IfWinActive
 
@@ -192,15 +177,6 @@
         Send, !{Up}
     Return
     Tab & c::
-        if GetKeyState("alt") {
-            Sleep, 200
-            send, {F2}
-            Sleep, 20
-            send, ^c
-            send, {Esc}
-            Sleep, 300
-            Return
-        }
         Sleep, 200
         send, {F2}
         Sleep, 20
@@ -209,6 +185,16 @@
         Sleep, 300
         clipboard = [[%clipboard%]]
     Return
+    Tab & f::
+        Sleep, 200
+        send, {F2}
+        Sleep, 20
+        send, ^c
+        send, {Esc}
+        Sleep, 300
+    Return
+    Return
+
     Tab & v::
         Send, {End}
         Send, ^c

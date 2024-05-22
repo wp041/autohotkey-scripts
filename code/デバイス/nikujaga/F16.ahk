@@ -81,7 +81,12 @@ F16 & 8::
     backup := ClipboardAll
     Clipboard := % TimeString
     Send,^v
+    Send,{Esc}
     Send,{Enter}
+    Send,{Enter}
+    Send,{Enter}
+    Send, {Up}
+    Send, {Up}
     sleep,100
     Clipboard := backup
 Return
