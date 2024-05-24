@@ -1,27 +1,27 @@
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
     ;keyball用
-    ^::del
+    ^::Enter
     WheelLeft::WheelRight
     WheelRight::WheelLeft
+
     ;無変換キー
-    ; LAlt & g::[下の二つと同じ効果
-    ; LAlt & b::]
-    vk1D & x::
+    ; レイヤー切り替え
+    vk1D & s::
         if GetKeyState("ctrl") {
             send, ^![
             return
         }
         send, !]
     Return
-    vk1D & c::
+    vk1D & d::
         if GetKeyState("ctrl") {
             send, ^!]
             return
         }
         send, ![
     Return
-    vk1D & v::
-    vk1D & s::
+    ; ページ切り替え
+    vk1D & a::
         if GetKeyState("alt") {
             send, {Down}
             return
@@ -32,7 +32,7 @@
         }
         send, ^,
     Return
-    vk1D & d::
+    vk1D & f::
         if GetKeyState("alt") {
             send, {Up}
             return
@@ -43,4 +43,5 @@
         }
         send, ^.
     Return
+
 #IfWinActive
