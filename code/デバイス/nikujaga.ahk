@@ -82,22 +82,14 @@ Return
 ; グローバルショートカットとして運用
 
 ; F13
-
-; F13 & c::Run, C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP STUDIO PAINT\CLIPStudioPaint.exe
-; F13 & a::Run, C:\Users\okiko\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Aseprite.url
+; include！！！！！！！！！
 
 #Include *i デバイス/nikujaga/F13.ahk
 #Include *i デバイス/nikujaga/F14.ahk
 #Include *i デバイス/nikujaga/F15.ahk
 #Include *i デバイス/nikujaga/F16.ahk
 
-;F16
-
-F17::Return
-
-F18::Return
-
-; ソフトウェア固有
+; ソフトウェア固有（nikujaga）
 
 #IfWinActive, ahk_exe Illustrator.exe
     ctrl & WheelUp::!WheelDown

@@ -33,7 +33,7 @@ InsertText(Content) {
 }
 
 F16 & m::
-    if GetKeyState("F15") {
+    if GetKeyState("F17") {
         CoordMode, Mouse, Screen
         MouseClick, L, 1930, -920, 1, 0,
         Return
@@ -106,6 +106,30 @@ Return
 
 F16 & k::
     if GetKeyState("ctrl") {
+        WinActivate, ahk_exe chrome.exe
+        CoordMode, Mouse, Screen
+        MouseClick, L, 2000, -944, 1, 0,
+        Send, ^t
+        IME_SET(0)
+        Send, go
+        Send, {Enter}
+        Sleep, 1000
+        MouseClick, L, 2700, -507, 1, 0,
+        Sleep, 100
+        MouseClick, L, 2255, -268, 1, 0,
+        Send, ^v
+        Send, {Enter}
+        return
+    }
+    else if GetKeyState("F17") {
+        CoordMode, Mouse, Screen
+        MouseClick, L, 2000, -944, 1, 0,
+        Send, ^1
+        MouseClick, L, 1990, -777, 1, 0,
+        MouseClick, L, 2382, 858, 1, 0,
+        return
+    }
+    else if GetKeyState("F18") {
         WinActivate, ahk_exe chrome.exe
         CoordMode, Mouse, Screen
         MouseClick, L, 2000, -944, 1, 0,

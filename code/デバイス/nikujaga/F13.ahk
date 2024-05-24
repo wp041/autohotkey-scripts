@@ -1,4 +1,7 @@
 
+; F13 & c::Run, C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP STUDIO PAINT\CLIPStudioPaint.exe
+; F13 & a::Run, C:\Users\okiko\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Aseprite.url
+
 F13 & z::n
 F13 & x::m
 F13 & c::,
