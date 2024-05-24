@@ -1,5 +1,6 @@
 ﻿
 #Include *i 拡張/ソフトウェア固有/クリスタ.ahk
+#Include *i 拡張/ソフトウェア固有/chrome.ahk
 
 #IfWinActive, ahk_exe GitHubDesktop.exe
     Tab::Tab
@@ -13,62 +14,6 @@
 
 #IfWinActive, ahk_exe javaw.exe
     vk1D::Space
-#IfWinActive
-
-#IfWinActive, ahk_exe chrome.exe
-    ^f::^f
-    Tab::Tab
-    Tab & c::
-        Sleep, 50
-        send, {F6}
-        Sleep, 50
-        send, ^c
-    Return
-    Tab & w::
-        send, {F6}
-        send, {F6}
-        Sleep, 50
-        send, {AppsKey}
-        Sleep, 50
-        send, {Down}
-        Sleep, 10
-        send, {Down}
-        Sleep, 10
-        send, {Down}
-        Sleep, 10
-        send, {Down}
-        Sleep, 50
-        send, {Enter}
-        send, {Enter}
-    Return
-    Tab & a::
-        send, ^+a
-    Return
-    tab & t::
-        Sleep, 20
-        CoordMode, Mouse, Screen
-        MouseClick, R, 2988, 911, 1, 0,
-        Sleep, 20
-        Send, t
-        Sleep, 20
-        send, {Enter}
-        Sleep, 20
-        send, {Esc}
-    Return
-    tab & s::
-        send, ^s
-        Sleep, 1000
-        send, {Enter}
-        send, {Enter}
-        Sleep, 100
-        send, {Down}
-        send, {Down}
-        send, {Down}
-        send, !{Tab}
-        send, ^d
-        send, ^v
-    Return
-
 #IfWinActive
 
 #IfWinActive, ahk_exe explorer.exe
@@ -158,11 +103,6 @@
         Sleep, 50
         Send, ^+!2
     Return
-    ; Ctrl & j::
-    ;     send, ^{Home}
-    ;     sleep, 50
-    ;     Send, ^j
-    ; Return
     CoordMode, Mouse, Screen
     vk1D & b::MouseClick, L, 30, 180, 1, 0,
     vk1D & n::MouseClick, L, 64, 180, 1, 0,

@@ -65,7 +65,6 @@ vk1D & 8::Send, {Blind}{NumpadDiv}
 vk1D & 9::Send, {Blind}{NumpadMult}
 vk1D & 0::Send, {Blind}{BS}
 
-; vk1D & Enter::Send, {Blind}{=}
 vk1D & sc073::Send, {Blind}{^}
 
 vk1D & g::Send, {Blind}{[}
