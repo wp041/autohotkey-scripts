@@ -14,6 +14,15 @@ SetWorkingDir, %A_ScriptDir%
             send, ^![
             return
         }
+        Else if GetKeyState("F13") {
+            CoordMode, Mouse, Screen
+            MouseClick, L, 1670, 736, 1, 0,
+            return
+        }
+        Else if GetKeyState("alt") {
+            send, {Down}
+            return
+        }
         send, !]
     Return
     vk1D & d::
@@ -21,27 +30,46 @@ SetWorkingDir, %A_ScriptDir%
             send, ^!]
             return
         }
+        Else if GetKeyState("F13") {
+            CoordMode, Mouse, Screen
+            MouseClick, L, 1670, 775, 1, 0,
+            return
+        }
+        Else if GetKeyState("alt") {
+            send, {Up}
+            return
+        }
         send, ![
     Return
     ; ページ切り替え
     vk1D & a::
-        if GetKeyState("alt") {
-            send, {Down}
+        if GetKeyState("ctrl") {
+            CoordMode, Mouse, Screen
+            MouseClick, L, 1670, 696, 1, 0,
             return
         }
-        Else if GetKeyState("ctrl") {
+        Else if GetKeyState("shift") {
             send, +^,
+            return
+        }
+        Else if GetKeyState("alt") {
+            send, {Left}
             return
         }
         send, ^,
     Return
     vk1D & f::
-        if GetKeyState("alt") {
-            send, {Up}
+        if GetKeyState("ctrl") {
+            CoordMode, Mouse, Screen
+            MouseClick, L, 1670, 815, 1, 0,
             return
         }
-        Else if GetKeyState("ctrl") {
+        Else if GetKeyState("shift") {
             send, +^.
+            return
+        }
+        Else if GetKeyState("alt") {
+            send, {Right}
             return
         }
         send, ^.
@@ -57,16 +85,22 @@ SetWorkingDir, %A_ScriptDir%
     ; Tab & r::Del
     ; Tab & g::Enter
     Tab & z::
-        Sleep, 20
         CoordMode, Mouse, Screen
+        Sleep, 20
+        Send, v
+        MouseClick, L, 1555, 150, 1, 0,
         MouseClick, L, 475, 60, 1, 0,
+        Sleep, 100
         MouseClick, L, 495, 605, 1, 0,
         MouseClick, L, 890, 60, 1, 0,
     Return
     Tab & v::
-        Sleep, 20
         CoordMode, Mouse, Screen
+        Sleep, 20
+        Send, v
+        MouseClick, L, 1555, 150, 1, 0,
         MouseClick, L, 475, 60, 1, 0,
+        Sleep, 100
         if GetKeyState("shift") {
             MouseClick, L, 578, 490, 1, 0,
             MouseClick, L, 890, 60, 1, 0,
@@ -75,4 +109,51 @@ SetWorkingDir, %A_ScriptDir%
         MouseClick, L, 656, 490, 1, 0,
         MouseClick, L, 890, 60, 1, 0,
     Return
+
+    vk1D & 1::
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1670, 696, 1, 0,
+    Return
+    vk1D & 2::
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1670, 736, 1, 0,
+    Return
+    vk1D & 3::
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1670, 775, 1, 0,
+    Return
+    vk1D & 4::
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1670, 815, 1, 0,
+    Return
+    vk1D & 5::
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1670, 855, 1, 0,
+    Return
+
+    vk1D & b::
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1670, 775, 1, 0,
+        Sleep, 20
+        Send, b
+        Send, b
+    Return
+
+    #If (altmode)
+    b::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1670, 775, 1, 0,
+    Sleep, 200
+    Send, b
+    Sleep, 200
+    Send, b
+Return
+e::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1670, 775, 1, 0,
+    Sleep, 20
+    Send, e
+    Send, e
+Return
+#If
 #IfWinActive
