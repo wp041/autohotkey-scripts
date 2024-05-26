@@ -25,7 +25,6 @@
             Return
         }
         Else{
-
             Sleep, 200
             send, {F2}
             Sleep, 20
@@ -92,5 +91,24 @@
         send, {Enter}
         Sleep, 300
         send, ^{End}
+    Return
+    Tab & G::
+        Send, ^s
+        Send, {Enter}
+    Return
+    Tab & A::
+        Sleep, 200
+        send, {F2}
+        Sleep, 20
+        send, ^c
+        send, {Esc}
+        Sleep, 300
+        CoordMode, Mouse, Screen
+        MouseClick, L, 2000, -944, 1, 0,
+        Send, ^1
+        Send, +^o
+        Send, +{Esc}
+        Send, ^v
+        Send, {Enter}
     Return
 #IfWinActive
