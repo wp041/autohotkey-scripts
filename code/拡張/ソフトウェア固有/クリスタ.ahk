@@ -101,7 +101,7 @@ SetWorkingDir, %A_ScriptDir%
         MouseClick, L, 1555, 150, 1, 0,
         MouseClick, L, 475, 60, 1, 0,
         Sleep, 100
-        if GetKeyState("shift") {
+        if GetKeyState("alt") {
             MouseClick, L, 578, 490, 1, 0,
             MouseClick, L, 890, 60, 1, 0,
             Return
