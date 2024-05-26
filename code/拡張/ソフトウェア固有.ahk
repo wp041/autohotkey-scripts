@@ -1,6 +1,7 @@
 ﻿
 #Include *i 拡張/ソフトウェア固有/クリスタ.ahk
 #Include *i 拡張/ソフトウェア固有/chrome.ahk
+#Include *i 拡張/ソフトウェア固有/obsidian.ahk
 
 #IfWinActive, ahk_exe GitHubDesktop.exe
     Tab::Tab
@@ -47,71 +48,6 @@
         send, {Enter}
         send, {Enter}
     Return
-#IfWinActive
-
-#IFWinActive ahk_exe Obsidian.exe
-    Tab::Tab
-    Tab & w::
-        Send, {End}
-        Send, ^c
-        Send, ^v
-        Send, {BS}
-        Send, {BS}
-        Send, {BS}
-        Send, {BS}
-        Send, {Esc}
-        Send, {Esc}
-        Send, {Enter}
-        Send, !{Up}
-    Return
-    Tab & c::
-        Sleep, 200
-        send, {F2}
-        Sleep, 20
-        send, ^c
-        send, {Esc}
-        Sleep, 300
-        clipboard = [[%clipboard%]]
-    Return
-    Tab & f::
-        Sleep, 200
-        send, {F2}
-        Sleep, 20
-        send, ^c
-        send, {Esc}
-        Sleep, 300
-    Return
-    Return
-
-    Tab & v::
-        Send, {End}
-        Send, ^c
-        Send, ^v
-        Send, {Up}
-        Send, {NumpadSub}
-    Return
-    Tab & b::
-        if GetKeyState("alt") {
-            Sleep, 50
-            Send, ^+!1
-            Sleep, 50
-            Send, ^+!3
-            return
-        }
-        Sleep, 50
-        Send, ^+!1
-        Sleep, 50
-        Send, ^+!2
-    Return
-    CoordMode, Mouse, Screen
-    vk1D & b::MouseClick, L, 30, 180, 1, 0,
-    vk1D & n::MouseClick, L, 64, 180, 1, 0,
-    vk1D & t::MouseClick, L, 99, 180, 1, 0,
-    vk1D & y::MouseClick, L, 138, 180, 1, 0,
-    vk1D & 7::MouseClick, L, 30, 180, 1, 0,
-    vk1D & 8::MouseClick, L, 64, 180, 1, 0,
-    vk1D & 9::MouseClick, L, 99, 180, 1, 0,
-    vk1D & 0::MouseClick, L, 138, 180, 1, 0,
 #IfWinActive
 
 #IfWinActive, ahk_exe Code.exe

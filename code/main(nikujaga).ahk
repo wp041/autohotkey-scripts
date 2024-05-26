@@ -18,3 +18,4 @@ F16 & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 #Include *i 拡張/ソフトウェア固有.ahk
 
 ; temp
+#Include *i test.ahk
