@@ -54,15 +54,9 @@
         Sleep, 50
         Send, ^+!2
     Return
-    CoordMode, Mouse, Screen
-    vk1D & b::MouseClick, L, 30, 180, 1, 0,
-    vk1D & n::MouseClick, L, 64, 180, 1, 0,
-    vk1D & t::MouseClick, L, 99, 180, 1, 0,
-    vk1D & y::MouseClick, L, 138, 180, 1, 0,
-    vk1D & 7::MouseClick, L, 30, 180, 1, 0,
-    vk1D & 8::MouseClick, L, 64, 180, 1, 0,
-    vk1D & 9::MouseClick, L, 99, 180, 1, 0,
-    vk1D & 0::MouseClick, L, 138, 180, 1, 0,
+    CoordMode, Mouse, Relative
+    vk1D & z::MouseClick, L, 30, 280, 1, 0,
+    vk1D & v::MouseClick, L, 100, 280, 1, 0,
     Tab & d::
         if GetKeyState("alt") {
             Sleep, 200
