@@ -7,6 +7,12 @@ SetWorkingDir, %A_ScriptDir%
     WheelLeft::WheelRight
     WheelRight::WheelLeft
 
+    esc::
+        IF (IME_GetConverting() != 0){
+            Send, {Esc}
+        }
+    Return
+
     ;無変換キー
     ; レイヤー切り替え
     vk1D & s::
@@ -88,28 +94,30 @@ SetWorkingDir, %A_ScriptDir%
         CoordMode, Mouse, Screen
         Sleep, 20
         Send, v
-        MouseClick, L, 1555, 150, 1, 0,
         MouseClick, L, 475, 60, 1, 0,
         Sleep, 100
         MouseClick, L, 495, 605, 1, 0,
         MouseClick, L, 890, 60, 1, 0,
     Return
-    Tab & v::
+    Tab & y::
         CoordMode, Mouse, Screen
         Sleep, 20
         Send, v
-        MouseClick, L, 1555, 150, 1, 0,
         MouseClick, L, 475, 60, 1, 0,
         Sleep, 100
-        if GetKeyState("alt") {
-            MouseClick, L, 578, 490, 1, 0,
-            MouseClick, L, 890, 60, 1, 0,
-            Return
-        }
+        MouseClick, L, 578, 490, 1, 0,
+        MouseClick, L, 890, 60, 1, 0,
+    Return
+    Tab & t::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        Send, v
+        MouseClick, L, 475, 60, 1, 0,
+        Sleep, 100
         MouseClick, L, 656, 490, 1, 0,
         MouseClick, L, 890, 60, 1, 0,
     Return
-    Esc::
+    ^::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 475, 60, 1, 0,
