@@ -80,6 +80,54 @@ SetWorkingDir, %A_ScriptDir%
         }
         send, ^.
     Return
+    ; vk1D & q::
+    ;     if GetKeyState("ctrl") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("shift") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("alt") {
+    ;         send, {Esc}
+    ;         return
+    ;     }
+    ; Return
+    ; vk1D & w::
+    ;     if GetKeyState("ctrl") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("shift") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("alt") {
+    ;         send, {BS}
+    ;         return
+    ;     }
+    ; Return
+    ; vk1D & e::
+    ;     if GetKeyState("ctrl") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("shift") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("alt") {
+    ;         send, {Del}
+    ;         return
+    ;     }
+    ; Return
+    ; vk1D & r::
+    ;     if GetKeyState("ctrl") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("shift") {
+    ;         return
+    ;     }
+    ;     Else if GetKeyState("alt") {
+    ;         send, {Enter}
+    ;         return
+    ;     }
+    ; Return
 
     ; Tab::Tab
     ; Tab & e::up
@@ -117,6 +165,16 @@ SetWorkingDir, %A_ScriptDir%
         MouseClick, L, 656, 490, 1, 0,
         MouseClick, L, 890, 60, 1, 0,
     Return
+    vk1D & t::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1690, 60, 1, 0,
+    Return
+    vk1D & b::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1705, 60, 1, 0,
+    Return
     ^::
         CoordMode, Mouse, Screen
         Sleep, 20
@@ -143,12 +201,24 @@ SetWorkingDir, %A_ScriptDir%
         MouseClick, L, 1860, 855, 1, 0,
     Return
 
-    vk1D & b::
-        CoordMode, Mouse, Screen
-        MouseClick, L, 1860, 775, 1, 0,
-        Sleep, 20
-        Send, b
-        Send, b
+    ^d::
+        key := "d"
+        KeyWait, %key%, T0.3
+        If(ErrorLevel){ ;長押しした場合
+            return
+        }
+        KeyWait, %key%, D, T0.2
+        If(!ErrorLevel){ ;2度押しした場合
+            CoordMode, Mouse, Screen
+            MouseClick, L, 1860, 775, 1, 0,
+            Sleep, 20
+            Send, d
+            Send, d
+        }else{ ;短押しした場合
+            Send, ^d
+            KeyWait, %key%
+            return
+        }
     Return
 
     #If (altmode)

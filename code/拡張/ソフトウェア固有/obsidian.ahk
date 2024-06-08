@@ -65,7 +65,6 @@
             send, ^c
             send, {Esc}
             Sleep, 300
-            Send, ^w
         }
         Else{
             Sleep, 200
@@ -74,6 +73,7 @@
             send, ^c
             send, {Esc}
             Sleep, 300
+            Send, ^w
         }
         CoordMode, Mouse, Screen
         MouseClick, L, 300, -1080, 1, 0,
