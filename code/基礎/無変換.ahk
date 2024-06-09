@@ -67,9 +67,6 @@ vk1D & 0::Send, {Blind}{BS}
 
 vk1D & sc073::Send, {Blind}{^}
 
-vk1D & g::Send, {Blind}{[}
-vk1D & h::Send, {Blind}{]}
-
 vk1D & esc::Send, {Blind}{.}
 vk1D & F16::Send, {Blind}{,}
 vk1D & vk1C::
@@ -165,4 +162,19 @@ vk1D & f::
         return
     }
     send, !{Right}
+Return
+
+vk1D & g::
+    if GetKeyState("alt") {
+        send, {Enter}
+        return
+    }
+    Send, {Blind}{[}
+Return
+vk1D & h::Send, {Blind}{]}
+vk1D & z::
+    if GetKeyState("alt") {
+        send, {Esc}
+        return
+    }
 Return

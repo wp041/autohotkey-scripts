@@ -165,6 +165,16 @@ SetWorkingDir, %A_ScriptDir%
         MouseClick, L, 656, 490, 1, 0,
         MouseClick, L, 890, 60, 1, 0,
     Return
+    Tab & x::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        Send, ^x
+        Send, ^v
+        Send, ^d
+        send, ^!]
+        send, !]
+    Return
+
     vk1D & t::
         CoordMode, Mouse, Screen
         Sleep, 20
