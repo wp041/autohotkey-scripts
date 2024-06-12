@@ -173,6 +173,7 @@ SetWorkingDir, %A_ScriptDir%
         Send, ^d
         send, ^!]
         send, !]
+        Send, ^+a
     Return
 
     vk1D & t::

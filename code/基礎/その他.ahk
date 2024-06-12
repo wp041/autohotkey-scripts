@@ -12,3 +12,5 @@ F20::LWin
 
 ^esc::Suspend ; Suspend script with Ctrl+esc
 
+;screen to gifの起動
+^PrintScreen::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\ScreenToGif.lnk"

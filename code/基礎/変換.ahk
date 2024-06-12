@@ -14,7 +14,13 @@ Return
 vk1C & u::Send, {Blind}{Insert}
 vk1C & i::Send, {Blind}{BS}
 vk1C & o::Send, {Blind}{Delete}
-vk1C & p::Send, {Blind}{PrintScreen}
+vk1C & p::
+    if GetKeyState("ctrl") {
+        Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\ScreenToGif.lnk"
+        return
+    }
+    Send, {Blind}{PrintScreen}
+Return
 
 vk1C & j::Send, {Blind}{Left}
 vk1C & k::Send, {Blind}{Down}
