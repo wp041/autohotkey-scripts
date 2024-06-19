@@ -1,11 +1,6 @@
 
 F16::AppsKey
 
-F16 & r::
-    Reload
-    Send, {Esc}
-Return
-
 F16 & n::
     if GetKeyState("shift") {
         FormatTime,TimeString,,yyyy-MM-dd
@@ -137,12 +132,6 @@ F16 & k::
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
-return
-
-F16 & /::
-    WinActivate, ahk_exe chrome.exe
-    CoordMode, Mouse, Window
-    MouseClick, L, 150, 20, 1, 0,
 return
 
 F16 & a::

@@ -20,11 +20,6 @@ F13::
     }
 Return
 
-End & r::
-    Reload
-    Send, {Esc}
-Return
-
 1::#1
 2::#2
 3::#3
@@ -36,13 +31,8 @@ Return
 9::#9
 0::#0
 
-end & 1::
+f16 & k::
     WinActivate, ahk_exe chrome.exe
     Send, ^t
 return
 
-end & /::
-    WinActivate, ahk_exe chrome.exe
-    CoordMode, Mouse, Window
-    MouseClick, L, 150, 20, 1, 0,
-return
