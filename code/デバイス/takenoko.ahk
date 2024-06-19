@@ -20,6 +20,18 @@ F13::
     }
 Return
 
+$Esc::
+    KeyWait, Esc, T0.3
+    if (ErrorLevel){
+        send,!{F4}
+    }else{
+        send,{Esc}
+        altmode := False
+        ToolTip,,,,2
+    }
+    keywait, Esc
+return
+
 1::#1
 2::#2
 3::#3
