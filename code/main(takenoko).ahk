@@ -11,7 +11,7 @@
 
 ; デバイス
 #Include *i デバイス/takenoko.ahk
-F16 & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\okiko\Documents\GitHub\AutoHotKey-scripts"
+End & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\okiko\Documents\GitHub\AutoHotKey-scripts"
 
 ; 拡張
 #Include *i 拡張/indesign.ahk

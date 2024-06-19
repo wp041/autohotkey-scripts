@@ -101,7 +101,7 @@ F16 & k::
         IME_SET(0)
         Send, go
         Send, {Enter}
-        Sleep, 1000
+        Sleep, 1000E
         MouseClick, L, 2700, -507, 1, 0,
         Sleep, 100
         MouseClick, L, 2255, -268, 1, 0,
