@@ -79,7 +79,7 @@
         MouseClick, L, 300, -1080, 1, 0,
         Sleep, 100
         send, ^t
-        send, ^p
+        send, ^o
         send, ^v
         Sleep, 20
         send, {Enter}
