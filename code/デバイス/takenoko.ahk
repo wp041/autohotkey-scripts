@@ -2,7 +2,7 @@
 
 F13::
     key := "F13"
-    KeyWait, %key%, T0.4
+    KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         Send, !{F4}
         KeyWait, %key%
@@ -39,4 +39,10 @@ Return
 end & 1::
     WinActivate, ahk_exe chrome.exe
     Send, ^t
+return
+
+end & /::
+    WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Window
+    MouseClick, L, 150, 20, 1, 0,
 return

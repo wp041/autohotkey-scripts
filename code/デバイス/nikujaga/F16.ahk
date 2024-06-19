@@ -141,8 +141,8 @@ return
 
 F16 & /::
     WinActivate, ahk_exe chrome.exe
-    CoordMode, Mouse, Screen
-    MouseClick, L, 2075, -921, 1, 0,
+    CoordMode, Mouse, Window
+    MouseClick, L, 150, 20, 1, 0,
 return
 
 F16 & a::
