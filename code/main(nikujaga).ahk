@@ -8,6 +8,8 @@
 #Include *i 基礎/日本語入力.ahk
 #Include *i 基礎/変換.ahk
 #Include *i 基礎/無変換.ahk
+#Include *i 基礎/F15.ahk
+#Include *i 基礎/F16.ahk
 
 ; デバイス
 #Include *i デバイス/nikujaga.ahk
