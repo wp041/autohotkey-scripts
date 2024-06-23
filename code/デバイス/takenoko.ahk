@@ -56,3 +56,8 @@ F16 & m::
     Send, ^{End}
     Send, ^m
 Return
+
+F16 & o::
+    WinActivate, ahk_exe obsidian.exe
+    Send, ^o
+Return
