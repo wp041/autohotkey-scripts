@@ -30,8 +30,8 @@
     Return
     tab & t::
         Sleep, 20
-        CoordMode, Mouse, Screen
-        MouseClick, R, 2988, 911, 1, 0,
+        CoordMode, Mouse, Relative
+        MouseClick, R, 5, 90, 1, 0,
         Sleep, 20
         Send, t
         Sleep, 20
