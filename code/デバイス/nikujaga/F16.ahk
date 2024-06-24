@@ -86,6 +86,14 @@ F16 & o::
     Send, ^o
 Return
 
+F16 & /::
+    WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Screen
+    MouseClick, L, 2000, -944, 1, 0,
+    CoordMode, Mouse, Relative
+    MouseClick, L, 150, 20, 1, 0,
+return
+
 F16 & k::
     if GetKeyState("ctrl") {
         KeyWait, Ctrl
