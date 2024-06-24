@@ -36,11 +36,11 @@ SetWorkingDir, %A_ScriptDir%
             send, ^!]
             return
         }
-        Else if GetKeyState("F13") {
-            CoordMode, Mouse, Screen
-            MouseClick, L, 1860, 775, 1, 0,
-            return
-        }
+        ; Else if GetKeyState("F13") {
+        ;     CoordMode, Mouse, Screen
+        ;     MouseClick, L, 1860, 775, 1, 0,
+        ;     return
+        ; }
         Else if GetKeyState("alt") {
             send, {Up}
             return
@@ -142,28 +142,28 @@ SetWorkingDir, %A_ScriptDir%
         CoordMode, Mouse, Screen
         Sleep, 20
         Send, v
-        MouseClick, L, 475, 30, 1, 0,
+        MouseClick, L, 475, 60, 1, 0,
         Sleep, 100
         MouseClick, L, 495, 605, 1, 0,
-        MouseClick, L, 890, 30, 1, 0,
+        MouseClick, L, 890, 60, 1, 0,
     Return
     Tab & y::
         CoordMode, Mouse, Screen
         Sleep, 20
         Send, v
-        MouseClick, L, 475, 30, 1, 0,
+        MouseClick, L, 475, 60, 1, 0,
         Sleep, 100
         MouseClick, L, 578, 490, 1, 0,
-        MouseClick, L, 890, 30, 1, 0,
+        MouseClick, L, 890, 60, 1, 0,
     Return
     Tab & t::
         CoordMode, Mouse, Screen
         Sleep, 20
         Send, v
-        MouseClick, L, 475, 30, 1, 0,
+        MouseClick, L, 475, 60, 1, 0,
         Sleep, 100
         MouseClick, L, 656, 490, 1, 0,
-        MouseClick, L, 890, 30, 1, 0,
+        MouseClick, L, 890, 60, 1, 0,
     Return
     Tab & x::
         CoordMode, Mouse, Screen
@@ -179,17 +179,17 @@ SetWorkingDir, %A_ScriptDir%
     vk1D & t::
         CoordMode, Mouse, Screen
         Sleep, 20
-        MouseClick, L, 1690, 30, 1, 0,
+        MouseClick, L, 1690, 60, 1, 0,
     Return
     vk1D & b::
         CoordMode, Mouse, Screen
         Sleep, 20
-        MouseClick, L, 1705, 30, 1, 0,
+        MouseClick, L, 1705, 60, 1, 0,
     Return
     ^::
         CoordMode, Mouse, Screen
         Sleep, 20
-        MouseClick, L, 475, 30, 1, 0,
+        MouseClick, L, 475, 60, 1, 0,
     Return
     vk1D & 1::
         CoordMode, Mouse, Screen
