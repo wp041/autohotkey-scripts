@@ -7,6 +7,8 @@ SetWorkingDir, %A_ScriptDir%
     WheelLeft::WheelRight
     WheelRight::WheelLeft
 
+    Tab::Tab
+
     esc::
         IF (IME_GetConverting() != 0){
             Send, {Esc}
@@ -179,12 +181,12 @@ SetWorkingDir, %A_ScriptDir%
     vk1D & t::
         CoordMode, Mouse, Screen
         Sleep, 20
-        MouseClick, L, 1690, 60, 1, 0,
+        MouseClick, L, 1700, 60, 1, 0,
     Return
-    vk1D & b::
-        CoordMode, Mouse, Screen
-        Sleep, 20
-        MouseClick, L, 1705, 60, 1, 0,
+    ; vk1D & b::
+    ;     CoordMode, Mouse, Screen
+    ;     Sleep, 20
+    ;     MouseClick, L, 1705, 60, 1, 0,
     Return
     ^::
         CoordMode, Mouse, Screen
