@@ -20,11 +20,11 @@ SetWorkingDir, %A_ScriptDir%
             send, ^![
             return
         }
-        Else if GetKeyState("F13") {
-            CoordMode, Mouse, Screen
-            MouseClick, L, 1860, 736, 1, 0,
-            return
-        }
+        ; Else if GetKeyState("F13") {
+        ;     CoordMode, Mouse, Screen
+        ;     MouseClick, L, 1860, 736, 1, 0,
+        ;     return
+        ; }
         Else if GetKeyState("alt") {
             send, {Down}
             return
