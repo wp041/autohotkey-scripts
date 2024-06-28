@@ -21,3 +21,5 @@ F16 & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 
 ; temp
 #Include *i test.ahk
+; h::]
+; g::[

@@ -171,3 +171,5 @@ Return
 
 ; ブログ
 F16 & B::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "D:\Users\okiko\git\wp041.github.io"
+
+F16 & F17::#tab
