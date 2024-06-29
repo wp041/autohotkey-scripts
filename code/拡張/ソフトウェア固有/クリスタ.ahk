@@ -187,7 +187,7 @@ SetWorkingDir, %A_ScriptDir%
     ;     CoordMode, Mouse, Screen
     ;     Sleep, 20
     ;     MouseClick, L, 1705, 60, 1, 0,
-    Return
+    ; Return
     ^::
         CoordMode, Mouse, Screen
         Sleep, 20
@@ -233,6 +233,46 @@ SetWorkingDir, %A_ScriptDir%
             return
         }
     Return
+    ; tab+数字でパレットカラーの変更
+
+    tab & esc::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1750, 100, 1, 0,
+        MouseClick, L, 1750, 120, 1, 0,
+    Return
+    tab & 1::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1750, 100, 1, 0,
+        MouseClick, L, 1750, 140, 1, 0,
+    Return
+    tab & 2::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1750, 100, 1, 0,
+        MouseClick, L, 1750, 160, 1, 0,
+    Return
+    tab & 3::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1750, 100, 1, 0,
+        MouseClick, L, 1750, 180, 1, 0,
+    Return
+    tab & 4::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1750, 100, 1, 0,
+        MouseClick, L, 1750, 220, 1, 0,
+    Return
+    tab & 5::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 1750, 100, 1, 0,
+        MouseClick, L, 1750, 230, 1, 0,
+    Return
+
+    ; ここからaltモード
 
     #If (altmode)
     b::
@@ -250,5 +290,6 @@ e::
     Send, e
     Send, e
 Return
+
 #If
 #IfWinActive
