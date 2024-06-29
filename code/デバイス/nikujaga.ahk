@@ -6,6 +6,10 @@ WheelUp::WheelDown
 WheelLeft::WheelRight
 WheelRight::WheelLeft
 
+; audio switcher
+F20 & 1::^+!F18
+F20 & 2::^+!F17
+
 ; ファンクションキー
 
 altmode := False
