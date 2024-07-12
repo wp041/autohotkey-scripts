@@ -1,5 +1,4 @@
 ﻿; ホイール
-
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
 WheelDown::WheelUp
 WheelUp::WheelDown
@@ -9,7 +8,6 @@ WheelRight::WheelLeft
 ; ファンクションキー
 
 ; esc
-
 $Esc::
     KeyWait, Esc, T0.2
     if (ErrorLevel){

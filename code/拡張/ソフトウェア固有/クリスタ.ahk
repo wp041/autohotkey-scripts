@@ -1,8 +1,5 @@
-#SingleInstance, Force
-SendMode Input
-SetWorkingDir, %A_ScriptDir%
-
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
+
     ;keyball用
     WheelLeft::WheelRight
     WheelRight::WheelLeft

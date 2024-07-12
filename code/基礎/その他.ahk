@@ -9,6 +9,3 @@
 
 ;F20
 F20::LWin
-
-;screen to gifの起動
-^PrintScreen::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\ScreenToGif.lnk"

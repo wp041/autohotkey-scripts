@@ -1,9 +1,7 @@
-﻿;-----------------------------------------------------------------------------
-; 中ボタンでいつでも手のひらツール ver2
+﻿; 中ボタンでいつでも手のひらツール ver2
 ; 参照：http://sysys.blog.shinobi.jp/Entry/71/
 ; 変更点
 ;   中ボタンダブルクリックの機能を削除
-;-----------------------------------------------------------------------------
 
 IdProgId=InDesign.Application
 DoubleClickDelay:=300
@@ -30,3 +28,5 @@ MButtonDownTime1:=0
         Send {Blind}{Alt Up}
         BlockInput, off
     Return
+
+#IfWinActive

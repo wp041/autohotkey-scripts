@@ -1,9 +1,10 @@
-﻿
+﻿; include
 #Include *i 拡張/ソフトウェア固有/クリスタ.ahk
 #Include *i 拡張/ソフトウェア固有/chrome.ahk
 #Include *i 拡張/ソフトウェア固有/obsidian.ahk
 #Include *i 拡張/ソフトウェア固有/indesign.ahk
 
+; その他
 #IfWinActive, ahk_exe GitHubDesktop.exe
     Tab::Tab
     Tab & v::Send, ^+a
