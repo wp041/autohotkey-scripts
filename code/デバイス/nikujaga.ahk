@@ -7,6 +7,9 @@
 #Include *i デバイス/nikujaga/モード/altmode.ahk
 #Include *i デバイス/nikujaga/モード/leftmode.ahk
 
+; space長押し
+RShift::LAlt
+
 ; ホイール
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
 WheelDown::WheelUp

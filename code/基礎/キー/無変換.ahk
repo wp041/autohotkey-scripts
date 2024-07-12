@@ -52,10 +52,11 @@ vk1D & vk1C::
         return
     }
     Send, {Blind}{0}
+Return
 
-    vk1D & /::Send, {Blind}{=}
+vk1D & /::Send, {Blind}{=}
 
-    vk1D & Enter::Send, {Blind}{Enter}
+vk1D & Enter::Send, {Blind}{Enter}
 vk1D & sc027::
     if GetKeyState("Shift") {
         Send, {NumpadMult}

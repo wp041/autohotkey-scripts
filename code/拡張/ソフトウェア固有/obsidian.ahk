@@ -1,4 +1,3 @@
-
 #IFWinActive ahk_exe Obsidian.exe
     Tab::Tab
     Tab & w::
