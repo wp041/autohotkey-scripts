@@ -5,12 +5,16 @@
     KeyWait, F20
     Reload
 Return
-#s:: Suspend
-Return
+; #s:: Suspend
 
+; オーディオデバイスの切り替え
 #+a::Send, #^v
 
-; spotifyメディアコントロール
+; メディアコントロール
+#s::Volume_Down
+#d::Volume_Up
+#x::Media_Prev
+#c::Media_Next
 #Tab::
     key := "Tab"
     KeyWait, %key%, T0.3

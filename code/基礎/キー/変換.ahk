@@ -48,10 +48,4 @@ vk1C & 2::Send, {Blind}{F10}
 vk1C & 3::Send, {Blind}{F11}
 vk1C & 4::Send, {Blind}{F12}
 
-vk1C & Enter::Send, {Volume_Up}
-vk1C & sc073::Send, {Media_Next}
-
-vk1C & h::Send, {Volume_Down}
-vk1C & n::Send, {Media_Prev}
-
 vk1C & F17::AltTab
