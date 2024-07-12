@@ -34,28 +34,9 @@ F16 & m::
         Return
     }
     Sleep, 10
-    ; Sleep, 100
-    ; Send, ^j
-    ; Sleep, 20
-    ; InsertText("<% tp.file.cursor(2) %>")
-    ; Sleep, 20
-    ; Send, ^t
-    ; Sleep, 20
-    ; Send, ^d
-    ; Sleep, 500
     Send, ^d
     Sleep, 500
     Send, ^{End}
-    ; Send, ^f
-    ; Send, ✅行動 ; 下のコメントアウトされているコードを用いるとメモのところに「行動」という文字列が入っていても動作するようになる。ただし、実行が遅い
-    ; ; backup := ClipboardAll
-    ; ; Clipboard := ## 行動
-    ; ; Send,^v
-    ; ; Clipboard := backup
-    ; Send, {Enter}
-    ; Send, {Esc}
-    ; Send, {Esc}
-    ; Send, {Up}
     Send, ^m
 Return
 
