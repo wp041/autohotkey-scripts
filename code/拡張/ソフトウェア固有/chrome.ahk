@@ -53,4 +53,8 @@
         send, ^v
     Return
 
+    vk1D & x::Send, {Blind}{Left}
+    vk1D & c::Send, {Blind}{Right}
+    vk1D & v::Send, {Blind}{esc}
+
 #IfWinActive

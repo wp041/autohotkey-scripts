@@ -1,18 +1,6 @@
 
 
 ; 起動
-F13::
-    If (altmode == True){
-        altmode := False
-        ToolTip,,,,2
-        Return
-    }Else{
-        altmode := True
-        ToolTip, altmode, 0, 0, 2
-        Return
-    }
-Return
-
 F14::
     If (altmode == True){
         altmode := False
@@ -41,11 +29,5 @@ Return
 *sc027::send, {Blind}{Right}
 *,::send, {Blind}{Left}
 *.::send, {Blind}{Right}
-
-t::
-    send, ^t
-    altmode := False
-    ToolTip,,,,2
-Return
 
 #if

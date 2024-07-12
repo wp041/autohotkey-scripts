@@ -13,8 +13,8 @@ Return
 ; メディアコントロール
 #s::Volume_Down
 #d::Volume_Up
-#x::Media_Prev
-#c::Media_Next
+#w::Media_Prev
+#e::Media_Next
 #Tab::
     key := "Tab"
     KeyWait, %key%, T0.3
