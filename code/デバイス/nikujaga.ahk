@@ -41,13 +41,11 @@ return
     Alt::Space
 #If
 
-; altmode
+; mode
 #Include *i デバイス/nikujaga/altmode.ahk
-
-#If
+#Include *i デバイス/nikujaga/leftmode.ahk
 
 ; グローバルショートカットとして運用
-
 ; F13
 ; include！！！！！！！！！
 
