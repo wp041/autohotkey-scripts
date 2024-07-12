@@ -167,6 +167,10 @@ F16 & G::
     MouseClick, L, 3009, -400, 1, 0,
     WinActivate, ahk_exe GitHubDesktop.exe
     Send, ^t
+    Send, {vk1D}
+    ToolTip, □en
+    sleep, 300
+    ToolTip
 Return
 
 ; ブログ
