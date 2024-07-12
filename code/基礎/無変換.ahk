@@ -3,6 +3,7 @@
 vk1D::
     altmode := False
     ToolTip,,,,2
+    ; msime用
     ; IF (IME_GetConverting() != 0){
     ;     Send, {Blind}{F7}
     ;     key := "vk1D"
