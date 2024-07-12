@@ -53,4 +53,9 @@
         send, ^v
     Return
 
+    vk1D & a::send, !{left}
+    vk1D & f::send, !{Right}
+    vk1D & s::send, ^+{Tab}
+    vk1D & d::send, ^{Tab}
+
 #IfWinActive

@@ -47,3 +47,5 @@ t::
     altmode := False
     ToolTip,,,,2
 Return
+
+#if
