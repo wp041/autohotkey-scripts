@@ -19,43 +19,7 @@ Return
 ; 内容
 #If (leftmode)
     ; 左手入力
-
-; +z::Send, {n}
-; +x::Send, {m}
-; +c::Send, {,}
-; +v::Send, {.}
-; +b::Send, {/}
-
-; +a::Send, {h}
-; +s::Send, {j}
-; +d::Send, {k}
-; +f::Send, {l}
-; +g::
-;     If (leftmode){
-;         If (IME_GET() == 1 ){ ; IMEがオンの時に実行
-;             Send, -
-;             Return
-;         }
-;         else{
-;             Send, {sc027}
-;             Return
-;         }
-;     }
-; Return
-
-; +q::Send, {y}
-; +w::Send, {u}
-; +e::Send, {i}
-; +r::Send, {o}
-; +t::Send, {p}
-
-; +1::6
-; +2::7
-; +3::8
-; +4::9
-; +5::0
-
-; floggy参考にしてみる
+; godan参考にしてみる
 
 q::l
 w::k
