@@ -6,34 +6,18 @@ WheelUp::WheelDown
 WheelLeft::WheelRight
 WheelRight::WheelLeft
 
-; audio switcher
-F20 & 1::^+!F18
-F20 & 2::^+!F17
-
 ; ファンクションキー
 
 altmode := False
 
 Tab & F13::
-    If (altmode == True){
-        altmode := False
+    If (leftmode == True){
+        leftmode := False
         ToolTip,,,,2
         Return
     }Else{
-        altmode := True
-        ToolTip, altmode, 0, 0, 2
-        Return
-    }
-Return
-
-F14::
-    If (altmode == True){
-        altmode := False
-        ToolTip,,,,2
-        Return
-    }Else{
-        altmode := True
-        ToolTip, altmode, 0, 0, 2
+        leftmode := True
+        ToolTip, leftmode, 0, 0, 2
         Return
     }
 Return
@@ -58,28 +42,7 @@ return
 #If
 
 ; altmode
-
-#If (altmode)
-
-*s::send, {Blind}{Down}
-*d::send, {Blind}{Up}
-*a::send, {Blind}{Left}
-*f::send, {Blind}{Right}
-*e::send, {Blind}{Esc}
-*g::send, {Blind}{Enter}
-*l::send, {Blind}{Up}
-*k::send, {Blind}{Down}
-*j::send, {Blind}{Left}
-*vkBB::send, {Blind}{Right}
-*sc027::send, {Blind}{Right}
-*,::send, {Blind}{Left}
-*.::send, {Blind}{Right}
-
-t::
-    send, ^t
-    altmode := False
-    ToolTip,,,,2
-Return
+#Include *i デバイス/nikujaga/altmode.ahk
 
 #If
 
