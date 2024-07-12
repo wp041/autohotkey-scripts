@@ -1,20 +1,20 @@
 ﻿#M::Run,notepad.exe
 #f::Send, {F19}
 
-#r::
-    KeyWait, F20
-    Reload
-Return
+; #r::
+;     KeyWait, F20
+;     Reload
+; Return
 ; #s:: Suspend
 
 ; オーディオデバイスの切り替え
 #+a::Send, #^v
 
 ; メディアコントロール
-#s::Volume_Down
-#d::Volume_Up
-#w::Media_Prev
-#e::Media_Next
+#w::Volume_Down
+#e::Volume_Up
+#q::Media_Prev
+#r::Media_Next
 #Tab::
     key := "Tab"
     KeyWait, %key%, T0.3

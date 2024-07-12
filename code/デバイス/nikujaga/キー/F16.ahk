@@ -1,5 +1,7 @@
 
 F16::AppsKey
+F16 & r::Reload
+F16 & s::Suspend
 
 F16 & n::
     if GetKeyState("shift") {
