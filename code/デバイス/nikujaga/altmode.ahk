@@ -1,5 +1,6 @@
 
 
+; 起動
 F13::
     If (altmode == True){
         altmode := False
@@ -24,6 +25,7 @@ F14::
     }
 Return
 
+; 内容
 #If (altmode)
 
 *s::send, {Blind}{Down}

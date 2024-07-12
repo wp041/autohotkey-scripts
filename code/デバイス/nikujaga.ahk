@@ -8,20 +8,6 @@ WheelRight::WheelLeft
 
 ; ファンクションキー
 
-altmode := False
-
-Tab & F13::
-    If (leftmode == True){
-        leftmode := False
-        ToolTip,,,,2
-        Return
-    }Else{
-        leftmode := True
-        ToolTip, leftmode, 0, 0, 2
-        Return
-    }
-Return
-
 ; esc
 
 $Esc::
