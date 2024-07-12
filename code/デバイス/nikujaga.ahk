@@ -1,11 +1,18 @@
-﻿; ホイール
+﻿; include
+#Include *i デバイス/nikujaga/ソフトウェア固有.ahk
+#Include *i デバイス/nikujaga/キー/F13.ahk
+#Include *i デバイス/nikujaga/キー/F14.ahk
+#Include *i デバイス/nikujaga/キー/F15.ahk
+#Include *i デバイス/nikujaga/キー/F16.ahk
+#Include *i デバイス/nikujaga/モード/altmode.ahk
+#Include *i デバイス/nikujaga/モード/leftmode.ahk
+
+; ホイール
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
 WheelDown::WheelUp
 WheelUp::WheelDown
 WheelLeft::WheelRight
 WheelRight::WheelLeft
-
-; ファンクションキー
 
 ; esc
 $Esc::
@@ -25,42 +32,3 @@ return
     Alt::Space
 #If
 
-; mode
-#Include *i デバイス/nikujaga/altmode.ahk
-#Include *i デバイス/nikujaga/leftmode.ahk
-
-; グローバルショートカットとして運用
-; F13
-; include！！！！！！！！！
-
-#Include *i デバイス/nikujaga/F13.ahk
-#Include *i デバイス/nikujaga/F14.ahk
-#Include *i デバイス/nikujaga/F15.ahk
-#Include *i デバイス/nikujaga/F16.ahk
-
-; ソフトウェア固有（nikujaga）
-
-#IfWinActive, ahk_exe Illustrator.exe
-    ctrl & WheelUp::!WheelDown
-    ctrl & WheelDown::!WheelUp
-#IfWinActive
-
-#IfWinActive, ahk_exe InDesign.exe
-    ctrl & WheelUp::!WheelDown
-    ctrl & WheelDown::!WheelUp
-#IfWinActive
-
-#IfWinActive, ahk_exe Photoshop.exe
-^WheelUp::
-    Send, {AltDown}
-    Sleep, 2
-    Send, {WheelDown}
-    Send, {AltUp}
-Return
-^WheelDown::
-    Send, {AltDown}
-    Sleep, 2
-    Send, {WheelUp}
-    Send, {AltUp}
-Return
-#IfWinActive
