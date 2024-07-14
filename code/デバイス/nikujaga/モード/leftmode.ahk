@@ -1,7 +1,12 @@
 ; 起動
 F13::
-    leftmode := True
-    ToolTip, leftmode, 0, 0, 3
+    If (leftmode == True){
+        leftmode := False
+        Progress, off
+    }Else{
+        leftmode := True
+        Progress, b zh0 fs6 w1920 x0 y0 ctffffff cwff0000, , , progtip, plemoljp
+    }
 Return
 
 ^F13::
@@ -112,7 +117,7 @@ vk1D & x::Send, {Blind}{PgDn}
 vk1D & c::Send, {Blind}{PgUp}
 vk1D & v::Send, {Blind}{End}
 
-F13::
+vk1D & b::
     ToolTip,,,,2
     Send, {vk1C}
     ToolTip, ■ja
