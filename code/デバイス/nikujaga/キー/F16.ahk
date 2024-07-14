@@ -1,10 +1,12 @@
 
 F16::AppsKey
-F16 & r::
-    KeyWait, F16
-    Reload
-Return
+; F16 & r::
+;     KeyWait, F16
+;     Reload
+; Return
 F16 & s::Suspend
+
+F16 & j::Send, {F19}
 
 F16 & n::
     if GetKeyState("shift") {

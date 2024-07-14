@@ -1,10 +1,9 @@
 ﻿#M::Run,notepad.exe
-#e::Send, {F19}
 
-; #r::
-;     KeyWait, F20
-;     Reload
-; Return
+#r::
+    KeyWait, F20
+    Reload
+Return
 ; #s:: Suspend
 
 ; オーディオデバイスの切り替え
@@ -21,19 +20,19 @@ Return
 #g::
     audio ++
     If (audio == 1){
-        Send, !+8
+        Send, !+{F17}
         ToolTip, bluetooth
     }
     Else if (audio == 2){
-        Send, !+9
+        Send, !+{F18}
         ToolTip, analog
     }
     Else if (audio == 3){
-        Send, !+0
+        Send, !+{F14}
         ToolTip, digital
         audio == 0
     }
-    sleep, 300
+    sleep, 200
     ToolTip
 Return
 
