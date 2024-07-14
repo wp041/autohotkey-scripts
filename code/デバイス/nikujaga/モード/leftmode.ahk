@@ -2,22 +2,10 @@
 F13::
     If (leftmode == True){
         leftmode := False
-        Progress, off
+        Progress, 1:off
     }Else{
         leftmode := True
-        Progress, b zh0 fs6 w1920 x0 y0 ctffffff cwff0000, , , progtip, plemoljp
-    }
-Return
-
-^F13::
-    If (leftmode == True){
-        leftmode := False
-        ToolTip,,,,3
-        Return
-    }Else{
-        leftmode := True
-        ToolTip, leftmode, 0, 0, 3
-        Return
+        Progress, 1:b zh0 fs6 w960 h4 x0 y0 ctffffff cwff0000, , , progtip, plemoljp
     }
 Return
 
@@ -127,7 +115,7 @@ Return
 
 Esc::
     leftmode := False
-    ToolTip,,,,3
+    Progress, off
 Return
 
 #If

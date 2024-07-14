@@ -4,12 +4,12 @@
 F14::
     If (altmode == True){
         altmode := False
-        ToolTip,,,,2
-        Return
+        ; ToolTip,,,,2
+        Progress, 2:off
     }Else{
         altmode := True
-        ToolTip, altmode, 0, 0, 2
-        Return
+        ; ToolTip, altmode, 0, 0, 2
+        Progress, 2:b zh0 fs4 w960 x960 y0 ctffffff cw00ff00 c00, ,altmode , progtip, plemoljp
     }
 Return
 
@@ -22,6 +22,7 @@ Return
 *f::send, {Blind}{Right}
 *e::send, {Blind}{Esc}
 *g::send, {Blind}{Enter}
+
 *l::send, {Blind}{Up}
 *k::send, {Blind}{Down}
 *j::send, {Blind}{Left}
