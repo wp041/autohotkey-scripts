@@ -5,7 +5,7 @@ F13::
         Progress, 1:off
     }Else{
         leftmode := True
-        Progress, 1:b zh0 fs6 w960 h4 x0 y0 ctffffff cwff0000, , , progtip, plemoljp
+        Progress, 1:b zh0 fs6 w950 h5 x0 y0 ctffffff cwff0000 c00, leftmode , , ,plemoljp
     }
 Return
 
