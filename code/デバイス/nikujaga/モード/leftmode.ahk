@@ -120,4 +120,9 @@ F13::
     ToolTip
 Return
 
+Esc::
+    leftmode := False
+    ToolTip,,,,3
+Return
+
 #If

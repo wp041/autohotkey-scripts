@@ -1,5 +1,5 @@
 ﻿#M::Run,notepad.exe
-#f::Send, {F19}
+#e::Send, {F19}
 
 ; #r::
 ;     KeyWait, F20
@@ -8,15 +8,42 @@
 ; #s:: Suspend
 
 ; オーディオデバイスの切り替え
-#+a::Send, #^v
+#c::
+    if GetKeyState("alt") {
+        Send, #^v
+    }
+    Else {
+        Send, #a
+    }
+Return
+
+; audioswitcher
+#g::
+    audio ++
+    If (audio == 1){
+        Send, !+8
+        ToolTip, bluetooth
+    }
+    Else if (audio == 2){
+        Send, !+9
+        ToolTip, analog
+    }
+    Else if (audio == 3){
+        Send, !+0
+        ToolTip, digital
+        audio == 0
+    }
+    sleep, 300
+    ToolTip
+Return
 
 ; メディアコントロール
-#w::Volume_Down
-#e::Volume_Up
-#q::Media_Prev
-#r::Media_Next
-#Tab::
-    key := "Tab"
+#s::Volume_Down
+#d::Volume_Up
+#a::Media_Prev
+#f::Media_Next
+#vk1D::
+    key := "vk1D"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         WinActivate,ahk_exe Spotify.exe

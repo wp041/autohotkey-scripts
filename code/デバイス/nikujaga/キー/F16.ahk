@@ -1,6 +1,9 @@
 
 F16::AppsKey
-F16 & r::Reload
+F16 & r::
+    KeyWait, F16
+    Reload
+Return
 F16 & s::Suspend
 
 F16 & n::
