@@ -101,16 +101,27 @@ vk1D & f::Send, {Blind}{Right}
 vk1D & g::Send, {Blind}{Enter}
 
 vk1D & z::Send, {Blind}{Home}
-vk1D & x::Send, {Blind}{PgDn}
-vk1D & c::Send, {Blind}{PgUp}
-vk1D & v::Send, {Blind}{End}
-
-vk1D & b::
+vk1D & x::
+    Send, {vk1D}
+    ToolTip, □en
+    sleep, 300
+    ToolTip
+Return
+vk1D & c::
     ToolTip,,,,2
     Send, {vk1C}
     ToolTip, ■ja
     sleep, 300
     ToolTip
+Return
+vk1D & v::Send, {Blind}{End}
+; vk1D & b::
+
+vk1D::Send,{Enter}
+^vk1D::
+    Send, {Enter}
+    leftmode := False
+    Progress, 1:off
 Return
 
 Esc::
