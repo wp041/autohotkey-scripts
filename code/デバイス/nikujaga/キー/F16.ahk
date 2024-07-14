@@ -146,14 +146,26 @@ F16 & F18::
 Return
 
 F16 & h::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 3009, -400, 1, 0,
-    WinActivate, ahk_exe GitHubDesktop.exe
-    Send, ^t
-    Send, {vk1D}
-    ToolTip, □en
-    sleep, 300
-    ToolTip
+    key := "h"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        CoordMode, Mouse, Screen
+        MouseClick, L, 3009, -400, 1, 0,
+        WinActivate, ahk_exe GitHubDesktop.exe
+        Send, ^t
+        Send, {vk1D}
+        ToolTip, □en
+        sleep, 300
+        ToolTip
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+
+    }else{ ;短押しした場合
+        CoordMode, Mouse, Screen
+        MouseClick, L, 3009, -400, 1, 0,
+        WinActivate, ahk_exe GitHubDesktop.exe
+    }
 Return
 
 ; ブログ
