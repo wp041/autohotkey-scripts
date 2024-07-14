@@ -133,19 +133,19 @@ F16 & a::
     Send, +{Esc}
 return
 
-F16 & h::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 3009, 0, 1, 0,
-    MouseClick, L, 2990, -292, 1, 0,
-    Send, ^t
-Return
+; F16 & h::
+;     CoordMode, Mouse, Screen
+;     MouseClick, L, 3009, 0, 1, 0,
+;     MouseClick, L, 2990, -292, 1, 0,
+;     Send, ^t
+; Return
 
 F16 & F18::
     CoordMode, Mouse, Screen
     MouseClick, L, 1750, 1000, 1, 0,
 Return
 
-F16 & G::
+F16 & h::
     CoordMode, Mouse, Screen
     MouseClick, L, 3009, -400, 1, 0,
     WinActivate, ahk_exe GitHubDesktop.exe
