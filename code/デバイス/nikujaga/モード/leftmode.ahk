@@ -118,7 +118,7 @@ vk1D & v::Send, {Blind}{End}
 ; vk1D & b::
 
 vk1D::Send,{Enter}
-^vk1D::
++vk1D::
     Send, {Enter}
     leftmode := False
     Progress, 1:off
