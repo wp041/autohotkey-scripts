@@ -14,37 +14,20 @@
 
     ;無変換キー
 
-    ; スクリプトの説明:
-    ; 画面内の特定の領域 (0, 0) から (1920, 1080) の範囲で色 #424c61 を検索し、
-    ; 見つけた場合にその色の位置をクリックするスクリプトです。
-
-    ; 色の定義 (16進数の色コードをBGRに変換する必要があります)
-    colorToSearch = 0x242424
-    ; colorToSearch = 0x424C61
-
-    ; 画面領域の定義 (ここでは画面全体を定義していますが、必要に応じて変更してください)
-    searchAreaLeft := 1754
-    searchAreaTop := 160
-    searchAreaRight := 1758
-    searchAreaBottom := 885
-
     ; ループ開始 (この例ではスクリプトを1回だけ実行します。必要に応じてループを追加してください)
     vk1D & g::
-        CoordMode, Mouse, Screen
-        ; ピクセル検索
-        ; PixelSearch, posX, posY, searchAreaLeft, searchAreaTop, searchAreaRight, searchAreaBottom, colorToSearch, 0, Fast
         PixelSearch, posX, posY, 1754, 160, 1758, 885, 0x614c42, 0, Fast
         if (ErrorLevel == 0) ; 色が見つかった場合
         {
             ; 色が見つかった位置をクリック
+            CoordMode, Mouse, Screen
             MouseClick, L, %posX%, %posY%, 1, 0,
-            ; 必要に応じて他のアクションを追加してください
-        }
+        } ; 見つからなかった場合
         else if (ErrorLevel == 1)
         {
             MsgBox, 色 #424c61 は見つかりませんでした。
         }
-        Else{
+        Else{ ;エラーのとき
             MsgBox, error
         }
     Return
