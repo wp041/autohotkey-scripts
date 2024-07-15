@@ -43,8 +43,8 @@ vk1D & m::Send, {Blind}{1}
 vk1D & ,::Send, {Blind}{2}
 vk1D & .::Send, {Blind}{3}
 
-vk1D & g::Send, {Blind}{[}
-vk1D & h::Send, {Blind}{]}
+vk1D & h::Send, {Blind}{[}
+vk1D & n::Send, {Blind}{]}
 
 vk1D & vk1C::
     if GetKeyState("Shift") {
