@@ -6,7 +6,7 @@ F16::AppsKey
 ; Return
 F16 & s::Suspend
 
-F16 & j::Send, {F19}
+F16 & f::Send, {F19}
 
 F16 & n::
     if GetKeyState("shift") {
@@ -152,7 +152,7 @@ F16 & F18::
     MouseClick, L, 1750, 1000, 1, 0,
 Return
 
-F16 & h::
+F16 & g::
     key := "h"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合

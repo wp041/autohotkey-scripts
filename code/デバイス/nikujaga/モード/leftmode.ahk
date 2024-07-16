@@ -3,9 +3,17 @@ F13::
     If (leftmode == True){
         leftmode := False
         Progress, 1:off
+        Progress, 2:off
+        Progress, 3:off
+        Progress, 4:off
+        Progress, 5:off
     }Else{
         leftmode := True
         Progress, 1:b zh0 fs6 w950 h5 x0 y0 ctffffff cwff0000 c00, leftmode , , ,plemoljp
+        Progress, 2:b zh0 fs6 w950 h5 x-2550 y-1084 ctffffff cwff0000 c00, leftmode , , ,plemoljp
+        Progress, 3:b zh0 fs6 w950 h5 x-1920 y0 ctffffff cwff0000 c00, leftmode , , ,plemoljp
+        Progress, 4:b zh0 fs6 w950 h5 x-630 y-1080 ctffffff cwff0000 c00, leftmode , , ,plemoljp
+        Progress, 5:b zh0 fs6 w535 h5 x1930 y-944 ctffffff cwff0000 c00, leftmode , , ,plemoljp
     }
 Return
 
