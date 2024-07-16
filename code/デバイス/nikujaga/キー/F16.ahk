@@ -63,9 +63,10 @@ Return
 
 F16 & ,::
     CoordMode, Mouse, Screen
-    MouseClick, L, 1927, -1080, 1, 0,
-    Sleep, 100
-    Send, ^j
+    MouseClick, L, 1700, -538, 1, 0,
+    Sleep, 10
+    Send, ^{End}
+    Send, ^!+m
 Return
 
 F16 & o::
@@ -90,6 +91,7 @@ F16 & k::
         MouseClick, L, 2000, -944, 1, 0,
         Send, ^t
         IME_SET(0)
+        Sleep, 1000
         Send, go
         Send, {Enter}
         Sleep, 1000
