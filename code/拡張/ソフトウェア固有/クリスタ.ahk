@@ -3,6 +3,11 @@
     ;keyball用
     WheelLeft::WheelRight
     WheelRight::WheelLeft
+    ; ^WheelLeft::WheelRight
+    ; ^WheelRight::WheelLeft
+
+    vk1D & x::Send, !,
+    vk1D & c::Send, !.
 
     Tab::Tab
 

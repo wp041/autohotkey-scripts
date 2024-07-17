@@ -153,7 +153,7 @@ F16 & F18::
 Return
 
 F16 & g::
-    key := "h"
+    key := "g"
     KeyWait, %key%, T0.3
     If(ErrorLevel){ ;長押しした場合
         CoordMode, Mouse, Screen

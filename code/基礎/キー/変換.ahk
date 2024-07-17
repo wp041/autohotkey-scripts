@@ -49,3 +49,4 @@ vk1C & 3::Send, {Blind}{F11}
 vk1C & 4::Send, {Blind}{F12}
 
 vk1C & F17::AltTab
+vk1C & F18::Send, {F19}

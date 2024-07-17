@@ -7,7 +7,7 @@ Return
 ; #s:: Suspend
 
 ; オーディオデバイスの切り替え
-#c::
+#a::
     if GetKeyState("alt") {
         Send, #^v
     }
@@ -37,10 +37,12 @@ Return
 Return
 
 ; メディアコントロール
-#s::Volume_Down
-#d::Volume_Up
+#w::Volume_Down
+#e::Volume_Up
 #a::Media_Prev
 #f::Media_Next
+#x::Media_Prev
+#c::Media_Next
 #vk1D::
     key := "vk1D"
     KeyWait, %key%, T0.3
