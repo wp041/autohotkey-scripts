@@ -39,6 +39,8 @@ Return
 ; メディアコントロール
 #w::Volume_Down
 #e::Volume_Up
+#s::Volume_Down
+#d::Volume_Up
 #a::Media_Prev
 #f::Media_Next
 #x::Media_Prev
