@@ -1,8 +1,20 @@
-﻿
+﻿; 基本操作（上書き容易）
+
+vk1D & a::send, !{left}
+vk1D & f::send, !{Right}
+vk1D & s::send, ^+{Tab}
+vk1D & d::send, ^{Tab}
+vk1D & x::Send, {Blind}{Left}
+vk1D & c::Send, {Blind}{Right}
+vk1D & v::Send, {Blind}{esc}
+
+; include
 #Include *i 拡張/ソフトウェア固有/クリスタ.ahk
 #Include *i 拡張/ソフトウェア固有/chrome.ahk
 #Include *i 拡張/ソフトウェア固有/obsidian.ahk
+#Include *i 拡張/ソフトウェア固有/indesign.ahk
 
+; その他
 #IfWinActive, ahk_exe GitHubDesktop.exe
     Tab::Tab
     Tab & v::Send, ^+a

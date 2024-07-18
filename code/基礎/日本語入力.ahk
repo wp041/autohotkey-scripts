@@ -2,6 +2,4 @@
 
 sc027::Send, -
 
-c::Send, っ
-
 #If

@@ -3,9 +3,9 @@
 #IfWinActive, ahk_exe chrome.exe
     Tab::Tab
     Tab & c::
-        Sleep, 50
-        send, {F6}
-        Sleep, 50
+        Sleep, 100
+        send, !d
+        Sleep, 100
         send, ^c
     Return
     Tab & w::

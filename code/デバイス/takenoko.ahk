@@ -61,3 +61,8 @@ F16 & o::
     WinActivate, ahk_exe obsidian.exe
     Send, ^o
 Return
+F16 & /::
+    WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Relative
+    MouseClick, L, 150, 20, 1, 0,
+return
