@@ -6,8 +6,6 @@ F16::AppsKey
 ; Return
 F16 & s::Suspend
 
-F16 & f::Send, {F19}
-
 F16 & n::
     if GetKeyState("shift") {
         FormatTime,TimeString,,yyyy-MM-dd

@@ -6,6 +6,34 @@
 Return
 ; #s:: Suspend
 
+; everything
+#f::Send, {F19}
+
+; github
+#g::
+    key := "g"
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        CoordMode, Mouse, Screen
+        MouseClick, L, 3009, -400, 1, 0,
+        WinActivate, ahk_exe GitHubDesktop.exe
+        Send, {vk1D}
+        ToolTip, □en
+        sleep, 300
+        ToolTip
+        Send, ^t
+        Return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
+    }else{ ;短押しした場合
+        CoordMode, Mouse, Screen
+        MouseClick, L, 3009, -400, 1, 0,
+        WinActivate, ahk_exe GitHubDesktop.exe
+        Send, ^g
+    }
+Return
+
 ; オーディオデバイスの切り替え
 #a::
     if GetKeyState("alt") {
@@ -17,7 +45,7 @@ Return
 Return
 
 ; audioswitcher
-#g::
+#t::
     audio ++
     If (audio == 1){
         Send, !+{F17}
@@ -37,12 +65,8 @@ Return
 Return
 
 ; メディアコントロール
-#w::Volume_Down
-#e::Volume_Up
 #s::Volume_Down
 #d::Volume_Up
-#a::Media_Prev
-#f::Media_Next
 #x::Media_Prev
 #c::Media_Next
 #vk1D::
