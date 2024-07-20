@@ -3,8 +3,8 @@
     ;keyball用
     WheelLeft::WheelRight
     WheelRight::WheelLeft
-    ; ^WheelLeft::WheelRight
-    ; ^WheelRight::WheelLeft
+    ^WheelLeft::Send, !.
+    ^WheelRight::Send, !,
 
     vk1D & x::Send, !,
     vk1D & c::Send, !.

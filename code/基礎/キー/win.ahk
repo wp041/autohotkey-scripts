@@ -67,8 +67,8 @@ Return
 ; メディアコントロール
 #s::Volume_Down
 #d::Volume_Up
-#x::Media_Prev
-#c::Media_Next
+#+s::Media_Prev
+#+d::Media_Next
 #vk1D::
     key := "vk1D"
     KeyWait, %key%, T0.3
