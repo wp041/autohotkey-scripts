@@ -66,3 +66,7 @@ F16 & /::
     CoordMode, Mouse, Relative
     MouseClick, L, 150, 20, 1, 0,
 return
+
+; 変換キー
+
+vk1C & F13::AltTab
