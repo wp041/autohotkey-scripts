@@ -35,3 +35,6 @@ return
     Alt::Space
 #If
 
+; 変換キー
+vk1C & F17::AltTab
+vk1C & F18::Send, {F19}
