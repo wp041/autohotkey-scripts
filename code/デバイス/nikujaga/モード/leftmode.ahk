@@ -134,7 +134,11 @@ Return
 
 Esc::
     leftmode := False
-    Progress, off
+    Progress, 1:off
+    Progress, 2:off
+    Progress, 3:off
+    Progress, 4:off
+    Progress, 5:off
 Return
 
 #If
