@@ -26,7 +26,9 @@
         {
             ; 色が見つかった位置をクリック
             CoordMode, Mouse, Screen
-            MouseClick, L, %posX%, %posY%, 1, 0,
+            posZ := % posY + 10
+            Sleep, 20
+            MouseClick, L, %posX%, %posZ%, 1, 0,
         } ; 見つからなかった場合
         else if (ErrorLevel == 1)
         {
