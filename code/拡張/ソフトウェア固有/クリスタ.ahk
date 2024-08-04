@@ -6,9 +6,6 @@
     ^WheelLeft::Send, !.
     ^WheelRight::Send, !,
 
-    vk1D & x::Send, !,
-    vk1D & c::Send, !.
-
     Tab::Tab
 
     esc::
@@ -20,15 +17,16 @@
     ;無変換キー
 
     ; レイヤーフォルダー開閉
-    vk1D & g::
+    vk1D & x::
         PixelSearch, posX, posY, 1754, 160, 1758, 885, 0x614c42, 0, Fast
         if (ErrorLevel == 0) ; 色が見つかった場合
         {
             ; 色が見つかった位置をクリック
             CoordMode, Mouse, Screen
-            posZ := % posY + 10
+            clkX := % posX + 7
+            clkY := % posY + 10
             Sleep, 20
-            MouseClick, L, %posX%, %posZ%, 1, 0,
+            MouseClick, L, %clkX%, %clkY%, 1, 0,
         } ; 見つからなかった場合
         else if (ErrorLevel == 1)
         {
@@ -156,37 +154,37 @@
     Return
 
     ; レイヤーカラーをつける
-    tab & esc::
+    vk1D & esc::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 1750, 100, 1, 0,
         MouseClick, L, 1750, 120, 1, 0,
     Return
-    tab & 1::
+    vk1D & 1::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 1750, 100, 1, 0,
         MouseClick, L, 1750, 140, 1, 0,
     Return
-    tab & 2::
+    vk1D & 2::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 1750, 100, 1, 0,
         MouseClick, L, 1750, 160, 1, 0,
     Return
-    tab & 3::
+    vk1D & 3::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 1750, 100, 1, 0,
         MouseClick, L, 1750, 180, 1, 0,
     Return
-    tab & 4::
+    vk1D & 4::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 1750, 100, 1, 0,
         MouseClick, L, 1750, 220, 1, 0,
     Return
-    tab & 5::
+    vk1D & 5::
         CoordMode, Mouse, Screen
         Sleep, 20
         MouseClick, L, 1750, 100, 1, 0,
