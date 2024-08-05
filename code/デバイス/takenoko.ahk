@@ -20,6 +20,18 @@ F13::
     }
 Return
 
+F13 & m::#1
+F13 & ,::#2
+F13 & .::#3
+
+F13 & j::#4
+F13 & k::#5
+F13 & l::#6
+
+F13 & u::#7
+F13 & i::#8
+F13 & o::#9
+
 $Esc::
     KeyWait, Esc, T0.3
     if (ErrorLevel){
@@ -32,12 +44,12 @@ $Esc::
     keywait, Esc
 return
 
-f16 & k::
-    WinActivate, ahk_exe chrome.exe
-    Send, ^t
-return
+#Include *i デバイス/nikujaga/キー/F16.ahk
 
-F16 & m::
+; Space::LAlt
+; LAlt::F20
+
+Space & m::
     WinActivate, ahk_exe obsidian.exe
     Send, ^t
     Send, ^d
@@ -46,16 +58,43 @@ F16 & m::
     Send, ^m
 Return
 
-F16 & o::
+Space & o::
     WinActivate, ahk_exe obsidian.exe
     Send, ^o
 Return
-F16 & /::
+
+Space::Space
+Space & /::
     WinActivate, ahk_exe chrome.exe
     CoordMode, Mouse, Relative
     MouseClick, L, 150, 20, 1, 0,
 return
+Space & k::
+    WinActivate, ahk_exe chrome.exe
+    Send, ^t
+return
+
+Space & n::
+    if GetKeyState("shift") {
+        FormatTime,TimeString,,yyyy-MM-dd
+        backup := ClipboardAll
+        Clipboard := % TimeString
+        Send,^v
+        sleep,100
+        Clipboard := backup
+        Return
+    }
+    FormatTime,TimeString,,yyyy-MM-ddTHHmmss
+    backup := ClipboardAll
+    Clipboard := % TimeString
+    Send,^v
+    sleep,100
+    ; Clipboard := backup
+Return
 
 ; 変換キー
 
-vk1C & F13::AltTab
+; vk1C & F13::AltTab
+; vk1C & Enter::AltTab
+; vk1C & vkBB::AltTab
+
