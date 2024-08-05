@@ -92,6 +92,8 @@ Space & n::
     ; Clipboard := backup
 Return
 
+Space & E::Run, "C:\Users\okiko\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\okiko\Documents\GitHub\AutoHotKey-scripts"
+
 ; 変換キー
 
 ; vk1C & F13::AltTab
