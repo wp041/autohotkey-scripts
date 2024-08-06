@@ -81,3 +81,60 @@ vk1D & sc073::Send, {Blind}{^}
 
 vk1D & esc::Send, {Blind}{.}
 vk1D & F16::Send, {Blind}{,}
+
+vk1D & a::
+    if GetKeyState("alt") {
+        Send, {Left}
+        return
+    }
+    Send, !{left}
+Return
+vk1D & f::
+    if GetKeyState("alt") {
+        Send, {Right}
+        return
+    }
+    Send, !{Right}
+Return
+
+vk1D & s::
+    if GetKeyState("alt") {
+        Send, {Down}
+        return
+    }
+    Send, ^+{Tab}
+Return
+vk1D & d::
+    if GetKeyState("alt") {
+        Send, {up}
+        return
+    }
+    Send, ^{Tab}
+Return
+
+vk1D & g::
+    if GetKeyState("alt") {
+        Send, {Enter}
+        return
+    }
+    Send, {Blind}{g}
+Return
+
+vk1D & w::
+    if GetKeyState("alt") {
+        Send, {BS}
+        return
+    }
+    Send, {Blind}{u}
+Return
+vk1D & e::
+    if GetKeyState("alt") {
+        Send, {Del}
+        return
+    }
+    Send, {Blind}{i}
+Return
+
+vk1D & x::Send, {Blind}{Left}
+vk1D & c::Send, {Blind}{Right}
+vk1D & v::Send, {Blind}{esc}
