@@ -37,4 +37,13 @@ Return
 *,::send, {Blind}{Left}
 *.::send, {Blind}{Right}
 
+Esc::
+    altmode := False
+    Progress, 6:off
+    Progress, 7:off
+    Progress, 8:off
+    Progress, 9:off
+    Progress, 10:off
+Return
+
 #if
