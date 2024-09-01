@@ -11,7 +11,27 @@
 F20::LWin
 
 ; サスペンド
-^Esc:: Suspend
+; ^Esc:: Suspend
+; ^Esc:: 
+;     Suspend
+;     ToolTip,,,,3
+;     ToolTip, Suspend=t
+;     sleep, 300
+;     ToolTip
+; Return
+^Esc::
+    Suspend
+    Pause ,,1
+    if A_IsPaused {
+        ToolTip, PAUSED
+        Sleep, 300
+        ToolTip
+    } else {
+        ToolTip, RUNNING
+        Sleep, 300
+        ToolTip
+    }
+return
 
 ; test
 
