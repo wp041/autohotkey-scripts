@@ -4,7 +4,6 @@
     KeyWait, F20
     Reload
 Return
-; #s:: Suspend
 
 ; everything
 #f::Send, {F19}

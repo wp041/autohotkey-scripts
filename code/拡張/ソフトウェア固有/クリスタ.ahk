@@ -191,4 +191,40 @@
         MouseClick, L, 1750, 230, 1, 0,
     Return
 
+    ; obsidianに保存
+    Tab & s::
+        send, ^s
+        Sleep, 100
+        ; ファイル保存先は指定しない
+        ; send, !d
+        ; Clipboard := C:\Users\okiko\git\Obsidian-personal\🖼️
+        ; Send,^v
+        ; send, {enter}
+        Send, !n
+        ; 時間
+        FormatTime,TimeString,,yyyy-MM-ddTHHmmss
+        backup := ClipboardAll
+        Clipboard := % TimeString
+        Send,^v
+        ; /時間
+        Send, !s
+        ; obsidian格納
+        Sleep, 500
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1700, -1080, 1, 0,
+        if GetKeyState("F17") {
+            Return
+        }
+        Sleep, 10
+        Send, ^d
+        Sleep, 500
+        Send, ^{End}
+        Send, ^m
+        ; ここまでF16 & m
+        Sleep, 500
+        Send, ^l
+        Send, {Down}
+        Send, {Enter}
+    Return
+
 #IfWinActive

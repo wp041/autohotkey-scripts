@@ -10,6 +10,9 @@
 ;F20
 F20::LWin
 
+; サスペンド
+^Esc:: Suspend
+
 ; test
 
 ; 疑似スリープ

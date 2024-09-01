@@ -97,3 +97,7 @@
 #IfWinActive, ahk_exe Photoshop.exe
     Tab::Tab
 #IfWinActive
+
+#IfWinActive, ahk_exe League of Legends.exe
+    Tab::Tab
+#IfWinActive

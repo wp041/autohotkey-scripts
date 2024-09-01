@@ -40,6 +40,10 @@
         Send, {Up}
         Send, {NumpadSub}
     Return
+    Tab & i::
+        clipboard = ![[%clipboard%.png]][[%clipboard%.clip]]
+        Send, ^v
+    Return
     Tab & b::
         if GetKeyState("alt") {
             Sleep, 50
