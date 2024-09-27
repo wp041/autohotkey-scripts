@@ -1,4 +1,3 @@
-
 F16::AppsKey
 ; F16 & r::
 ;     KeyWait, F16
@@ -21,7 +20,7 @@ F16 & n::
     Clipboard := % TimeString
     Send,^v
     sleep,100
-    ; Clipboard := backup
+; Clipboard := backup
 Return
 
 InsertText(Content) {
@@ -43,6 +42,22 @@ F16 & m::
     Sleep, 500
     Send, ^{End}
     Send, ^m
+Return
+
+F16 & t::
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1400, -1080, 1, 0,
+    Sleep, 10
+    Send, ^d
+    Sleep, 500
+    Send, ^{Home}
+    Send, ^f
+    Sleep, 10
+    Send, [ ]
+    Sleep, 10
+    Send, {Esc}
+    Send, {End}
+    Send, {End}
 Return
 
 F16 & 8::
@@ -128,6 +143,13 @@ F16 & k::
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     Send, ^t
+return
+
+F16 & p::
+    WinActivate, ahk_exe chrome.exe
+    CoordMode, Mouse, Screen
+    MouseClick, L, 2000, -944, 1, 0,
+    Send, !p
 return
 
 F16 & a::
