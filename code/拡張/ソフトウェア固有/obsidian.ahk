@@ -1,18 +1,18 @@
 #IFWinActive ahk_exe Obsidian.exe
     Tab::Tab
-    Tab & w::
-        Send, {End}
-        Send, ^c
-        Send, ^v
-        Send, {BS}
-        Send, {BS}
-        Send, {BS}
-        Send, {BS}
-        Send, {Esc}
-        Send, {Esc}
-        Send, {Enter}
-        Send, !{Up}
-    Return
+    ; Tab & w::
+    ;     Send, {End}
+    ;     Send, ^c
+    ;     Send, ^v
+    ;     Send, {BS}
+    ;     Send, {BS}
+    ;     Send, {BS}
+    ;     Send, {BS}
+    ;     Send, {Esc}
+    ;     Send, {Esc}
+    ;     Send, {Enter}
+    ;     Send, !{Up}
+    ; Return
     Tab & c::
         if GetKeyState("alt") {
             Sleep, 200
@@ -60,7 +60,7 @@
     CoordMode, Mouse, Relative
     vk1D & z::MouseClick, L, 30, 280, 1, 0,
     vk1D & v::MouseClick, L, 100, 280, 1, 0,
-    Tab & d::
+    Tab & w::
         if GetKeyState("alt") {
             Sleep, 200
             send, {F2}
@@ -117,9 +117,11 @@
         send, ^+c
         WinActivate, ahk_exe TogglTrack.exe
         send, ^n
-        Sleep, 20
+        Sleep, 50
         send, ^v
         Send, {Enter}
+        Sleep, 20
+        Send, !{Esc}
     Return
     ^!c::
         backup := ClipboardAll

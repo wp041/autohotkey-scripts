@@ -99,7 +99,6 @@ return
 F16 & t::
     WinActivate, ahk_exe TogglTrack.exe
     Send, ^n
-    Send, @
 Return
 
 F16 & k::
