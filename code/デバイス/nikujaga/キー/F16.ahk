@@ -44,7 +44,7 @@ F16 & m::
     Send, ^m
 Return
 
-F16 & t::
+F16 & @::
     CoordMode, Mouse, Screen
     MouseClick, L, 1400, -1080, 1, 0,
     Sleep, 10
@@ -95,6 +95,12 @@ F16 & /::
     CoordMode, Mouse, Relative
     MouseClick, L, 150, 20, 1, 0,
 return
+
+F16 & t::
+    WinActivate, ahk_exe TogglTrack.exe
+    Send, ^n
+    Send, @
+Return
 
 F16 & k::
     if GetKeyState("ctrl") {

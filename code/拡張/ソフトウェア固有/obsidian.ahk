@@ -109,4 +109,32 @@
         Send, ^v
         Send, {Enter}
     Return
+    Tab & t::
+        send, {End}
+        send, {End}
+        send, +{Home}
+        Sleep, 20
+        send, ^+c
+        WinActivate, ahk_exe TogglTrack.exe
+        send, ^n
+        Sleep, 20
+        send, ^v
+        Send, {Enter}
+    Return
+    ^!c::
+        backup := ClipboardAll
+        Sleep, 200
+        send, {F2}
+        Sleep, 20
+        send, ^c
+        send, {Esc}
+        Sleep, 10
+        Send, !^x
+        Send, ^v
+        Send, {vk1D}
+        Send, -
+        Send, {U+1F4DD}
+        Send, {vk1C}
+        Clipboard := backup
+    Return
 #IfWinActive
