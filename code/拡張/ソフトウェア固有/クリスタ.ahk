@@ -146,8 +146,14 @@
         MouseClick, L, 922, 182, 1, 0,
     Return
 
-; レイヤーカラーをつける
+    ; ツールプロパティを表示させる
+    vk1D & t::
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 900, 60, 1, 0,
+    Return
 
+; レイヤーカラーをつける
 ;     vk1D & esc::
 ;     CoordMode, Mouse, Screen
 ;     Sleep, 20
@@ -251,7 +257,6 @@
     Return
 
     ; レイヤーカラーをつける
-
     vk1D & esc::
         CoordMode, Mouse, Screen
         Sleep, 20
