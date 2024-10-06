@@ -8,6 +8,20 @@ Return
 ; everything
 #f::Send, {F19}
 
+#x::
+    KeyWait, F20
+    Run, "C:\Program Files\Pentablet\PenTablet.exe"
+    WinActivate, ahk_exe PenTablet.exe
+    pen ++
+    If (pen == 1){
+        MouseClick, L, 338, 533, 1, 0,
+    }
+    Else if (pen == 2){
+        MouseClick, L, 495, 533, 1, 0,
+        pen == 0
+    }
+Return
+
 ; github
 ; #g::
 ;     key := "g"
