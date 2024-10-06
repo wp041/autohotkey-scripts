@@ -1,5 +1,6 @@
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
 
+    ; test
     ;keyball用
     WheelLeft::WheelRight
     WheelRight::WheelLeft
@@ -7,6 +8,21 @@
     ^WheelRight::Send, !,
 
     Tab::Tab
+
+    GetWindowWidth() {
+        WinGetPos, X, Y, Width, Height, A ; アクティブウィンドウの位置とサイズを取得
+        return Width
+    }
+
+#If (GetWindowWidth() <= 1100)
+    ^+d::
+        Sleep, 20
+        CoordMode, Mouse, Screen
+        MouseClick, L, 922, 182, 1, 0,
+    Return
+
+#If
+#If (GetWindowWidth() >= 1100)
 
     esc::
         IF (IME_GetConverting() != 0){
@@ -156,6 +172,7 @@
     Return
 
     ; レイヤーカラーをつける
+
     vk1D & esc::
         CoordMode, Mouse, Screen
         Sleep, 20
@@ -228,5 +245,7 @@
         Send, {Down}
         Send, {Enter}
     Return
+
+#if
 
 #IfWinActive

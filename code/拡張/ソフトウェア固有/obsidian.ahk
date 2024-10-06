@@ -110,17 +110,35 @@
         Send, {Enter}
     Return
     Tab & t::
+        Sleep, 40
         send, {End}
+        Sleep, 40
         send, {End}
-        send, +{Home}
+        Sleep, 40
+        send, {End}
         Sleep, 20
+        send, +{Home}
+        Sleep, 10
+        send, +{Home}
+        Sleep, 10
+        send, +{Home}
+        send, +{Right}
+        send, +{Right}
+        send, +{Right}
+        send, +{Right}
+        send, +{Right}
+        send, +{Right}
+        Sleep, 80
         send, ^+c
         WinActivate, ahk_exe TogglTrack.exe
+        Sleep, 400
         send, ^n
-        Sleep, 50
+        Sleep, 400
         send, ^v
+        Sleep, 400
         Send, {Enter}
-        Sleep, 20
+        Send, {Enter}
+        Sleep, 50
         Send, !{Esc}
     Return
     ^!c::

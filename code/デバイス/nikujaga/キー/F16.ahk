@@ -33,7 +33,7 @@ InsertText(Content) {
 
 F16 & m::
     CoordMode, Mouse, Screen
-    MouseClick, L, 1700, -1080, 1, 0,
+    MouseClick, L, 1920, -5, 1, 0,
     if GetKeyState("F17") {
         Return
     }
