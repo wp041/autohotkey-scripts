@@ -153,43 +153,67 @@
         MouseClick, L, 900, 60, 1, 0,
     Return
 
-; レイヤーカラーをつける
-;     vk1D & esc::
-;     CoordMode, Mouse, Screen
-;     Sleep, 20
-;     MouseClick, L, 1750, 100, 1, 0,
-;     MouseClick, L, 1750, 120, 1, 0,
-; Return
-; vk1D & 1::
-;     CoordMode, Mouse, Screen
-;     Sleep, 20
-;     MouseClick, L, 1750, 100, 1, 0,
-;     MouseClick, L, 1750, 140, 1, 0,
-; Return
-; vk1D & 2::
-;     CoordMode, Mouse, Screen
-;     Sleep, 20
-;     MouseClick, L, 1750, 100, 1, 0,
-;     MouseClick, L, 1750, 160, 1, 0,
-; Return
-; vk1D & 3::
-;     CoordMode, Mouse, Screen
-;     Sleep, 20
-;     MouseClick, L, 1750, 100, 1, 0,
-;     MouseClick, L, 1750, 180, 1, 0,
-; Return
-; vk1D & 4::
-;     CoordMode, Mouse, Screen
-;     Sleep, 20
-;     MouseClick, L, 1750, 100, 1, 0,
-;     MouseClick, L, 1750, 220, 1, 0,
-; Return
-; vk1D & 5::
-;     CoordMode, Mouse, Screen
-;     Sleep, 20
-;     MouseClick, L, 1750, 100, 1, 0,
-;     MouseClick, L, 1750, 230, 1, 0,
-; Return
+    ; レイヤーカラーをつける
+
+    ; ウィンドウ下げてる量
+    posx := 940
+    posy := 130
+
+    layercolor := posy + 100
+    color0 := posy + 120
+    color1 := posy + 140
+    color2 := posy + 160
+    color3 := posy + 180
+    color4 := posy + 220
+    color5 := posy + 230
+
+    vk1D & esc::
+        global posx, layercolor, color0
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 940, 230, 1, 0
+        MouseClick, L, 940, 250, 1, 0
+    Return
+
+    vk1D & 1::
+        global posx, layercolor, color1
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 940, 230, 1, 0
+        MouseClick, L, 940, 270, 1, 0
+    Return
+
+    vk1D & 2::
+        global posx, layercolor, color2
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 940, 230, 1, 0
+        MouseClick, L, 940, 290, 1, 0
+    Return
+
+    vk1D & 3::
+        global posx, layercolor, color3
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 940, 230, 1, 0
+        MouseClick, L, 940, 310, 1, 0
+    Return
+
+    vk1D & 4::
+        global posx, layercolor, color4
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 940, 230, 1, 0
+        MouseClick, L, 940, 350, 1, 0
+    Return
+
+    vk1D & 5::
+        global posx, layercolor, color5
+        CoordMode, Mouse, Screen
+        Sleep, 20
+        MouseClick, L, 940, 230, 1, 0
+        MouseClick, L, 940, 360, 1, 0
+    Return
 
 #if
 
