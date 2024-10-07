@@ -31,7 +31,7 @@
     tab & t::
         Sleep, 20
         CoordMode, Mouse, Relative
-        MouseClick, R, 5, 90, 1, 0,
+        MouseClick, R, 10, 90, 1, 0,
         Sleep, 20
         Send, t
         Sleep, 20
