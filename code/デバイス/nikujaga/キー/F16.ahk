@@ -33,7 +33,8 @@ InsertText(Content) {
 
 F16 & m::
     CoordMode, Mouse, Screen
-    MouseClick, L, 1920, -5, 1, 0,
+    MouseClick, L, 1820, -12, 1, 0,
+    ; WinActivate, ahk_exe Obsidian.exe, 202
     if GetKeyState("F17") {
         Return
     }

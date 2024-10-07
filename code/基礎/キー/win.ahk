@@ -20,6 +20,7 @@ Return
         MouseClick, L, 495, 533, 1, 0,
         pen == 0
     }
+    Send, !{Esc}
 Return
 
 ; github
