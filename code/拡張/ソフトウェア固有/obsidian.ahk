@@ -112,6 +112,8 @@
     Tab & t::
         send, ^c
         StringReplace, clipboard, clipboard,- [ ] , , All
+        StringReplace, clipboard, clipboard,[[, , All
+        StringReplace, clipboard, clipboard,]], , All
         WinActivate, ahk_exe TogglTrack.exe
         Sleep, 400
         send, ^n
