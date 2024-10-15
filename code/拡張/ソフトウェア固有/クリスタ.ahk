@@ -215,8 +215,6 @@
         MouseClick, L, 940, 360, 1, 0
     Return
 
-#if
-
 #If
 ; !横長
 #If (GetWindowWidth() >= 1100)
@@ -224,25 +222,25 @@
     ;無変換キー
 
     ; レイヤーフォルダー開閉
-    vk1D & x::
-        PixelSearch, posX, posY, 1754, 160, 1758, 885, 0x614c42, 0, Fast
-        if (ErrorLevel == 0) ; 色が見つかった場合
-        {
-            ; 色が見つかった位置をクリック
-            CoordMode, Mouse, Screen
-            clkX := % posX + 7
-            clkY := % posY + 10
-            Sleep, 20
-            MouseClick, L, %clkX%, %clkY%, 1, 0,
-        } ; 見つからなかった場合
-        else if (ErrorLevel == 1)
-        {
-            MsgBox, 色 #424c61 は見つかりませんでした。
-        }
-        Else{ ;エラーのとき
-            MsgBox, error
-        }
-    Return
+    ; vk1D & x::
+    ;     PixelSearch, posX, posY, 1754, 160, 1758, 885, 0x614c42, 0, Fast
+    ;     if (ErrorLevel == 0) ; 色が見つかった場合
+    ;     {
+    ;         ; 色が見つかった位置をクリック
+    ;         CoordMode, Mouse, Screen
+    ;         clkX := % posX + 7
+    ;         clkY := % posY + 10
+    ;         Sleep, 20
+    ;         MouseClick, L, %clkX%, %clkY%, 1, 0,
+    ;     } ; 見つからなかった場合
+    ;     else if (ErrorLevel == 1)
+    ;     {
+    ;         MsgBox, 色 #424c61 は見つかりませんでした。
+    ;     }
+    ;     Else{ ;エラーのとき
+    ;         MsgBox, error
+    ;     }
+    ; Return
 
     ; テキスト編集コード（現在はプロパティの位置などが変わって使われてない）
     ; Tab & z:: ;テキストの折り返し
