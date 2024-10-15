@@ -110,26 +110,8 @@
         Send, {Enter}
     Return
     Tab & t::
-        Sleep, 40
-        send, {End}
-        Sleep, 40
-        send, {End}
-        Sleep, 40
-        send, {End}
-        Sleep, 20
-        send, +{Home}
-        Sleep, 10
-        send, +{Home}
-        Sleep, 10
-        send, +{Home}
-        send, +{Right}
-        send, +{Right}
-        send, +{Right}
-        send, +{Right}
-        send, +{Right}
-        send, +{Right}
-        Sleep, 80
-        send, ^+c
+        send, ^c
+        StringReplace, clipboard, clipboard,- [ ] , , All
         WinActivate, ahk_exe TogglTrack.exe
         Sleep, 400
         send, ^n
