@@ -8,7 +8,7 @@ F16::AppsKey
 F16 & n::
     if GetKeyState("shift") {
         FormatTime,TimeString,,yyyy-MM-dd
-        backup := ClipboardAll
+            backup := ClipboardAll
         Clipboard := % TimeString
         Send,^v
         sleep,100
@@ -16,11 +16,11 @@ F16 & n::
         Return
     }
     FormatTime,TimeString,,yyyy-MM-ddTHHmmss
-    backup := ClipboardAll
+        backup := ClipboardAll
     Clipboard := % TimeString
     Send,^v
     sleep,100
-; Clipboard := backup
+    ; Clipboard := backup
 Return
 
 InsertText(Content) {
@@ -43,22 +43,6 @@ F16 & m::
     Sleep, 500
     Send, ^{End}
     Send, ^m
-Return
-
-F16 & @::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 1400, -1080, 1, 0,
-    Sleep, 10
-    Send, ^d
-    Sleep, 500
-    Send, ^{Home}
-    Send, ^f
-    Sleep, 10
-    Send, [ ]
-    Sleep, 10
-    Send, {Esc}
-    Send, {End}
-    Send, {End}
 Return
 
 F16 & 8::
@@ -98,8 +82,19 @@ F16 & /::
 return
 
 F16 & t::
-    WinActivate, ahk_exe TogglTrack.exe
-    Send, ^n
+    CoordMode, Mouse, Screen
+    MouseClick, L, 1400, -1080, 1, 0,
+    Sleep, 10
+    Send, ^d
+    Sleep, 500
+    Send, ^{Home}
+    Send, ^f
+    Sleep, 10
+    Send, [ ]
+    Sleep, 10
+    Send, {Esc}
+    Send, {End}
+    Send, {End}
 Return
 
 F16 & k::
