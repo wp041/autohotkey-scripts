@@ -86,7 +86,7 @@ F16 & t::
     MouseClick, L, 1400, -1080, 1, 0,
     Sleep, 10
     Send, ^d
-    Sleep, 500
+    Sleep, 200
     Send, ^{Home}
     Send, ^f
     Sleep, 10
