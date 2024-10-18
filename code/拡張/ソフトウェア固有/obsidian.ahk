@@ -125,6 +125,8 @@
         } else if GetKeyState("shift") {  ;タスクを完了にして通す
             send, ^+{Enter}
             Sleep, 400
+            send, {End}
+            send, {End}
             send, {Down}
             Sleep, 50
         }
