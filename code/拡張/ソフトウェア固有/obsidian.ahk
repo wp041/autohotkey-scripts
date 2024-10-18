@@ -110,10 +110,24 @@
         Send, {Enter}
     Return
     Tab & t::
-        send, ^+{Enter}
-        Sleep, 400
-        send, {Down}
-        Sleep, 50
+        if GetKeyState("alt") {  ;タスクの整理
+            WinActivate, ahk_exe TogglTrack.exe
+            Sleep, 400
+            send, ^n
+            Sleep, 400
+            send, task adjustment
+            Sleep, 400
+            Send, {Enter}
+            Send, {Enter}
+            Sleep, 50
+            Send, !{Esc}
+            return
+        } else if GetKeyState("shift") {  ;タスクを完了にして通す
+            send, ^+{Enter}
+            Sleep, 400
+            send, {Down}
+            Sleep, 50
+        }
         send, ^c
         StringReplace, clipboard, clipboard,- [ ] , , All
         StringReplace, clipboard, clipboard,[[, , All
