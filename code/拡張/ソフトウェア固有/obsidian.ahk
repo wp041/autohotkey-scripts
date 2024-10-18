@@ -110,6 +110,10 @@
         Send, {Enter}
     Return
     Tab & t::
+        send, ^+{Enter}
+        Sleep, 400
+        send, {Down}
+        Sleep, 50
         send, ^c
         StringReplace, clipboard, clipboard,- [ ] , , All
         StringReplace, clipboard, clipboard,[[, , All
