@@ -90,7 +90,8 @@ F16 & t::
     Send, ^{Home}
     Send, ^f
     Sleep, 10
-    Send, [ ]
+    Send, {vk1D}
+    Send, [ ] ;ここimeの状態によってはエラー出る
     Sleep, 10
     Send, {Esc}
     Send, {End}
