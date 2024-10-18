@@ -78,7 +78,7 @@ F16 & /::
     CoordMode, Mouse, Screen
     MouseClick, L, 2000, -944, 1, 0,
     CoordMode, Mouse, Relative
-    MouseClick, L, 150, 20, 1, 0,
+    MouseClick, L, 190, 20, 1, 0,  ;xを150にすると3つめにグループボタンが来る
 return
 
 F16 & t::
