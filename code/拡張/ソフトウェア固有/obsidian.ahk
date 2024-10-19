@@ -113,7 +113,8 @@
         if GetKeyState("alt") {  ;タスクの整理
             WinActivate, ahk_exe TogglTrack.exe
             Sleep, 400
-            send, ^n
+            Send, {vk1D}
+            send, ^{n}
             Sleep, 400
             send, task adjustment
             Sleep, 400
@@ -131,6 +132,7 @@
             Sleep, 50
         }
         send, ^c
+        sleep, 50
         StringReplace, clipboard, clipboard,- [ ] , , All
         StringReplace, clipboard, clipboard,[[, , All
         StringReplace, clipboard, clipboard,]], , All

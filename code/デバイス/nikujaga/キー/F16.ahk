@@ -82,6 +82,20 @@ F16 & /::
 return
 
 F16 & t::
+    if GetKeyState("alt") {  ;タスクの整理
+        WinActivate, ahk_exe TogglTrack.exe
+        Sleep, 400
+        Send, {vk1D}
+        send, ^{n}
+        Sleep, 400
+        send, task adjustment
+        Sleep, 400
+        Send, {Enter}
+        Send, {Enter}
+        Sleep, 50
+        Send, !{Esc}
+        return
+    }
     CoordMode, Mouse, Screen
     MouseClick, L, 1400, -1080, 1, 0,
     Sleep, 10

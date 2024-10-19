@@ -9,7 +9,7 @@
 
 ; space長押し
 RShift::LAlt
-
+    
 ; ホイール
 #MaxHotkeysPerInterval 200 ; 高速スクロール時に警告されるのを回避
 WheelDown::WheelUp
@@ -34,7 +34,7 @@ return
 #IF IME_GetConverting()
     Alt::Space
 #If
-
+    
 ; 変換キー
 vk1C & F17::AltTab
 vk1C & F18::Send, {F19}
