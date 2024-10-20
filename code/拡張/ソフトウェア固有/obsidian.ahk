@@ -136,11 +136,11 @@
         StringReplace, clipboard, clipboard,[[, , All
         StringReplace, clipboard, clipboard,]], , All
         WinActivate, ahk_exe TogglTrack.exe
-        Sleep, 400
+        ; Sleep, 200
         send, ^n
-        Sleep, 400
+        Sleep, 200
         send, ^v
-        Sleep, 400
+        Sleep, 200
         Send, {Enter}
         Send, {Enter}
         Sleep, 50
