@@ -95,19 +95,19 @@
         Send, {Enter}
     Return
     Tab & A::
-        Sleep, 200
-        send, {F2}
-        Sleep, 20
         send, ^c
-        send, {Esc}
-        Sleep, 300
+        StringReplace, clipboard, clipboard,-%A_Space%, , All
+        StringReplace, clipboard, clipboard,%A_Tab%, , All
+        StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
+        StringReplace, clipboard, clipboard,[[, , All
+        StringReplace, clipboard, clipboard,]], , All
         CoordMode, Mouse, Screen
         MouseClick, L, 2000, -944, 1, 0,
         Send, ^1
         Send, +^o
         Send, +{Esc}
+        sleep, 200
         Send, ^v
-        Send, {Enter}
     Return
     Tab & t::
         if GetKeyState("alt") {  ;タスクの整理
@@ -138,9 +138,9 @@
         WinActivate, ahk_exe TogglTrack.exe
         ; Sleep, 200
         send, ^n
-        Sleep, 200
+        Sleep, 400
         send, ^v
-        Sleep, 200
+        Sleep, 400
         Send, {Enter}
         Send, {Enter}
         Sleep, 50
