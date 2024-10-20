@@ -37,7 +37,8 @@
         Sleep, 20
         send, {Enter}
         Sleep, 20
-        MouseClick, L, 265, 30, 1, 0,
+        send, +{tab}
+        send, {Enter}
         ; send, {Esc}
     Return
     tab & s::
