@@ -132,6 +132,8 @@
             Sleep, 50
         }
         send, ^c
+        StringReplace, clipboard, clipboard,-%A_Space%, , All
+        StringReplace, clipboard, clipboard,%A_Tab%, , All
         StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
         StringReplace, clipboard, clipboard,[[, , All
         StringReplace, clipboard, clipboard,]], , All
