@@ -31,13 +31,13 @@
     tab & t::
         Sleep, 20
         CoordMode, Mouse, Relative
-        MouseClick, R, 5, 90, 1, 0,
+        MouseClick, R, 5, 95, 1, 0,
         Sleep, 20
         Send, t
         Sleep, 20
         send, {Enter}
         Sleep, 20
-        MouseClick, L, 1, 1, 1, 0,
+        MouseClick, L, 265, 30, 1, 0,
         ; send, {Esc}
     Return
     tab & s::
