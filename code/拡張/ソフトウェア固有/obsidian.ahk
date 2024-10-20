@@ -132,8 +132,7 @@
             Sleep, 50
         }
         send, ^c
-        sleep, 50
-        StringReplace, clipboard, clipboard,- [ ] , , All
+        StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
         StringReplace, clipboard, clipboard,[[, , All
         StringReplace, clipboard, clipboard,]], , All
         WinActivate, ahk_exe TogglTrack.exe
