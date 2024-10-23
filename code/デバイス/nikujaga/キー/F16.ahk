@@ -59,13 +59,13 @@ F16 & 8::
     Send, ^!m
 Return
 
-F16 & ,::
-    CoordMode, Mouse, Screen
-    MouseClick, L, 1700, -538, 1, 0,
-    Sleep, 10
-    Send, ^{End}
-    Send, ^!+m
-Return
+; F16 & ,::
+;     CoordMode, Mouse, Screen
+;     MouseClick, L, 1700, -538, 1, 0,
+;     Sleep, 10
+;     Send, ^{End}
+;     Send, ^!+m
+; Return
 
 F16 & o::
     CoordMode, Mouse, Screen
@@ -81,8 +81,27 @@ F16 & /::
     MouseClick, L, 190, 20, 1, 0,  ;xを150にすると3つめにグループボタンが来る
 return
 
-F16 & t::
-    if GetKeyState("alt") {  ;タスクの整理
+F16 & ,::
+    key := ","
+    KeyWait, %key%, T0.3
+    If(ErrorLevel){ ;長押しした場合
+        WinActivate, ahk_exe TogglTrack.exe
+        Sleep, 400
+        Send, {vk1D}
+        send, ^{n}
+        Sleep, 400
+        send, @
+        Sleep, 400
+        send, br
+        Sleep, 400
+        Send, {Enter}
+        Send, {Enter}
+        Sleep, 50
+        Send, !{Esc}
+        return
+    }
+    KeyWait, %key%, D, T0.2
+    If(!ErrorLevel){ ;2度押しした場合
         WinActivate, ahk_exe TogglTrack.exe
         Sleep, 400
         Send, {vk1D}
@@ -95,21 +114,62 @@ F16 & t::
         Sleep, 50
         Send, !{Esc}
         return
+    }else{ ;短押しした場合
     }
-    CoordMode, Mouse, Screen
-    MouseClick, L, 1400, -1080, 1, 0,
-    Sleep, 10
-    Send, ^d
-    Sleep, 200
-    Send, ^{Home}
-    Send, ^f
-    Sleep, 10
-    Send, {vk1D}
-    Send, [ ] ;ここimeの状態によってはエラー出る
-    Sleep, 10
-    Send, {Esc}
-    Send, {End}
-    Send, {End}
+    If WinActive("ahk_exe Obsidian.exe"){
+        if GetKeyState("alt") {  ;タスクの整理
+            WinActivate, ahk_exe TogglTrack.exe
+            Sleep, 400
+            Send, {vk1D}
+            send, ^{n}
+            Sleep, 400
+            send, task adjustment
+            Sleep, 400
+            Send, {Enter}
+            Send, {Enter}
+            Sleep, 50
+            Send, !{Esc}
+            return
+        } else if GetKeyState("shift") {  ;タスクを完了にして通す
+            send, ^+{Enter}
+            Sleep, 400
+            send, {End}
+            send, {End}
+            send, {Down}
+            Sleep, 50
+        }
+        send, ^c
+        WinActivate, ahk_exe TogglTrack.exe
+        ; Sleep, 200
+        send, ^n
+        Sleep, 400
+        StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
+        StringReplace, clipboard, clipboard,-%A_Space%, , All
+        StringReplace, clipboard, clipboard,%A_Tab%, , All
+        StringReplace, clipboard, clipboard,[[, , All
+        StringReplace, clipboard, clipboard,]], , All
+        send, ^v
+        Sleep, 400
+        Send, {Enter}
+        Send, {Enter}
+        Sleep, 50
+        Send, !{Esc}
+    }else{
+        CoordMode, Mouse, Screen
+        MouseClick, L, 1400, -1080, 1, 0,
+        Sleep, 10
+        Send, ^d
+        Sleep, 200
+        Send, ^{Home}
+        Send, ^f
+        Sleep, 10
+        Send, {vk1D}
+        Send, [ ] ;ここimeの状態によってはエラー出る
+        Sleep, 10
+        Send, {Esc}
+        Send, {End}
+        Send, {End}
+    }
 Return
 
 F16 & k::
