@@ -1,4 +1,5 @@
 ﻿; include
+#Include *i デバイス/nikujaga/temp.ahk
 #Include *i デバイス/nikujaga/ソフトウェア固有.ahk
 #Include *i デバイス/nikujaga/キー/F13.ahk
 #Include *i デバイス/nikujaga/キー/F14.ahk

@@ -115,60 +115,70 @@ F16 & ,::
         Send, !{Esc}
         return
     }else{ ;短押しした場合
-    }
-    If WinActive("ahk_exe Obsidian.exe"){
-        if GetKeyState("alt") {  ;タスクの整理
-            WinActivate, ahk_exe TogglTrack.exe
-            Sleep, 400
+        MouseGetPos, xpos, ypos 
+        If (xpos=186){
+            send, ^c
+            ClipWait, 1, 1
+            if (task=clipboard){ ;前コピったタスクが今のタスクと同じだったら
+                send, ^+{Enter}
+                Sleep, 400
+                send, {End}
+                send, {End}
+                send, {Down}
+                Sleep, 50
+                send, ^c
+                ClipWait, 1, 1
+                task := Clipboard ;変数をアップデートする
+                WinActivate, ahk_exe TogglTrack.exe
+                ; Sleep, 200
+                send, ^n
+                Sleep, 400
+                StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
+                StringReplace, clipboard, clipboard,-%A_Space%, , All
+                StringReplace, clipboard, clipboard,%A_Tab%, , All
+                StringReplace, clipboard, clipboard,[[, , All
+                StringReplace, clipboard, clipboard,]], , All
+                send, ^v
+                Sleep, 400
+                Send, {Enter}
+                Send, {Enter}
+                Sleep, 50
+                Send, !{Esc}
+            }else{
+                task := Clipboard ;変数をアップデートする
+                WinActivate, ahk_exe TogglTrack.exe
+                ; Sleep, 200
+                send, ^n
+                Sleep, 400
+                StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
+                StringReplace, clipboard, clipboard,-%A_Space%, , All
+                StringReplace, clipboard, clipboard,%A_Tab%, , All
+                StringReplace, clipboard, clipboard,[[, , All
+                StringReplace, clipboard, clipboard,]], , All
+                send, ^v
+                Sleep, 400
+                Send, {Enter}
+                Send, {Enter}
+                Sleep, 50
+                Send, !{Esc}
+            }
+        }else{
+            CoordMode, Mouse, Screen
+            MouseClick, L, 1400, -1080, 1, 0,
+            Sleep, 10
+            Send, ^d
+            Sleep, 200
+            Send, ^{Home}
+            Send, ^f
+            Sleep, 10
             Send, {vk1D}
-            send, ^{n}
-            Sleep, 400
-            send, task adjustment
-            Sleep, 400
-            Send, {Enter}
-            Send, {Enter}
-            Sleep, 50
-            Send, !{Esc}
-            return
-        } else if GetKeyState("shift") {  ;タスクを完了にして通す
-            send, ^+{Enter}
-            Sleep, 400
-            send, {End}
-            send, {End}
-            send, {Down}
-            Sleep, 50
+            Send, [ ] ;ここimeの状態によってはエラー出る
+            Sleep, 10
+            Send, {Esc}
+            Send, {End}
+            Send, {End}
         }
-        send, ^c
-        WinActivate, ahk_exe TogglTrack.exe
-        ; Sleep, 200
-        send, ^n
-        Sleep, 400
-        StringReplace, clipboard, clipboard,-%A_Space%[%A_Space%]%A_Space%, , All
-        StringReplace, clipboard, clipboard,-%A_Space%, , All
-        StringReplace, clipboard, clipboard,%A_Tab%, , All
-        StringReplace, clipboard, clipboard,[[, , All
-        StringReplace, clipboard, clipboard,]], , All
-        send, ^v
-        Sleep, 400
-        Send, {Enter}
-        Send, {Enter}
-        Sleep, 50
-        Send, !{Esc}
-    }else{
-        CoordMode, Mouse, Screen
-        MouseClick, L, 1400, -1080, 1, 0,
-        Sleep, 10
-        Send, ^d
-        Sleep, 200
-        Send, ^{Home}
-        Send, ^f
-        Sleep, 10
-        Send, {vk1D}
-        Send, [ ] ;ここimeの状態によってはエラー出る
-        Sleep, 10
-        Send, {Esc}
-        Send, {End}
-        Send, {End}
+        ; MsgBox, The cursor is at X%xpos% Y%ypos%. 
     }
 Return
 
