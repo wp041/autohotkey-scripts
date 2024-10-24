@@ -166,8 +166,6 @@ F16 & ,::
             CoordMode, Mouse, Screen
             MouseClick, L, 1400, -1080, 1, 0,
             Sleep, 10
-            Send, ^d
-            Sleep, 200
             Send, ^{Home}
             Send, ^f
             Sleep, 10
